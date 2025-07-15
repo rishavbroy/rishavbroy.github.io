@@ -56,7 +56,7 @@ education:
   - area: B.S. Economics with a Mathematical Emphasis, Mathematics for Economics and Finance, Data Science
     institution: University of Wisconsin-Madison
     # date_start: 2016-01-01
-    date_end: Spring 2026
+    date_end: 2026-05-09
     summary: |
       # GPA: 3.8/4.0
 
