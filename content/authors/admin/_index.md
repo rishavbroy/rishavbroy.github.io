@@ -10,7 +10,7 @@ first_name: Rishav
 last_name: Roy
 
 # Status emoji
-status: Budding Researcher
+status:
   icon: 🤓
 
 # Is this the primary user of the site?
