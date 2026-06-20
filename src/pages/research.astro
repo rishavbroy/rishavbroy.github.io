@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import CollectionFilters from "../components/CollectionFilters.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import TagList from "../components/TagList.astro";
 import { getProjectTaxonomy, sortProjects } from "../lib/projects";
@@ -16,7 +17,7 @@ const featuredCount = projects.filter((project) => project.data.featured).length
     <SectionHeading
       eyebrow="Research"
       title="Projects and research questions"
-      description="Each project is a structured Markdown entry with status, topics, skills, question, description, links, and a featured flag. Interactive filters will be added in a later pass."
+      description="Each project is a structured Markdown entry with status, topics, skills, question, description, links, and a featured flag. Use the filters to scan projects by field, method, or status."
     />
 
     <div class="research-summary" aria-label="Research collection summary">
@@ -52,11 +53,24 @@ const featuredCount = projects.filter((project) => project.data.featured).length
         <TagList tags={taxonomy.skills} label="Project skills" variant="skill" />
       </section>
     </div>
+  <CollectionFilters
+      id="research"
+      label="Filter research projects"
+      searchPlaceholder="Search projects by title, question, topic, or skill"
+      itemSingular="project"
+      itemPlural="projects"
+      groups={[
+        { key: "status", label: "Status", options: taxonomy.statuses },
+        { key: "topics", label: "Topic", options: taxonomy.topics },
+        { key: "skills", label: "Skill or technique", options: taxonomy.skills }
+      ]}
+    />
   </section>
 
   <section class="container section compact-section">
     <div class="card-grid">
       {projects.map((project) => <ProjectCard project={project} />)}
     </div>
+    <p class="no-filter-results" data-filter-empty="research" hidden>No projects match those filters.</p>
   </section>
 </BaseLayout>

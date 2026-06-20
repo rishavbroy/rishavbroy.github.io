@@ -512,3 +512,128 @@ p {
     justify-content: space-between;
   }
 }
+
+.filter-panel {
+  display: none;
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+  padding: var(--space-5);
+  border: 1px solid rgb(245 239 230 / 0.12);
+  border-radius: var(--radius-lg);
+  background: rgb(245 239 230 / 0.045);
+}
+
+html[data-js="true"] .filter-panel {
+  display: grid;
+}
+
+.filter-search {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.filter-search label,
+.filter-group legend {
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.filter-search input {
+  width: 100%;
+  border: 1px solid rgb(245 239 230 / 0.16);
+  border-radius: var(--radius-md);
+  background: rgb(8 5 4 / 0.5);
+  color: var(--text);
+  font: inherit;
+  padding: 0.82rem 1rem;
+}
+
+.filter-search input::placeholder {
+  color: rgb(205 191 175 / 0.72);
+}
+
+.filter-search input:focus-visible,
+.filter-button:focus-visible,
+.filter-reset:focus-visible {
+  outline: 3px solid rgb(217 120 36 / 0.55);
+  outline-offset: 3px;
+}
+
+.filter-groups {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.filter-group {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: var(--space-3);
+}
+
+.filter-button,
+.filter-reset {
+  border: 1px solid rgb(245 239 230 / 0.14);
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.filter-button {
+  padding: 0.42rem 0.72rem;
+  background: rgb(245 239 230 / 0.06);
+  color: var(--text-muted);
+}
+
+.filter-button[aria-pressed="true"] {
+  border-color: rgb(217 120 36 / 0.56);
+  background: var(--accent);
+  color: #17110e;
+}
+
+.filter-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.filter-count {
+  margin: 0;
+  color: var(--text-muted);
+  font-weight: 750;
+}
+
+.filter-reset {
+  padding: 0.46rem 0.8rem;
+  background: transparent;
+  color: var(--text);
+}
+
+.no-filter-results {
+  margin: var(--space-6) 0 0;
+  padding: var(--space-5);
+  border: 1px solid rgb(245 239 230 / 0.12);
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  text-align: center;
+  background: rgb(245 239 230 / 0.04);
+}
+
+.no-filter-results[hidden],
+[data-filter-card][hidden] {
+  display: none;
+}
