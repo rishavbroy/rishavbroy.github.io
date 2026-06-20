@@ -8,11 +8,11 @@ Personal website for Rishav Roy, built with [Astro](https://astro.build/) and de
 - `src/layouts/` contains page shells.
 - `src/components/` contains reusable UI blocks.
 - `src/content/projects/` contains structured research project entries.
-- `src/content/courses/` contains structured course entries.
+- `src/data/courses.json` contains structured course entries.
 - `public/` contains static files copied as-is to the deployed site.
 - `public/cv/Rishav_Roy_CV.pdf` is the committed CV PDF linked directly from the nav.
 - `cv/Rishav_Roy_CV.tex` is the public LaTeX source for the CV.
-- `scripts/` contains local review helpers for producing `review.zip` and `terminal_output.txt`.
+- `scripts/` contains local review helpers for producing `review.zip`.
 - `review.zip` includes the CV source so code review catches CV workflow issues. LaTeX build byproducts in `cv/` are ignored.
 
 The old HugoBlox site should live on the `archive/hugoblox-original` branch.
@@ -48,6 +48,22 @@ Run the dev server through the review wrapper. A review ZIP is created when the 
 ```bash
 npm run dev:review
 ```
+
+The review wrappers do not create `terminal_output.txt` by default. To include terminal output in `review.zip` for debugging, run:
+
+```bash
+npm run build:review:log
+```
+
+or:
+
+```bash
+npm run dev:review:log
+```
+
+## Content data
+
+Research projects are Markdown entries because they may later grow into project pages with prose bodies. Courses are stored in `src/data/courses.json` because they are structured records rather than essays. Both are still Astro content collections with Zod schemas, so they retain build-time validation and typed `getCollection()` access.
 
 ## Filtering and search
 

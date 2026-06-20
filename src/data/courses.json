@@ -1,0 +1,54 @@
+[
+  {
+    "id": "phd-econometrics-ii",
+    "title": "PhD Econometrics II",
+    "semester": "Spring 2026",
+    "termOrder": 202601,
+    "grade": "A",
+    "achievements": ["Top scorer", "PhD-level"],
+    "types": ["Graduate Economics", "Econometrics"],
+    "skills": ["Asymptotic theory", "Causal inference", "Stata"],
+    "syllabusUrl": "",
+    "featured": true,
+    "order": 1
+  },
+  {
+    "id": "phd-macroeconomics-ii",
+    "title": "PhD Macroeconomics II",
+    "semester": "Spring 2025",
+    "termOrder": 202501,
+    "grade": "A",
+    "achievements": ["Top scorer", "PhD-level"],
+    "types": ["Graduate Economics", "Macroeconomics"],
+    "skills": ["Dynamic models", "MATLAB"],
+    "syllabusUrl": "",
+    "featured": true,
+    "order": 2
+  },
+  {
+    "id": "measure-integration",
+    "title": "Measure and Integration",
+    "semester": "Spring 2025",
+    "termOrder": 202501,
+    "grade": "A",
+    "achievements": ["Top scorer of first half", "Master's-level", "Honors"],
+    "types": ["Mathematics"],
+    "skills": ["Proofs", "Measure theory"],
+    "syllabusUrl": "",
+    "featured": true,
+    "order": 3
+  },
+  {
+    "id": "development-economics",
+    "title": "Development Economics",
+    "semester": "Spring 2026",
+    "termOrder": 202601,
+    "grade": "A",
+    "achievements": ["Highest scorer on final"],
+    "types": ["Political Economy and Development", "Economics"],
+    "skills": ["Development theory", "Empirical development"],
+    "syllabusUrl": "",
+    "featured": true,
+    "order": 4
+  }
+]

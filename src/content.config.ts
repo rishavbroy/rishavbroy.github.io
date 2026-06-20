@@ -1,5 +1,5 @@
 import { defineCollection } from "astro:content";
-import { glob } from "astro/loaders";
+import { file, glob } from "astro/loaders";
 import { z } from "astro/zod";
 
 const optionalUrl = z.union([z.string().url(), z.literal("")]).optional();
@@ -34,11 +34,9 @@ const projects = defineCollection({
 });
 
 const courses = defineCollection({
-  loader: glob({
-    base: "./src/content/courses",
-    pattern: "**/*.{md,mdx}"
-  }),
+  loader: file("src/data/courses.json"),
   schema: z.object({
+    id: z.string(),
     title: z.string(),
     semester: z.string(),
     termOrder: z.number(),
