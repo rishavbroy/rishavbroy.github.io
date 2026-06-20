@@ -11,7 +11,9 @@
     "check:cv": "node scripts/check-cv-assets.mjs",
     "review": "node scripts/make-review-zip.mjs",
     "dev:review": "node scripts/run-with-review.mjs dev",
-    "build:review": "node scripts/run-with-review.mjs build"
+    "build:review": "node scripts/run-with-review.mjs build",
+    "dev:review:log": "node scripts/run-with-review.mjs dev --log",
+    "build:review:log": "node scripts/run-with-review.mjs build --log"
   },
   "dependencies": {
     "astro": "^6.4.8"

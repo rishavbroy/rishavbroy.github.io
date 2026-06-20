@@ -15,9 +15,12 @@ const includeRoots = [
   "package.json",
   "package-lock.json",
   "tsconfig.json",
-  "README.md",
-  "terminal_output.txt"
+  "README.md"
 ];
+
+if (process.env.INCLUDE_TERMINAL_OUTPUT === "1") {
+  includeRoots.push("terminal_output.txt");
+}
 
 const excludeNames = new Set([
   "node_modules",

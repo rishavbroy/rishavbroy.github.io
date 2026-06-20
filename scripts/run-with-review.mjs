@@ -2,25 +2,30 @@ import fs from "node:fs";
 import { spawn, spawnSync } from "node:child_process";
 
 const requested = process.argv[2];
+const shouldLog = process.argv.includes("--log");
 const allowed = new Set(["dev", "build"]);
 
 if (!allowed.has(requested)) {
-  console.error("Usage: node scripts/run-with-review.mjs <dev|build>");
+  console.error("Usage: node scripts/run-with-review.mjs <dev|build> [--log]");
   process.exit(1);
 }
 
 const npmCommand = process.platform === "win32" ? "npm.cmd" : "npm";
 const logPath = "terminal_output.txt";
-const log = fs.createWriteStream(logPath, { flags: "w" });
+const log = shouldLog ? fs.createWriteStream(logPath, { flags: "w" }) : null;
 
-function write(line) {
-  process.stdout.write(line);
-  log.write(line);
+function write(chunk) {
+  process.stdout.write(chunk);
+  log?.write(chunk);
 }
 
 function makeReviewZip() {
   const result = spawnSync(process.execPath, ["scripts/make-review-zip.mjs"], {
-    stdio: "inherit"
+    stdio: "inherit",
+    env: {
+      ...process.env,
+      INCLUDE_TERMINAL_OUTPUT: shouldLog ? "1" : ""
+    }
   });
   return result.status ?? 0;
 }
@@ -45,10 +50,17 @@ function finish(code) {
   if (exiting) return;
   exiting = true;
   write(`\nCommand exited with code ${code ?? "unknown"}. Creating review.zip...\n`);
-  log.end(() => {
-    makeReviewZip();
-    process.exit(code ?? 0);
-  });
+
+  if (log) {
+    log.end(() => {
+      makeReviewZip();
+      process.exit(code ?? 0);
+    });
+    return;
+  }
+
+  makeReviewZip();
+  process.exit(code ?? 0);
 }
 
 process.on("SIGINT", () => {
