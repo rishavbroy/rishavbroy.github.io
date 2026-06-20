@@ -1,0 +1,22 @@
+---
+import { getVisibleProjectLinks, type ProjectLinks } from "../lib/projectLinks";
+
+interface Props {
+  links?: ProjectLinks;
+  label: string;
+}
+
+const { links, label } = Astro.props;
+const visibleLinks = getVisibleProjectLinks(links);
+---
+
+{visibleLinks.length > 0 && (
+  <div class="card-links" aria-label={label}>
+    {visibleLinks.map((link) => (
+      <a href={link.href} target="_blank" rel="noreferrer">
+        <span aria-hidden="true">{link.icon}</span>
+        {link.label}
+      </a>
+    ))}
+  </div>
+)}
