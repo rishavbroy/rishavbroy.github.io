@@ -13,7 +13,7 @@ Personal website for Rishav Roy, built with [Astro](https://astro.build/) and de
 - `public/cv/Rishav_Roy_CV.pdf` is the committed CV PDF linked directly from the nav.
 - `cv/Rishav_Roy_CV.tex` is the public LaTeX source for the CV.
 - `scripts/` contains local review helpers for producing `review.zip` and `terminal_output.txt`.
-- `review.zip` includes the CV source so code review catches CV workflow issues.
+- `review.zip` includes the CV source so code review catches CV workflow issues. LaTeX build byproducts in `cv/` are ignored.
 
 The old HugoBlox site should live on the `archive/hugoblox-original` branch.
 
@@ -48,6 +48,14 @@ Run the dev server through the review wrapper. A review ZIP is created when the 
 ```bash
 npm run dev:review
 ```
+
+## Filtering and search
+
+The Research and Courses pages use progressively enhanced client-side filtering. Cards are rendered normally at build time, so all content remains visible if JavaScript is disabled. When JavaScript is available, `CollectionFilters.astro` reads `data-*` attributes on each card and applies search plus one active filter per group.
+
+- Research filters: status, topic, skill/technique.
+- Course filters: semester, course type, achievement.
+- Search is local to the page and matches the card text stored in `data-search`.
 
 ## CV workflow
 

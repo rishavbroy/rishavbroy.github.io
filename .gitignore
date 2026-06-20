@@ -30,3 +30,4 @@ cv/*.out
 cv/*.run.xml
 cv/*.synctex.gz
 cv/*.toc
+cv/*.pdf

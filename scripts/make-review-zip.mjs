@@ -29,8 +29,32 @@ const excludeNames = new Set([
   "review.zip"
 ]);
 
+const cvBuildByproducts = [
+  ".aux",
+  ".bbl",
+  ".bcf",
+  ".blg",
+  ".fdb_latexmk",
+  ".fls",
+  ".log",
+  ".out",
+  ".pdf",
+  ".run.xml",
+  ".synctex.gz",
+  ".toc"
+];
+
+function isCvBuildByproduct(relativePath) {
+  return (
+    relativePath.startsWith("cv/") &&
+    cvBuildByproducts.some((suffix) => relativePath.endsWith(suffix))
+  );
+}
+
 function shouldSkip(fullPath) {
-  const parts = path.relative(root, fullPath).split(path.sep);
+  const relativePath = path.relative(root, fullPath).replaceAll(path.sep, "/");
+  if (isCvBuildByproduct(relativePath)) return true;
+  const parts = relativePath.split("/");
   return parts.some((part) => excludeNames.has(part));
 }
 
