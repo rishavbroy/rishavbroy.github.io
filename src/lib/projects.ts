@@ -1,4 +1,5 @@
 import type { CollectionEntry } from "astro:content";
+import { uniqueSorted } from "./filterData";
 
 export type ProjectEntry = CollectionEntry<"projects">;
 
@@ -17,9 +18,6 @@ export function getFeaturedProjects(projects: ProjectEntry[]) {
   return sortProjects(projects).filter((project) => project.data.featured);
 }
 
-export function uniqueSorted(values: string[]) {
-  return [...new Set(values)].sort((a, b) => a.localeCompare(b));
-}
 
 export function getProjectTaxonomy(projects: ProjectEntry[]) {
   return {
