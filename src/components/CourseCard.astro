@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import TagList from "./TagList.astro";
+import { toFilterData, toSearchData } from "../lib/filterData";
 
 interface Props {
   course: CollectionEntry<"courses">;
@@ -8,9 +9,25 @@ interface Props {
 
 const { course } = Astro.props;
 const { data } = course;
+const filterScope = "courses";
+const searchData = toSearchData([
+  data.title,
+  data.semester,
+  data.grade,
+  data.achievements,
+  data.types,
+  data.skills
+]);
 ---
 
-<article class="card course-card">
+<article
+  class="card course-card"
+  data-filter-card={filterScope}
+  data-semester={toFilterData(data.semester)}
+  data-types={toFilterData(data.types)}
+  data-achievements={toFilterData(data.achievements)}
+  data-search={searchData}
+>
   <div class="course-card-header">
     <div>
       <p class="card-kicker">{data.semester}</p>

@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import ProjectLinkList from "./ProjectLinkList.astro";
 import TagList from "./TagList.astro";
+import { toFilterData, toSearchData } from "../lib/filterData";
 
 interface Props {
   project: CollectionEntry<"projects">;
@@ -9,9 +10,25 @@ interface Props {
 
 const { project } = Astro.props;
 const { data } = project;
+const filterScope = "research";
+const searchData = toSearchData([
+  data.title,
+  data.status,
+  data.question,
+  data.shortDescription,
+  data.topics,
+  data.skills
+]);
 ---
 
-<article class:list={["card", "project-card", data.featured && "featured-project"]}>
+<article
+  class:list={["card", "project-card", data.featured && "featured-project"]}
+  data-filter-card={filterScope}
+  data-status={toFilterData(data.status)}
+  data-topics={toFilterData(data.topics)}
+  data-skills={toFilterData(data.skills)}
+  data-search={searchData}
+>
   <div class="project-card-header">
     <div class="card-kicker">{data.status}</div>
     {data.featured && <span class="featured-badge">Featured</span>}

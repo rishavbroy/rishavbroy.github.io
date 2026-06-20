@@ -1,0 +1,144 @@
+---
+interface FilterGroup {
+  key: string;
+  label: string;
+  options: string[];
+  allLabel?: string;
+}
+
+interface Props {
+  id: string;
+  label: string;
+  searchLabel?: string;
+  searchPlaceholder?: string;
+  itemSingular: string;
+  itemPlural: string;
+  groups: FilterGroup[];
+}
+
+const {
+  id,
+  label,
+  searchLabel = "Search",
+  searchPlaceholder = "Search...",
+  itemSingular,
+  itemPlural,
+  groups
+} = Astro.props;
+---
+
+<section class="filter-panel" data-filter-root={id} data-item-singular={itemSingular} data-item-plural={itemPlural} aria-label={label}>
+  <div class="filter-search">
+    <label for={`${id}-search`}>{searchLabel}</label>
+    <input id={`${id}-search`} type="search" placeholder={searchPlaceholder} autocomplete="off" data-filter-search />
+  </div>
+
+  <div class="filter-groups" aria-label={`${label} controls`}>
+    {
+      groups.map((group) => (
+        <fieldset class="filter-group" data-filter-group={group.key}>
+          <legend>{group.label}</legend>
+          <div class="filter-options">
+            <button type="button" class="filter-button" data-filter-value="" aria-pressed="true">
+              {group.allLabel ?? "All"}
+            </button>
+            {group.options.map((option) => (
+              <button type="button" class="filter-button" data-filter-value={option} aria-pressed="false">
+                {option}
+              </button>
+            ))}
+          </div>
+        </fieldset>
+      ))
+    }
+  </div>
+
+  <div class="filter-footer">
+    <p class="filter-count" data-filter-count aria-live="polite"></p>
+    <button type="button" class="filter-reset" data-filter-reset>Reset filters</button>
+  </div>
+</section>
+
+<script>
+  function normalize(value) {
+    return String(value || "").trim().toLowerCase();
+  }
+
+  function tokenize(value) {
+    return normalize(value).split("|").filter(Boolean);
+  }
+
+  function setupFilters(root) {
+    const scope = root.dataset.filterRoot;
+    const cards = Array.from(document.querySelectorAll(`[data-filter-card="${scope}"]`));
+    const empty = document.querySelector(`[data-filter-empty="${scope}"]`);
+    const searchInput = root.querySelector("[data-filter-search]");
+    const count = root.querySelector("[data-filter-count]");
+    const reset = root.querySelector("[data-filter-reset]");
+    const itemSingular = root.dataset.itemSingular || "item";
+    const itemPlural = root.dataset.itemPlural || "items";
+    const state = {};
+
+    function updateCount(visibleCount) {
+      if (!count) return;
+      const label = visibleCount === 1 ? itemSingular : itemPlural;
+      count.textContent = `${visibleCount} of ${cards.length} ${label} shown`;
+    }
+
+    function applyFilters() {
+      const query = normalize(searchInput?.value);
+      let visibleCount = 0;
+
+      for (const card of cards) {
+        const matchesGroups = Object.entries(state).every(([key, selected]) => {
+          if (!selected) return true;
+          return tokenize(card.dataset[key]).includes(selected);
+        });
+        const matchesSearch = !query || normalize(card.dataset.search).includes(query);
+        const visible = matchesGroups && matchesSearch;
+        card.hidden = !visible;
+        if (visible) visibleCount += 1;
+      }
+
+      if (empty) empty.hidden = visibleCount !== 0;
+      updateCount(visibleCount);
+    }
+
+    for (const group of root.querySelectorAll("[data-filter-group]")) {
+      const key = group.dataset.filterGroup;
+      state[key] = "";
+      const buttons = Array.from(group.querySelectorAll("[data-filter-value]"));
+
+      for (const button of buttons) {
+        button.addEventListener("click", () => {
+          state[key] = normalize(button.dataset.filterValue);
+          for (const peer of buttons) {
+            peer.setAttribute("aria-pressed", String(peer === button));
+          }
+          applyFilters();
+        });
+      }
+    }
+
+    searchInput?.addEventListener("input", applyFilters);
+
+    reset?.addEventListener("click", () => {
+      if (searchInput) searchInput.value = "";
+      for (const group of root.querySelectorAll("[data-filter-group]")) {
+        const key = group.dataset.filterGroup;
+        state[key] = "";
+        const buttons = Array.from(group.querySelectorAll("[data-filter-value]"));
+        for (const button of buttons) {
+          button.setAttribute("aria-pressed", String(button.dataset.filterValue === ""));
+        }
+      }
+      applyFilters();
+    });
+
+    applyFilters();
+  }
+
+  for (const root of document.querySelectorAll("[data-filter-root]")) {
+    setupFilters(root);
+  }
+</script>
