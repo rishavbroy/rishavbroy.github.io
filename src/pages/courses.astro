@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CourseCard from "../components/CourseCard.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+
+const courses = (await getCollection("courses")).sort(
+  (a, b) => b.data.termOrder - a.data.termOrder || a.data.order - b.data.order || a.data.title.localeCompare(b.data.title)
+);
+---
+
+<BaseLayout title="Courses" description="Selected coursework by Rishav Roy in graduate economics, mathematics, data science, machine learning, political economy, and development.">
+  <section class="container page-hero">
+    <SectionHeading
+      eyebrow="Courses"
+      title="Selected coursework"
+      description="A selective, structured list of courses. Each entry stores semester, sortable term order, grade, achievements, course types, skills, and optional syllabus links. Filters will be added in a later pass."
+    />
+  </section>
+
+  <section class="container section compact-section">
+    <div class="course-grid">
+      {courses.map((course) => <CourseCard course={course} />)}
+    </div>
+  </section>
+</BaseLayout>

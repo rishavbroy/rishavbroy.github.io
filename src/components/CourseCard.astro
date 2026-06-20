@@ -1,0 +1,29 @@
+---
+import type { CollectionEntry } from "astro:content";
+import TagList from "./TagList.astro";
+
+interface Props {
+  course: CollectionEntry<"courses">;
+}
+
+const { course } = Astro.props;
+const { data } = course;
+---
+
+<article class="card course-card">
+  <div class="course-card-header">
+    <div>
+      <p class="card-kicker">{data.semester}</p>
+      <h3>{data.title}</h3>
+    </div>
+    {data.grade && <span class="grade-pill" aria-label={`Grade: ${data.grade}`}>{data.grade}</span>}
+  </div>
+  <TagList tags={data.achievements} label={`Achievements for ${data.title}`} variant="achievement" />
+  <TagList tags={data.types} label={`Types for ${data.title}`} variant="type" />
+  <TagList tags={data.skills} label={`Skills for ${data.title}`} variant="skill" />
+  {data.syllabusUrl && (
+    <div class="card-links">
+      <a href={data.syllabusUrl}>Syllabus</a>
+    </div>
+  )}
+</article>

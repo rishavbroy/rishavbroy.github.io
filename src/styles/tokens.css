@@ -1,0 +1,41 @@
+:root {
+  color-scheme: dark;
+
+  --bg: #080504;
+  --bg-soft: #120d0b;
+  --bg-elevated: #1b120e;
+  --text: #f5efe6;
+  --text-muted: #cdbfaf;
+  --accent: #d97824;
+  --accent-soft: #f1b66d;
+  --border: #2a211d;
+
+  --card-bg: #f7f1e8;
+  --card-bg-soft: #fff8ee;
+  --card-text: #17110e;
+  --card-muted: #62564d;
+  --card-border: #dfd1c0;
+
+  --tag-bg: #eadfce;
+  --tag-text: #2a211d;
+
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+
+  --container: 1120px;
+  --radius-sm: 0.55rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+
+  --shadow-soft: 0 20px 70px rgb(0 0 0 / 0.35);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+}

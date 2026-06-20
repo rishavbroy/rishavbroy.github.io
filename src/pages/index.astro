@@ -1,0 +1,86 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+
+const featuredProjects = (await getCollection("projects"))
+  .filter((project) => project.data.featured)
+  .sort((a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title));
+---
+
+<BaseLayout>
+  <section class="hero container section-xl">
+    <div class="hero-image-wrap">
+      <picture>
+        <source srcset="/images/headshot-480.webp 480w, /images/headshot-960.webp 960w" type="image/webp" />
+        <img
+          src="/images/headshot.jpg"
+          alt="Portrait of Rishav Roy at sunset"
+          class="hero-image"
+          width="960"
+          height="1440"
+          loading="eager"
+        />
+      </picture>
+    </div>
+
+    <div class="hero-copy">
+      <p class="eyebrow">Economics · Mathematics · Data Science</p>
+      <h1>Rishav Roy</h1>
+      <p class="hero-identity">
+        I study political economy, development, and the institutional dynamics that shape how societies escape—or remain trapped in—bad equilibria.
+      </p>
+      <div class="button-row">
+        <a class="button button-primary" href="#interests">My Interests</a>
+        <a class="button button-secondary" href="#current-projects">Current Projects</a>
+        <a class="button button-secondary" href="#story">My Story</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="interests" class="container section">
+    <SectionHeading
+      eyebrow="My Interests"
+      title="Institutions, power, beliefs, and development"
+      description="My central question is why some societies channel individual incentives into innovation, trust, and broad prosperity while others get stuck in equilibria shaped by coercion, instability, inequality, or institutional failure."
+    />
+    <div class="interest-grid">
+      <article class="interest-item">
+        <h3>Political economy of development</h3>
+        <p>How elite power, state capacity, and institutional design shape growth, innovation, and structural transformation.</p>
+      </article>
+      <article class="interest-item">
+        <h3>Equilibrium selection</h3>
+        <p>How norms, beliefs, repeated interactions, and coordination failures make good and bad equilibria self-reinforcing.</p>
+      </article>
+      <article class="interest-item">
+        <h3>Measurement and empirical methods</h3>
+        <p>How causal inference, text-as-data, and econometric theory can make broad social questions empirically tractable.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="current-projects" class="container section">
+    <SectionHeading
+      eyebrow="My Current Projects"
+      title="Research questions I am actively developing"
+      description="Featured projects are drawn from the same structured project collection used on the Research page."
+    />
+    <div class="card-grid">
+      {featuredProjects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+
+  <section id="story" class="container section story-section">
+    <SectionHeading eyebrow="My Story" title="A nonlinear path into research" />
+    <div class="story-card">
+      <p>
+        My path through college was not linear. Early on, family and health issues collided with a lack of structure, and my academic record reflected it: at one point, my GPA was around 1.9. I took time away from school, worked full-time, studied part-time, and slowly rebuilt both my habits and my sense of what I was capable of.
+      </p>
+      <p>
+        When I returned, I chose harder questions rather than easier ones. I pursued economics, mathematics, and data science; took graduate-level economics and mathematics courses; earned top scores in multiple PhD-level classes; and began developing independent research projects with faculty guidance across development, econometrics, macroeconomics, language models, and political economy.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

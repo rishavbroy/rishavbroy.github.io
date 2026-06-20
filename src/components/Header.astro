@@ -1,0 +1,17 @@
+---
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/research/", label: "Research" },
+  { href: "/courses/", label: "Courses" },
+  { href: "/cv/Rishav_Roy_CV.pdf", label: "CV" }
+];
+---
+
+<header class="site-header">
+  <nav class="nav container" aria-label="Main navigation">
+    <a class="brand" href="/" aria-label="Rishav Roy home">Rishav Roy</a>
+    <div class="nav-links">
+      {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+    </div>
+  </nav>
+</header>

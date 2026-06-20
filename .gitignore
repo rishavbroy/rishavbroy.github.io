@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.astro/
+
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Review artifacts
+review.zip
+terminal_output.txt
+
+# System files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,17 @@
+{
+  "name": "rishavbroy.github.io",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "review": "node scripts/make-review-zip.mjs",
+    "dev:review": "node scripts/run-with-review.mjs dev",
+    "build:review": "node scripts/run-with-review.mjs build"
+  },
+  "dependencies": {
+    "astro": "^5.0.0"
+  }
+}
