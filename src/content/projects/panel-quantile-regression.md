@@ -17,4 +17,4 @@ links:
   paper: ""
 ---
 
-Placeholder body. Later, this can become a full project page with theorem statements, proof sketches, and simulation plans.
+This entry is intentionally short for now. Later, it can become a full project page with abstract, methods, links, figures, and replication notes.

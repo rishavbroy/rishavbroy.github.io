@@ -18,4 +18,4 @@ links:
   paper: ""
 ---
 
-Placeholder body.
+This entry is intentionally short for now. Later, it can become a full project page with abstract, methods, links, figures, and replication notes.
