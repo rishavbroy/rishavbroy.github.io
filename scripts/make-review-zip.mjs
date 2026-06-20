@@ -8,6 +8,7 @@ const includeRoots = [
   "src",
   "public",
   "scripts",
+  ".gitignore",
   ".github/workflows",
   "astro.config.mjs",
   "package.json",
