@@ -7,6 +7,7 @@ const outFile = path.join(root, "review.zip");
 const includeRoots = [
   "src",
   "public",
+  "cv",
   "scripts",
   ".gitignore",
   ".github/workflows",

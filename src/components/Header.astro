@@ -3,7 +3,7 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/research/", label: "Research" },
   { href: "/courses/", label: "Courses" },
-  { href: "/cv/Rishav_Roy_CV.pdf", label: "CV" }
+  { href: "/cv/Rishav_Roy_CV.pdf", label: "CV", openInNewTab: true }
 ];
 ---
 
@@ -11,7 +11,17 @@ const navItems = [
   <nav class="nav container" aria-label="Main navigation">
     <a class="brand" href="/" aria-label="Rishav Roy home">Rishav Roy</a>
     <div class="nav-links">
-      {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            target={item.openInNewTab ? "_blank" : undefined}
+            rel={item.openInNewTab ? "noopener" : undefined}
+          >
+            {item.label}
+          </a>
+        ))
+      }
     </div>
   </nav>
 </header>

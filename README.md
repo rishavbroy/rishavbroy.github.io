@@ -13,6 +13,7 @@ Personal website for Rishav Roy, built with [Astro](https://astro.build/) and de
 - `public/cv/Rishav_Roy_CV.pdf` is the committed CV PDF linked directly from the nav.
 - `cv/Rishav_Roy_CV.tex` is the public LaTeX source for the CV.
 - `scripts/` contains local review helpers for producing `review.zip` and `terminal_output.txt`.
+- `review.zip` includes the CV source so code review catches CV workflow issues.
 
 The old HugoBlox site should live on the `archive/hugoblox-original` branch.
 
@@ -50,7 +51,7 @@ npm run dev:review
 
 ## CV workflow
 
-The site links directly to the committed PDF at `public/cv/Rishav_Roy_CV.pdf`.
+The site links directly to the committed PDF at `public/cv/Rishav_Roy_CV.pdf`. The navigation link opens the PDF in a new tab; the exact inline-view/download behavior can still depend on the visitor's browser or PDF settings.
 
 To update the CV:
 
@@ -65,6 +66,8 @@ npm run build:review
 ```
 
 The deployment workflow intentionally does not compile LaTeX. The PDF is a committed static asset so the public CV link stays stable and the website build stays simple.
+
+The checked-in TeX source should preserve all PDF-relevant content from the CV. Large inactive `comment` environments may be omitted to avoid publishing dormant reference/contact blocks, but visible CV content should not be removed as part of website maintenance.
 
 ## Deployment
 
