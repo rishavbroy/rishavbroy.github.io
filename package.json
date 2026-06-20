@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "node scripts/check-cv-assets.mjs",
     "build": "astro build",
     "preview": "astro preview",
+    "check:cv": "node scripts/check-cv-assets.mjs",
     "review": "node scripts/make-review-zip.mjs",
     "dev:review": "node scripts/run-with-review.mjs dev",
     "build:review": "node scripts/run-with-review.mjs build"
