@@ -1,0 +1,254 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage{multicol}
+\usepackage{changepage} % for adjustwidth
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}}
+\newcommand{\resumeSubSubheading}[2]{\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-7pt}}
+\newcommand{\resumeProjectHeading}[2]{\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2 \\
+  \end{tabular*}\vspace{-7pt}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Rishav Roy} \\ \vspace{1pt}
+    \small  
+    \href{https://github.com/rishavbroy}{{github.com/rishavbroy}} $|$ 
+    \href{mailto:roybrishav@gmail.com}{{roybrishav@gmail.com}} $|$
+    \href{tel:19857893732}{+1-985-789-3732}
+\end{center}
+
+\vspace{-1mm}
+
+\vspace{-6.5mm}
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Wisconsin--Madison, B.S.}{Spring 2026}
+      {\parbox[t]{0.65\textwidth}{Triple Major: Economics, Mathematics, and Data Science \\ \textnormal{\textbf{Recent GPA (since Summer 2024): 3.9} $|$ Overall GPA: 3.3}}}{Madison, WI}%\footnotesize{}
+      \vspace{2mm}
+    \resumeSubheading
+      {Graduate-Level Coursework}{}{}{}
+      \vspace{-5.5mm}
+      \begin{multicols}{2}
+      \begin{itemize}[label={}]
+        \item PhD Macroeconomics I--II (MATLAB) \parbox[t]{0.5\textwidth}{\vspace{-0.8em} \footnotesize \underline{\textbf{\textit{Top scorer}} in PhD Macroeconomics II}}
+        \item PhD Microeconomics I--II
+        \item PhD Industrial Organization I--II (audit)
+        \item PhD Econometrics I--II (Stata) \parbox[t]{0.5\textwidth}{\vspace{-0.8em} \footnotesize \underline{\textbf{\textit{Top scorer}} in PhD Econometrics II} in 18-cr. semester}
+        \item Master’s-Level Measure \& Integration (Honors) \parbox[t]{0.5\textwidth}{\vspace{-0.9em} \footnotesize \underline{\textit{Top scorer}} of first half in 18-cr. semester}
+      \end{itemize}
+      \end{multicols}
+      \vspace{-5mm}
+    \resumeSubheading
+      {Select Undergraduate Coursework}{}{}{}
+      \vspace{-5.5mm}
+      \begin{multicols}{2}
+      \begin{itemize}[label={}]
+          \item Data Science Programming I--II (Python, SQL)
+          \item Introduction to Optimization (Julia)
+          \item Machine Learning \& Classification (Python)
+          \item Econometrics: AI \& Machine Learning (R)
+          \item Foundation Models \& LLMs (Python)
+          \item Real Analysis I--II (Honors)
+      \end{itemize}
+      \end{multicols}
+  \resumeSubHeadingListEnd
+
+%-----------RESEARCH-----------
+
+\vspace{-9mm}
+
+
+\vspace{1mm}
+
+\section{Research Experience}
+\resumeSubHeadingListStart
+    \resumeSubheading{Escaping Inequality in India: The Role of English-Medium Instruction}{Spring 2025--Present}{Senior Thesis Paper (with feedback from Prof. Laura Schechter)}{}
+    \resumeItemListStart
+
+        \resumeItem{Built a district pseudo-panel ($N = 454$) merging 2007-08/2017-18 survey microdata and metadata, 35 Census 2001 language files, \& 2019-20 shapefiles to study EMI exposure on consumption growth with survey-weighted measures.}
+
+        \resumeItem{Estimated district-level 2SLS with state-level clustered SEs, partial $F=39.20$. Documented endogeneity threats, spatial spillovers (Moran's $I$, Monte Carlo). Designed reusable IV generator to safely iterate 2SLS specifications.}
+        %\resumeItem{Estimated district-level 2SLS with state-level clustered SEs. Verified relevance (partial $F=39.20$) of IV, the 2001 pop.-WA of mother tongues' linguistic distance  from Hindi. Documented endogeneity threats, spatial spillovers (Moran's $I$, Monte Carlo), ecological fallacy. Designed reusable IV generator to safely iterate 2SLS specifications.}
+
+        \resumeItem{Estimated enrollment probit with design-based SEs, complex survey design (nested strata, lonely PSUs). Computed AME, delta-method SEs via autodiff. Rejected MCAR via logits, BH procedure. Mitigated systematic missingness.}
+        %\resumeItem{Detected spatial autocorrelation via Moran's $I$, constructed spatial lags, \& prototyped spatial IV/GMM.}
+
+        \resumeItem{Harmonized districts across renames/mergers/splits \& typos via multi-pass fuzzy joins (soundex, q-gram, etc.), canonicalization, \& 80 manual matches. Engineered data intake tools robust to OS-specific file-naming conventions.} % Identified duplicates driving multicollinearity.
+       
+        \resumeItem{Drafted 49-page paper in R Markdown with detailed replication notes, automated publication-quality maps/tables.}
+    \resumeItemListEnd
+
+
+    \resumeSubheading{Language Models as Measurement Instruments: Risks for Estimation}{Spring 2026--Present}{Independent Research Project (with feedback from Prof. Harold D. Chiang)}{}
+    \resumeItemListStart
+        \resumeItem{Formulated LM-generated measures as noisy proxies for central banks’ latent policy stance. Decomposed noise into error/leakage channels whose effects on downstream economic estimation I then experimentally isolated.}
+
+        \resumeItem{Built reproducible Python codebase for World Central Banks corpus (380,200 sentences, 3,453 docs, 1996-2024): ingestion, measurement, aggregation, FE regressions with IMF/World Bank data, and automated tables/figures.}
+
+        \resumeItem{Evaluated non-classical measurement error using 25,000 human-labeled sentences and entity masking, semantic perturbations, validation sample-size simulations, regressions predicting errors, and sensitivity to aggregation rules.}
+
+        \resumeItem{Currently fine-tuning RoBERTa model while using a TF-IDF/logit baseline to benchmark and debug the pipeline. Will compare models by predictive performance, potential propagation of errors into macroeconomic estimation.}
+        
+    \resumeItemListEnd
+
+
+    \resumeSubheading{Fast Inference for Large-$N$ Panel Quantile Regression \& Common Shocks}{Spring 2026--Present}{Research Project (with guidance from Prof. Harold D. Chiang)}{}
+    \resumeItemListStart
+        \resumeItem{Defined stochastic subgradient estimator for fixed-effects panel quantile regression under common shocks. Demonstrated $\sqrt{T}$-normality under full-period stochastic increments. Outlined Polyak-Ruppert averaging, online updating, and mini-batch rate conditions for $o_p(T^{-1/2})$ score residuals and stochastic approximation errors.}
+        \resumeItem{Eliminated first-order effect of FE scores and $N$-dimensional incidental parameters via orthogonalized slope moment, yielding the Schur-complement Jacobian $\Gamma$ and identifying the common-shock variance component $\Sigma$.}
+        \resumeItem{Developed proof strategy for first-order equivalence between one-step corrected SGD estimator and exact FEQR: asymptotically negligible KKT residuals imply $\sqrt{T}$-normality and valid $\Gamma^{-1}\Sigma\Gamma^{-1}$ sandwich inference.}
+
+    \resumeItemListEnd
+
+%
+
+    \resumeSubheading{Dynamic Discrete Choice in Fast Food: Loyalty, Technology, \& Inequality}{Summer--Fall 2025}{Independent Research Project (with feedback from Prof. Amanda Smith)}{}
+    \resumeItemListStart
+        \resumeItem{Formulated and numerically optimized a structural model of discounts, channel choice (in-store vs. app vs. outside option), and loyalty adoption using exponential cone optimization (Julia/JuMP, MOSEK) with MNL demand.}
+        
+        \resumeItem{Built a reproducible simulation procedure (e.g., $T=20$) with evolving states, feasibility/termination checks, \& numerical stability via stable softmax. Outlined counterfactuals for COVID, input-cost inflation, inequality shocks.}
+        
+        \resumeItem{Ensured convexity despite MNL demand \& concave technology investment via log-sum-exp \& RSOC epigraphs. Avoided bilinearity by updating loyalty shares via lagged states. Added income segmentation via MILP Big-$M$.}
+    \resumeItemListEnd
+
+
+\resumeSubHeadingListEnd
+
+\vspace{-4mm}
+%-----------WORK EXPERIENCE-----------
+\section{Work Experience}
+\resumeSubHeadingListStart
+
+%
+
+    \resumeSubheading{Restaurant and Inventory Manager}{2022--2023}{Sookie’s Veggie Burgers}{Madison, WI}
+    \resumeItemListStart
+        \resumeItem{Built data-driven inventory tracker, cutting waste/holding times and building teamwork under stressful conditions.}
+    \resumeItemListEnd
+
+    \resumeSubheading{Tutor of College-Level Economics, Calculus, Chemistry, and US History}{2022--2023}{Self-Employed}{Remote}
+    %
+\resumeSubHeadingListEnd
+
+\vspace{-4mm}
+%-----------EXTRACURRICULAR EXPERIENCE-----------
+\section{Extracurricular Experience}
+\resumeSubHeadingListStart
+
+\vspace{0.5mm}
+
+    \resumeSubheading{Policies for Labor Recovery: Economic Development Case Competition (\textit{\underline{1\textsuperscript{st} Place}})}{Fall 2024}{Sole Author of Written Report \& Collaborator on Presentation (with feedback from Prof. Simeon Alder)}{}
+    \resumeItemListStart
+        
+        \resumeItem{Analyzed local general equilibrium impacts of a coal-plant closure using demand spillovers, labor reallocation, BLS and WI DWD projections, and direct/indirect/induced labor/fiscal losses  (\$251M output, \$2.8M taxes, 308 jobs).}
+        
+        \resumeItem{Designed demand-driven training addressing job-specific human capital, participation constraints (school funding, housing supply), and retention via supportive services (childcare, transportation) \& post-training mentorship guarantees. Evaluated funding constraints and alternatives beyond WIOA (e.g., WI Fast Forward, SCSEP).}
+        
+        \resumeItem{Presented strategies and potential partnerships for improving business dynamism and climate (licensing, zoning, knowledge diffusion) given local demand gaps (e.g., 50\% retail furniture leakage) to Alliant Energy, MadREP.}
+        
+    \resumeItemListEnd
+
+\resumeSubheading{Presenter, \textnormal{PREDOC.org Research Conference}}{2026}{Booth School of Business, The University of Chicago}{}
+
+\vspace{1mm}
+
+\resumeSubheading{Presenter, \textnormal{Undergraduate Research Symposium}}{2025}{University of Wisconsin-Madison}{}
+
+
+\vspace{2.5mm}
+
+\vspace{-1mm}
+
+
+\resumeSubHeadingListEnd
+
+\vspace{-4.5mm}
+%-----------AWARDS AND HONORS-----------
+\section{Awards \& Honors}
+\resumeSubHeadingListStart
+
+\vspace{0.5mm}
+
+\resumeSubheading{Veldor Kopitzke Scholarship \textnormal{in Economics}}{Fall 2025}{Department of Economics, University of Wisconsin-Madison}{}
+
+\vspace{1mm}
+
+\resumeSubheading{Dean's List}{Fall 2023, Spring 2025, Spring 2026}{University of Wisconsin-Madison}{}
+
+\vspace{2.5mm}
+
+\textbf{Leadership Recognition}: \small{President’s Volunteer Service Award Winner (Field Museum),}\\ \small{Martin Luther King Jr. Outstanding Young Person Award (Urban League of Greater Madison), \\ Certificate of Distinguished Achievement for Outstanding Citizenship (American Legion)}
+
+\resumeSubHeadingListEnd
+
+\vspace{-5mm}
+%-----------PROGRAMMING-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \item{
+     \textbf{Proficient}{: R (incl. spdep), Python (incl. sklearn, transformers), Stata, Julia, MATLAB, SQL, Git, \LaTeX} \\
+     \textbf{Familiar}{: C++, Fortran, JavaScript, HTML/CSS, Mathematica}
+     }
+ \end{itemize}
+
+
+\end{document}
