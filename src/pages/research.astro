@@ -3,10 +3,12 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import SectionHeading from "../components/SectionHeading.astro";
+import TagList from "../components/TagList.astro";
+import { getProjectTaxonomy, sortProjects } from "../lib/projects";
 
-const projects = (await getCollection("projects")).sort(
-  (a, b) => Number(b.data.featured) - Number(a.data.featured) || a.data.order - b.data.order || a.data.title.localeCompare(b.data.title)
-);
+const projects = sortProjects(await getCollection("projects"));
+const taxonomy = getProjectTaxonomy(projects);
+const featuredCount = projects.filter((project) => project.data.featured).length;
 ---
 
 <BaseLayout title="Research" description="Research projects by Rishav Roy in development, political economy, econometrics, macroeconomics, and language models.">
@@ -14,8 +16,42 @@ const projects = (await getCollection("projects")).sort(
     <SectionHeading
       eyebrow="Research"
       title="Projects and research questions"
-      description="This page is intentionally data-driven: each project is a structured Markdown entry with status, topics, skills, question, description, links, and a featured flag. Interactive filters will be added in a later pass."
+      description="Each project is a structured Markdown entry with status, topics, skills, question, description, links, and a featured flag. Interactive filters will be added in a later pass."
     />
+
+    <div class="research-summary" aria-label="Research collection summary">
+      <div class="metric-card">
+        <strong>{projects.length}</strong>
+        <span>Projects</span>
+      </div>
+      <div class="metric-card">
+        <strong>{featuredCount}</strong>
+        <span>Featured</span>
+      </div>
+      <div class="metric-card">
+        <strong>{taxonomy.topics.length}</strong>
+        <span>Topics</span>
+      </div>
+      <div class="metric-card">
+        <strong>{taxonomy.skills.length}</strong>
+        <span>Skills</span>
+      </div>
+    </div>
+
+    <div class="taxonomy-grid">
+      <section class="taxonomy-card" aria-labelledby="status-taxonomy">
+        <h2 id="status-taxonomy">Statuses</h2>
+        <TagList tags={taxonomy.statuses} label="Project statuses" variant="type" />
+      </section>
+      <section class="taxonomy-card" aria-labelledby="topic-taxonomy">
+        <h2 id="topic-taxonomy">Topics</h2>
+        <TagList tags={taxonomy.topics} label="Project topics" variant="topic" />
+      </section>
+      <section class="taxonomy-card" aria-labelledby="skill-taxonomy">
+        <h2 id="skill-taxonomy">Skills</h2>
+        <TagList tags={taxonomy.skills} label="Project skills" variant="skill" />
+      </section>
+    </div>
   </section>
 
   <section class="container section compact-section">

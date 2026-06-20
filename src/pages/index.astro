@@ -3,10 +3,9 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import SectionHeading from "../components/SectionHeading.astro";
+import { getFeaturedProjects } from "../lib/projects";
 
-const featuredProjects = (await getCollection("projects"))
-  .filter((project) => project.data.featured)
-  .sort((a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title));
+const featuredProjects = getFeaturedProjects(await getCollection("projects"));
 ---
 
 <BaseLayout>

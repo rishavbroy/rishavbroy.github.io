@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import ProjectLinkList from "./ProjectLinkList.astro";
 import TagList from "./TagList.astro";
 
 interface Props {
@@ -8,31 +9,28 @@ interface Props {
 
 const { project } = Astro.props;
 const { data } = project;
-const links = Object.entries(data.links ?? {}).filter(([, value]) => Boolean(value));
-const linkLabels: Record<string, string> = {
-  github: "GitHub",
-  paper: "Paper",
-  slides: "Slides",
-  poster: "Poster",
-  code: "Code",
-  website: "Website"
-};
 ---
 
-<article class="card project-card">
-  <div class="card-kicker">{data.status}</div>
+<article class:list={["card", "project-card", data.featured && "featured-project"]}>
+  <div class="project-card-header">
+    <div class="card-kicker">{data.status}</div>
+    {data.featured && <span class="featured-badge">Featured</span>}
+  </div>
+
   <h3>{data.title}</h3>
   <p class="project-question"><strong>Question:</strong> {data.question}</p>
   <p>{data.shortDescription}</p>
-  <TagList tags={data.topics} label={`Topics for ${data.title}`} variant="topic" />
-  <TagList tags={data.skills} label={`Skills for ${data.title}`} variant="skill" />
-  {links.length > 0 && (
-    <div class="card-links" aria-label={`Links for ${data.title}`}>
-      {links.map(([key, value]) => (
-        <a href={value as string} target="_blank" rel="noreferrer">
-          {linkLabels[key] ?? key}
-        </a>
-      ))}
+
+  <div class="tag-groups">
+    <div>
+      <p class="tag-group-label">Topics</p>
+      <TagList tags={data.topics} label={`Topics for ${data.title}`} variant="topic" />
     </div>
-  )}
+    <div>
+      <p class="tag-group-label">Skills</p>
+      <TagList tags={data.skills} label={`Skills for ${data.title}`} variant="skill" />
+    </div>
+  </div>
+
+  <ProjectLinkList links={data.links} label={`Links for ${data.title}`} />
 </article>
