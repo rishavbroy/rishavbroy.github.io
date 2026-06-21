@@ -12,21 +12,17 @@ const taxonomy = getCourseTaxonomy(courses);
 
 <BaseLayout title="Courses" description="Selected coursework by Rishav Roy in graduate economics, mathematics, data science, machine learning, political economy, and development.">
   <section class="container page-hero">
-    <SectionHeading
-      eyebrow="Courses"
-      title="Selected coursework"
-      description="A selective, structured list of courses. Course data is stored as structured JSON with semester, sortable term order, grade, achievements, course types, skills, and optional syllabus links."
-    />
-  <CollectionFilters
+    <SectionHeading eyebrow="Courses" title="Selected coursework" />
+    <CollectionFilters
       id="courses"
       label="Filter selected coursework"
       searchPlaceholder="Search courses by title, semester, achievement, type, or skill"
       itemSingular="course"
       itemPlural="courses"
       groups={[
-        { key: "semester", label: "Semester", options: taxonomy.semesters },
-        { key: "types", label: "Course type", options: taxonomy.types },
-        { key: "achievements", label: "Achievement", options: taxonomy.achievements }
+        { key: "semester", label: "Semester", options: taxonomy.semesters, defaultOpen: true },
+        { key: "types", label: "Course type", options: taxonomy.types, defaultOpen: true },
+        { key: "achievements", label: "Achievement", options: taxonomy.achievements, defaultOpen: true }
       ]}
     />
   </section>
@@ -36,5 +32,6 @@ const taxonomy = getCourseTaxonomy(courses);
       {courses.map((course) => <CourseCard course={course} />)}
     </div>
     <p class="no-filter-results" data-filter-empty="courses" hidden>No courses match those filters.</p>
+    <p class="collection-footnote">Course data is stored as structured JSON with semester, sortable term order, grade, achievements, course types, skills, and optional syllabus links.</p>
   </section>
 </BaseLayout>
