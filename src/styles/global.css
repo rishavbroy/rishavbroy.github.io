@@ -153,8 +153,8 @@ p {
 }
 
 .hero-image-wrap {
-  width: min(100%, 19rem);
-  max-width: 19rem;
+  width: min(100%, 21rem);
+  max-width: 21rem;
   margin-inline: auto;
   border: 1px solid rgb(245 239 230 / 0.12);
   border-radius: var(--radius-lg);
@@ -234,6 +234,16 @@ p {
 
 .section-heading p {
   font-size: 1.06rem;
+}
+
+.section-heading a {
+  color: var(--accent-soft);
+  font-weight: 800;
+  text-underline-offset: 0.2em;
+}
+
+.section-heading a:hover {
+  color: var(--text);
 }
 
 .interest-grid,
@@ -509,8 +519,8 @@ p {
   }
 
   .hero-image-wrap {
-    width: clamp(16rem, 19vw, 18.5rem);
-    max-width: 18.5rem;
+    width: clamp(18rem, 21vw, 21rem);
+    max-width: 21rem;
   }
 }
 
