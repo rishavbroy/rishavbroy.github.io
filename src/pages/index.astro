@@ -61,11 +61,9 @@ const featuredProjects = getFeaturedProjects(await getCollection("projects"));
   </section>
 
   <section id="current-projects" class="container section">
-    <SectionHeading
-      eyebrow="My Current Projects"
-      title="Research questions I am actively developing"
-      description="Featured projects are drawn from the same structured project collection used on the Research page."
-    />
+    <SectionHeading eyebrow="My Current Projects" title="Research questions I am actively developing">
+      <p>All of my projects can be found on the <a href="/research/">Research page</a>.</p>
+    </SectionHeading>
     <div class="card-grid">
       {featuredProjects.map((project) => <ProjectCard project={project} />)}
     </div>
