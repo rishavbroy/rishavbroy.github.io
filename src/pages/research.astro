@@ -12,21 +12,17 @@ const taxonomy = getProjectTaxonomy(projects);
 
 <BaseLayout title="Research" description="Research projects by Rishav Roy in development, political economy, econometrics, macroeconomics, and language models.">
   <section class="container page-hero">
-    <SectionHeading
-      eyebrow="Research"
-      title="Projects and research questions"
-      description="Use the filters to scan projects by field, method, or status."
-    />
+    <SectionHeading eyebrow="Research" title="Projects and research questions" />
     <CollectionFilters
       id="research"
       label="Filter research projects"
-      searchPlaceholder="Search projects by title, question, topic, or skill"
+      searchPlaceholder="Search projects by title, mentor, question, topic, or skill"
       itemSingular="project"
       itemPlural="projects"
       groups={[
-        { key: "status", label: "Status", options: taxonomy.statuses, defaultOpen: true },
-        { key: "topics", label: "Topic", options: taxonomy.topics, defaultOpen: true },
-        { key: "skills", label: "Skill or technique", options: taxonomy.skills, defaultOpen: false }
+        { key: "status", label: "Status", options: taxonomy.statuses },
+        { key: "topics", label: "Topic", options: taxonomy.topics },
+        { key: "skills", label: "Skill or technique", options: taxonomy.skills }
       ]}
     />
   </section>
@@ -36,6 +32,5 @@ const taxonomy = getProjectTaxonomy(projects);
       {projects.map((project) => <ProjectCard project={project} />)}
     </div>
     <p class="no-filter-results" data-filter-empty="research" hidden>No projects match those filters.</p>
-    <p class="collection-footnote">Each project is a structured Markdown entry with status, topics, skills, question, description, links, and a featured flag.</p>
   </section>
 </BaseLayout>

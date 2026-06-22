@@ -37,7 +37,7 @@ const {
   <div class="filter-groups" aria-label={`${label} controls`}>
     {
       groups.map((group) => (
-        <details class="filter-group" data-filter-group={group.key} open={group.defaultOpen !== false}>
+        <details class="filter-group" data-filter-group={group.key} open={group.defaultOpen === true ? true : undefined}>
           <summary>
             <span>{group.label}</span>
             <span class="filter-summary-count" data-filter-summary>All</span>
