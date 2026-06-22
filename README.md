@@ -9,6 +9,7 @@ Personal website for Rishav Roy, built with [Astro](https://astro.build/) and de
 - `src/components/` contains reusable UI blocks.
 - `src/content/projects/` contains structured research project entries.
 - `src/data/courses.json` contains structured course entries.
+- `src/data/people.ts` contains canonical professor and mentor names/links used by courses and projects.
 - `public/` contains static files copied as-is to the deployed site.
 - `public/cv/Rishav_Roy_CV.pdf` is the committed CV PDF linked directly from the nav.
 - `cv/Rishav_Roy_CV.tex` is the public LaTeX source for the CV.
@@ -63,11 +64,11 @@ npm run dev:review:log
 
 ## Content data
 
-Research projects are Markdown entries because they may later grow into project pages with prose bodies. Courses are stored in `src/data/courses.json` because they are structured records rather than essays. Both are still Astro content collections with Zod schemas, so they retain build-time validation and typed `getCollection()` access.
+Research projects are Markdown entries because they may later grow into project pages with prose bodies. Courses are stored in `src/data/courses.json` because they are structured records rather than essays. Professors and mentors are referenced by stable IDs and resolved through `src/data/people.ts`, so one canonical name/link update flows through all cards that cite that person. Both projects and courses are still Astro content collections with Zod schemas, so they retain build-time validation and typed `getCollection()` access.
 
 ## Filtering and search
 
-The Research and Courses pages use progressively enhanced client-side filtering. Cards are rendered normally at build time, so all content remains visible if JavaScript is disabled. When JavaScript is available, `CollectionFilters.astro` reads `data-*` attributes on each card and applies search plus one active filter per group.
+The Research and Courses pages use progressively enhanced client-side filtering. Cards are rendered normally at build time, so all content remains visible if JavaScript is disabled. When JavaScript is available, `CollectionFilters.astro` reads `data-*` attributes on each card and applies search plus multi-select filters. Within a filter group, selected values are combined with OR logic; across filter groups, groups are combined with AND logic.
 
 - Research filters: status, topic, skill/technique.
 - Course filters: semester, course type, achievement.
