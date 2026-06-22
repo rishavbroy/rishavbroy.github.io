@@ -1,0 +1,24 @@
+---
+import { getPeopleByIds } from "../data/people";
+
+interface Props {
+  ids?: string[];
+  label: string;
+  context?: string;
+}
+
+const { ids = [], label, context = label } = Astro.props;
+const people = getPeopleByIds(ids, context);
+---
+
+{people.length > 0 && (
+  <p class="people-line">
+    <span>{label}:</span>{" "}
+    {people.map((person, index) => (
+      <>
+        {index > 0 && <span aria-hidden="true">, </span>}
+        <a href={person.url} target="_blank" rel="noreferrer">{person.name}</a>
+      </>
+    ))}
+  </p>
+)}

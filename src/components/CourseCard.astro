@@ -1,7 +1,9 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import PeopleList from "./PeopleList.astro";
 import TagList from "./TagList.astro";
 import { toFilterData, toSearchData } from "../lib/filterData";
+import { getPeopleNames } from "../data/people";
 
 interface Props {
   course: CollectionEntry<"courses">;
@@ -10,13 +12,16 @@ interface Props {
 const { course } = Astro.props;
 const { data } = course;
 const filterScope = "courses";
+const peopleContext = `course: ${data.title}`;
+const professorNames = getPeopleNames(data.professors, peopleContext);
 const searchData = toSearchData([
   data.title,
   data.semester,
   data.grade,
   data.achievements,
   data.types,
-  data.skills
+  data.skills,
+  professorNames
 ]);
 ---
 
@@ -35,6 +40,7 @@ const searchData = toSearchData([
     </div>
     {data.grade && <span class="grade-pill" aria-label={`Grade: ${data.grade}`}>{data.grade}</span>}
   </div>
+  <PeopleList ids={data.professors} label="Professors" context={peopleContext} />
   <TagList tags={data.achievements} label={`Achievements for ${data.title}`} variant="achievement" />
   <TagList tags={data.types} label={`Types for ${data.title}`} variant="type" />
   <TagList tags={data.skills} label={`Skills for ${data.title}`} variant="skill" />

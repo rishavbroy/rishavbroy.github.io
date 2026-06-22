@@ -5,12 +5,26 @@
     "semester": "Spring 2026",
     "termOrder": 202601,
     "grade": "A",
-    "achievements": ["Top scorer", "PhD-level"],
-    "types": ["Graduate Economics", "Econometrics"],
-    "skills": ["Asymptotic theory", "Causal inference", "Stata"],
+    "achievements": [
+      "Top scorer",
+      "PhD-level"
+    ],
+    "types": [
+      "Graduate Economics",
+      "Econometrics"
+    ],
+    "skills": [
+      "Asymptotic theory",
+      "Causal inference",
+      "Stata"
+    ],
     "syllabusUrl": "",
     "featured": true,
-    "order": 1
+    "order": 1,
+    "professors": [
+      "bruce-hansen",
+      "harold-chiang"
+    ]
   },
   {
     "id": "phd-macroeconomics-ii",
@@ -18,12 +32,25 @@
     "semester": "Spring 2025",
     "termOrder": 202501,
     "grade": "A",
-    "achievements": ["Top scorer", "PhD-level"],
-    "types": ["Graduate Economics", "Macroeconomics"],
-    "skills": ["Dynamic models", "MATLAB"],
+    "achievements": [
+      "Top scorer",
+      "PhD-level"
+    ],
+    "types": [
+      "Graduate Economics",
+      "Macroeconomics"
+    ],
+    "skills": [
+      "Dynamic models",
+      "MATLAB"
+    ],
     "syllabusUrl": "",
     "featured": true,
-    "order": 2
+    "order": 2,
+    "professors": [
+      "rishabh-kirpalani",
+      "ananth-seshadri"
+    ]
   },
   {
     "id": "measure-integration",
@@ -31,12 +58,24 @@
     "semester": "Spring 2025",
     "termOrder": 202501,
     "grade": "A",
-    "achievements": ["Top scorer of first half", "Master's-level", "Honors"],
-    "types": ["Mathematics"],
-    "skills": ["Proofs", "Measure theory"],
+    "achievements": [
+      "Top scorer of first half",
+      "Master's-level",
+      "Honors"
+    ],
+    "types": [
+      "Mathematics"
+    ],
+    "skills": [
+      "Proofs",
+      "Measure theory"
+    ],
     "syllabusUrl": "",
     "featured": true,
-    "order": 3
+    "order": 3,
+    "professors": [
+      "shengwen-gan"
+    ]
   },
   {
     "id": "development-economics",
@@ -44,11 +83,22 @@
     "semester": "Spring 2026",
     "termOrder": 202601,
     "grade": "A",
-    "achievements": ["Highest scorer on final"],
-    "types": ["Political Economy and Development", "Economics"],
-    "skills": ["Development theory", "Empirical development"],
+    "achievements": [
+      "Highest scorer on final"
+    ],
+    "types": [
+      "Political Economy and Development",
+      "Economics"
+    ],
+    "skills": [
+      "Development theory",
+      "Empirical development"
+    ],
     "syllabusUrl": "",
     "featured": true,
-    "order": 4
+    "order": 4,
+    "professors": [
+      "laura-schechter"
+    ]
   }
 ]

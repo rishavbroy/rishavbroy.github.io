@@ -308,6 +308,27 @@ p {
   gap: var(--space-3);
 }
 
+.people-line {
+  margin: calc(var(--space-3) * -0.25) 0 var(--space-3);
+  color: var(--card-muted);
+  font-size: 0.92rem;
+}
+
+.people-line span:first-child {
+  color: var(--card-text);
+  font-weight: 800;
+}
+
+.people-line a {
+  color: var(--card-text);
+  font-weight: 700;
+  text-decoration-color: rgb(23 17 14 / 0.28);
+}
+
+.people-line a:hover {
+  text-decoration-color: #9d561e;
+}
+
 .grade-pill {
   flex: 0 0 auto;
   min-width: 2.25rem;
@@ -693,11 +714,6 @@ html[data-js="true"] .filter-panel {
   background: rgb(245 239 230 / 0.04);
 }
 
-.collection-footnote {
-  margin: var(--space-5) 0 0;
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
 
 .no-filter-results[hidden],
 [data-filter-card][hidden] {
