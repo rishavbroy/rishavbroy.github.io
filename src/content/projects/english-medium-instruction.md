@@ -12,6 +12,8 @@ skills:
   - Instrumental variables
   - Spatial analysis
   - Survey data
+mentors:
+  - laura-schechter
 question: "Can exposure to English-medium instruction help households escape persistent inequality, and through what channels?"
 shortDescription: "A district pseudo-panel project using Indian survey microdata, Census language files, shapefiles, and IV methods to study English-medium instruction exposure and consumption growth."
 links:

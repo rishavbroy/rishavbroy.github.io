@@ -12,6 +12,8 @@ skills:
   - Discrete choice
   - Convex optimization
   - Julia
+mentors:
+  - amanda-smith
 question: "How do loyalty programs, app adoption, and discount technologies reshape pricing, channel choice, and consumer surplus across income groups?"
 shortDescription: "A structural modeling project using dynamic channel choice, loyalty adoption, and discount technology to study how digital fast-food platforms can change firm strategy and inequality."
 links:

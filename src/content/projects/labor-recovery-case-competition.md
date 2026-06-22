@@ -12,6 +12,8 @@ skills:
   - Local general equilibrium
   - Workforce development
   - Public finance
+mentors:
+  - simeon-alder
 question: "How should local policymakers design workforce and business-development policy after a major negative labor-demand shock?"
 shortDescription: "A first-place economic development case competition project estimating local impacts from a coal-plant closure and designing demand-driven training, supportive services, and business-dynamism interventions."
 links:

@@ -1,8 +1,10 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import PeopleList from "./PeopleList.astro";
 import ProjectLinkList from "./ProjectLinkList.astro";
 import TagList from "./TagList.astro";
 import { toFilterData, toSearchData } from "../lib/filterData";
+import { getPeopleNames } from "../data/people";
 
 interface Props {
   project: CollectionEntry<"projects">;
@@ -11,13 +13,16 @@ interface Props {
 const { project } = Astro.props;
 const { data } = project;
 const filterScope = "research";
+const peopleContext = `project: ${data.title}`;
+const mentorNames = getPeopleNames(data.mentors, peopleContext);
 const searchData = toSearchData([
   data.title,
   data.status,
   data.question,
   data.shortDescription,
   data.topics,
-  data.skills
+  data.skills,
+  mentorNames
 ]);
 ---
 
@@ -35,6 +40,7 @@ const searchData = toSearchData([
   </div>
 
   <h3>{data.title}</h3>
+  <PeopleList ids={data.mentors} label="Mentors" context={peopleContext} />
   <p class="project-question"><strong>Question:</strong> {data.question}</p>
   <p>{data.shortDescription}</p>
 

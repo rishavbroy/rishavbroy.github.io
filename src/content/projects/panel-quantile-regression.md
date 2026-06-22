@@ -10,6 +10,8 @@ skills:
   - Proofs
   - Stochastic approximation
   - Asymptotic theory
+mentors:
+  - harold-chiang
 question: "Can stochastic subgradient methods deliver fast, valid inference for fixed-effects panel quantile regression under common shocks?"
 shortDescription: "A theoretical econometrics project deriving an orthogonalized slope moment and one-step correction strategy for large-N panel quantile regression with common shocks."
 links:

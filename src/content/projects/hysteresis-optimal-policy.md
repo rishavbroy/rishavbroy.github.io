@@ -11,6 +11,8 @@ skills:
   - Theory
   - Time series
   - Model diagnostics
+mentors:
+  - job-boerma
 question: "What observable implications distinguish true hysteresis from persistence, long memory, or misspecified Markov dynamics?"
 shortDescription: "A project developing empirical proxies and falsification strategies for distinguishing stochastic hysteresis from more familiar forms of persistence in macro, finance, and climate-policy settings."
 links:
