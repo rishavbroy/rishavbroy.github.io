@@ -5,6 +5,7 @@ import ProjectLinkList from "./ProjectLinkList.astro";
 import TagList from "./TagList.astro";
 import { toFilterData, toSearchData } from "../lib/filterData";
 import { getPeopleNames } from "../data/people";
+import { getPeriodValues } from "../lib/terms";
 
 interface Props {
   project: CollectionEntry<"projects">;
@@ -15,6 +16,7 @@ const { data } = project;
 const filterScope = "research";
 const peopleContext = `project: ${data.title}`;
 const mentorNames = getPeopleNames(data.mentors, peopleContext);
+const period = getPeriodValues(data.period);
 const searchData = toSearchData([
   data.title,
   data.status,
@@ -22,6 +24,7 @@ const searchData = toSearchData([
   data.shortDescription,
   data.topics,
   data.skills,
+  data.period.label,
   mentorNames
 ]);
 ---
@@ -32,11 +35,16 @@ const searchData = toSearchData([
   data-status={toFilterData(data.status)}
   data-topics={toFilterData(data.topics)}
   data-skills={toFilterData(data.skills)}
+  data-period-start={period.start}
+  data-period-end={period.end}
   data-search={searchData}
 >
   <div class="project-card-header">
     <div class="card-kicker">{data.status}</div>
-    {data.featured && <span class="featured-badge">Featured</span>}
+    <div class="project-card-meta">
+      <span class="project-period">{data.period.label}</span>
+      {data.featured && <span class="featured-badge">Featured</span>}
+    </div>
   </div>
 
   <h3>{data.title}</h3>

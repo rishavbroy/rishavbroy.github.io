@@ -7,6 +7,17 @@ interface FilterGroup {
   defaultOpen?: boolean;
 }
 
+interface RangePoint {
+  label: string;
+  value: number;
+}
+
+interface RangeFilter {
+  key: string;
+  label: string;
+  points: RangePoint[];
+}
+
 interface Props {
   id: string;
   label: string;
@@ -15,6 +26,7 @@ interface Props {
   itemSingular: string;
   itemPlural: string;
   groups: FilterGroup[];
+  range?: RangeFilter;
 }
 
 const {
@@ -24,8 +36,16 @@ const {
   searchPlaceholder = "Search...",
   itemSingular,
   itemPlural,
-  groups
+  groups,
+  range
 } = Astro.props;
+
+const hasRange = range && range.points.length > 1;
+const rangeStartLabel = hasRange ? range.points[0].label : "";
+const rangeEndLabel = hasRange ? range.points[range.points.length - 1].label : "";
+const rangeMax = hasRange ? range.points.length - 1 : 0;
+const rangeLabels = hasRange ? range.points.map((point) => point.label).join("|") : "";
+const rangeValues = hasRange ? range.points.map((point) => String(point.value)).join("|") : "";
 ---
 
 <section class="filter-panel" data-filter-root={id} data-item-singular={itemSingular} data-item-plural={itemPlural} aria-label={label}>
@@ -35,6 +55,31 @@ const {
   </div>
 
   <div class="filter-groups" aria-label={`${label} controls`}>
+    {hasRange && range && (
+      <details
+        class="filter-group range-filter-group"
+        data-filter-range={range.key}
+        data-range-labels={rangeLabels}
+        data-range-values={rangeValues}
+      >
+        <summary>
+          <span>{range.label}</span>
+          <span class="filter-summary-count" data-range-summary>{rangeStartLabel}–{rangeEndLabel}</span>
+        </summary>
+        <div class="range-filter">
+          <label>
+            <span>From</span>
+            <input type="range" min="0" max={rangeMax} step="1" value="0" data-range-start />
+          </label>
+          <label>
+            <span>To</span>
+            <input type="range" min="0" max={rangeMax} step="1" value={rangeMax} data-range-end />
+          </label>
+          <p class="range-filter-current" data-range-current>{rangeStartLabel}–{rangeEndLabel}</p>
+        </div>
+      </details>
+    )}
+
     {
       groups.map((group) => (
         <details class="filter-group" data-filter-group={group.key} open={group.defaultOpen === true ? true : undefined}>
@@ -100,6 +145,41 @@ const {
     const itemSingular = root.dataset.itemSingular || "item";
     const itemPlural = root.dataset.itemPlural || "items";
     const state = new Map();
+    const rangeGroup = root.querySelector("[data-filter-range]");
+    const rangeState = rangeGroup
+      ? {
+          key: rangeGroup.dataset.filterRange,
+          values: String(rangeGroup.dataset.rangeValues || "").split("|").map(Number),
+          labels: String(rangeGroup.dataset.rangeLabels || "").split("|"),
+          start: rangeGroup.querySelector("[data-range-start]"),
+          end: rangeGroup.querySelector("[data-range-end]"),
+          current: rangeGroup.querySelector("[data-range-current]"),
+          summary: rangeGroup.querySelector("[data-range-summary]")
+        }
+      : null;
+
+    function getRangeSelection() {
+      if (!rangeState) return null;
+      const startIndex = Number(rangeState.start?.value || 0);
+      const endIndex = Number(rangeState.end?.value || rangeState.values.length - 1);
+      const lowerIndex = Math.min(startIndex, endIndex);
+      const upperIndex = Math.max(startIndex, endIndex);
+
+      return {
+        start: rangeState.values[lowerIndex],
+        end: rangeState.values[upperIndex],
+        startLabel: rangeState.labels[lowerIndex],
+        endLabel: rangeState.labels[upperIndex]
+      };
+    }
+
+    function updateRangeLabels() {
+      const selection = getRangeSelection();
+      if (!selection || !rangeState) return;
+      const label = `${selection.startLabel}–${selection.endLabel}`;
+      if (rangeState.current) rangeState.current.textContent = label;
+      if (rangeState.summary) rangeState.summary.textContent = label;
+    }
 
     function updateCount(visibleCount) {
       if (!count) return;
@@ -117,8 +197,15 @@ const {
           const cardValues = tokenize(card.dataset[key]);
           return Array.from(selected).some((value) => cardValues.includes(value));
         });
+        const rangeSelection = getRangeSelection();
+        const matchesRange = !rangeSelection || (() => {
+          const cardStart = Number(card.dataset[`${rangeState.key}Start`]);
+          const cardEnd = Number(card.dataset[`${rangeState.key}End`]);
+          if (!Number.isFinite(cardStart) || !Number.isFinite(cardEnd)) return true;
+          return cardStart <= rangeSelection.end && cardEnd >= rangeSelection.start;
+        })();
         const matchesSearch = !query || normalize(card.dataset.search).includes(query);
-        const visible = matchesGroups && matchesSearch;
+        const visible = matchesGroups && matchesRange && matchesSearch;
         card.hidden = !visible;
         if (visible) visibleCount += 1;
       }
@@ -167,8 +254,23 @@ const {
 
     searchInput?.addEventListener("input", applyFilters);
 
+    rangeState?.start?.addEventListener("input", () => {
+      updateRangeLabels();
+      applyFilters();
+    });
+
+    rangeState?.end?.addEventListener("input", () => {
+      updateRangeLabels();
+      applyFilters();
+    });
+
     reset?.addEventListener("click", () => {
       if (searchInput) searchInput.value = "";
+      if (rangeState) {
+        rangeState.start.value = "0";
+        rangeState.end.value = String(rangeState.values.length - 1);
+        updateRangeLabels();
+      }
       for (const group of root.querySelectorAll("[data-filter-group]")) {
         const selected = state.get(group.dataset.filterGroup);
         selected?.clear();
@@ -177,6 +279,7 @@ const {
       applyFilters();
     });
 
+    updateRangeLabels();
     applyFilters();
   }
 

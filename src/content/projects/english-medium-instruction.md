@@ -14,6 +14,10 @@ skills:
   - Survey data
 mentors:
   - laura-schechter
+period:
+  label: "Spring 2025–Present"
+  start: "2025-spring"
+  end: "present"
 question: "Can exposure to English-medium instruction help households escape persistent inequality, and through what channels?"
 shortDescription: "A district pseudo-panel project using Indian survey microdata, Census language files, shapefiles, and IV methods to study English-medium instruction exposure and consumption growth."
 links:

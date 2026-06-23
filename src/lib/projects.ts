@@ -1,5 +1,6 @@
 import type { CollectionEntry } from "astro:content";
 import { uniqueSorted } from "./filterData";
+import { buildTimelinePoints } from "./terms";
 
 export type ProjectEntry = CollectionEntry<"projects">;
 
@@ -25,4 +26,8 @@ export function getProjectTaxonomy(projects: ProjectEntry[]) {
     topics: uniqueSorted(projects.flatMap((project) => project.data.topics)),
     skills: uniqueSorted(projects.flatMap((project) => project.data.skills))
   };
+}
+
+export function getProjectTimeline(projects: ProjectEntry[]) {
+  return buildTimelinePoints(projects.map((project) => project.data.period));
 }

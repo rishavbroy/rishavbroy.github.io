@@ -28,6 +28,11 @@ const projects = defineCollection({
     topics: z.array(z.string()).default([]),
     skills: z.array(z.string()).default([]),
     mentors: z.array(z.string()).default([]),
+    period: z.object({
+      label: z.string(),
+      start: z.string(),
+      end: z.string()
+    }),
     question: z.string(),
     shortDescription: z.string(),
     links: projectLinksSchema
@@ -46,7 +51,7 @@ const courses = defineCollection({
     audited: z.boolean().default(false),
     achievements: z.array(z.string()).default([]),
     types: z.array(z.string()).default([]),
-    skills: z.array(z.string()).default([]),
+    topics: z.array(z.string()).default([]),
     professors: z.array(z.string()).default([]),
     syllabusUrl: optionalUrl,
     featured: z.boolean().default(false),

@@ -14,6 +14,10 @@ skills:
   - Python
 mentors:
   - harold-chiang
+period:
+  label: "Spring 2026–Present"
+  start: "2026-spring"
+  end: "present"
 question: "When language models generate measures used in downstream economic estimation, how do their errors propagate?"
 shortDescription: "A project studying language-model-generated central bank stance measures as noisy proxies for latent policy stance, with experiments on error channels, masking, perturbations, and aggregation rules."
 links:

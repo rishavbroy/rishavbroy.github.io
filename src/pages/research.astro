@@ -4,10 +4,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import CollectionFilters from "../components/CollectionFilters.astro";
 import SectionHeading from "../components/SectionHeading.astro";
-import { getProjectTaxonomy, sortProjects } from "../lib/projects";
+import { getProjectTaxonomy, getProjectTimeline, sortProjects } from "../lib/projects";
 
 const projects = sortProjects(await getCollection("projects"));
 const taxonomy = getProjectTaxonomy(projects);
+const timeline = getProjectTimeline(projects);
 ---
 
 <BaseLayout title="Research" description="Research projects by Rishav Roy in development, political economy, econometrics, macroeconomics, and language models.">
@@ -19,6 +20,7 @@ const taxonomy = getProjectTaxonomy(projects);
       searchPlaceholder="Search projects by title, mentor, question, topic, or skill"
       itemSingular="project"
       itemPlural="projects"
+      range={{ key: "period", label: "Date", points: timeline }}
       groups={[
         { key: "status", label: "Status", options: taxonomy.statuses },
         { key: "topics", label: "Topic", options: taxonomy.topics },
