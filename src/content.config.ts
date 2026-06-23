@@ -52,6 +52,7 @@ const courses = defineCollection({
     achievements: z.array(z.string()).default([]),
     types: z.array(z.string()).default([]),
     topics: z.array(z.string()).default([]),
+    highlights: z.array(z.string()).default([]),
     professors: z.array(z.string()).default([]),
     syllabusUrl: optionalUrl,
     featured: z.boolean().default(false),

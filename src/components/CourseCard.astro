@@ -27,6 +27,7 @@ const searchData = toSearchData([
   data.achievements,
   courseTypes,
   data.topics,
+  data.highlights,
   professorNames
 ]);
 ---
@@ -54,6 +55,11 @@ const searchData = toSearchData([
   <TagList tags={data.achievements} label={`Achievements for ${data.title}`} variant="achievement" />
   <TagList tags={courseTypes} label={`Course types for ${data.title}`} variant="type" />
   <TagList tags={data.topics} label={`Topics for ${data.title}`} variant="topic" />
+  {data.highlights.length > 0 && (
+    <div class="course-highlights" aria-label={`Highlights from ${data.title}`}>
+      {data.highlights.map((highlight) => <p>{highlight}</p>)}
+    </div>
+  )}
   {data.syllabusUrl && (
     <div class="card-links">
       <a href={data.syllabusUrl}>Syllabus</a>

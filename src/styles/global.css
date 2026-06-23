@@ -358,6 +358,11 @@ p {
   text-decoration-color: #9d561e;
 }
 
+.people-line .person-name {
+  color: var(--card-text);
+  font-weight: 700;
+}
+
 .course-card .people-line {
   margin: var(--space-2) 0 0;
 }
@@ -419,6 +424,23 @@ p {
 
 .tag-list-type .tag {
   background: #d5d7f2;
+}
+
+.course-highlights {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: var(--space-4);
+  padding: var(--space-3);
+  border-left: 3px solid #9d561e;
+  border-radius: calc(var(--radius-sm) * 0.8);
+  background: rgb(157 86 30 / 0.08);
+}
+
+.course-highlights p {
+  margin: 0;
+  color: var(--card-text);
+  font-size: 0.92rem;
+  line-height: 1.55;
 }
 
 .project-card {
