@@ -234,6 +234,14 @@ p {
   background: rgb(245 239 230 / 0.04);
 }
 
+.button-secondary:hover,
+.button-secondary:focus-visible {
+  border-color: rgb(217 120 36 / 0.62);
+  background: var(--accent);
+  color: #120d0b;
+  text-decoration: none;
+}
+
 .section-heading {
   max-width: 48rem;
   margin-bottom: var(--space-6);
@@ -350,8 +358,7 @@ p {
 }
 
 .course-card .people-line {
-  margin-top: auto;
-  padding-top: var(--space-4);
+  margin: var(--space-2) 0 0;
 }
 
 .grade-pill {
@@ -424,6 +431,23 @@ p {
 
 .project-card-header .card-kicker {
   margin-bottom: 0;
+}
+
+.project-card-meta {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  max-width: 55%;
+}
+
+.project-period {
+  color: var(--card-muted);
+  font-size: 0.78rem;
+  font-weight: 820;
+  text-align: right;
+  white-space: nowrap;
 }
 
 .featured-badge {
@@ -541,32 +565,24 @@ p {
   padding-bottom: var(--space-9);
 }
 
-.story-section > .eyebrow {
-  color: var(--text);
-  font-size: clamp(2rem, 5vw, 4.25rem);
-  font-weight: 850;
-  letter-spacing: -0.035em;
-  line-height: 1.08;
-  text-transform: none;
-  margin-bottom: var(--space-5);
-}
-
 .story-prose {
   max-width: 64rem;
 }
 
 .story-prose p {
-  color: var(--text);
-  font-size: clamp(1.18rem, 1.4vw, 1.45rem);
+  color: var(--text-muted);
+  font-size: 1.06rem;
   line-height: 1.68;
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-4);
 }
 
-.story-prose .story-statement {
+.story-prose .story-lead {
+  color: var(--text);
   font-size: clamp(1.35rem, 2.1vw, 2rem);
   line-height: 1.35;
   font-weight: 780;
   letter-spacing: -0.035em;
+  margin-bottom: var(--space-5);
 }
 
 .story-prose p:last-child {
@@ -716,6 +732,32 @@ html[data-js="true"] .filter-panel {
   flex-wrap: wrap;
   gap: 0.5rem;
   padding-bottom: var(--space-3);
+}
+
+.range-filter {
+  display: grid;
+  gap: var(--space-3);
+  padding-bottom: var(--space-3);
+}
+
+.range-filter label {
+  display: grid;
+  gap: var(--space-2);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 750;
+}
+
+.range-filter input {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.range-filter-current {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.86rem;
+  font-weight: 800;
 }
 
 .filter-button,
