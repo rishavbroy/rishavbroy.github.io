@@ -68,16 +68,16 @@ npm run dev:review:log
 
 ## Content data
 
-Research projects are Markdown entries because they may later grow into project pages with prose bodies. Courses are stored in `src/data/courses.json` because they are structured records rather than essays. Professors and mentors are referenced by stable IDs and resolved through `src/data/people.ts`, so one canonical name/link update flows through all cards that cite that person. Both projects and courses are still Astro content collections with Zod schemas, so they retain build-time validation and typed `getCollection()` access. Course departments are derived from course codes, so codes should begin with the department label shown in filters, such as `ECON 710` or `COMP SCI 639`.
+Research projects are Markdown entries because they may later grow into project pages with prose bodies. Courses are stored in `src/data/courses.json` because they are structured records rather than essays. Professors and mentors are referenced by stable IDs and resolved through `src/data/people.ts`, so one canonical name/link update flows through all cards that cite that person. Both projects and courses are still Astro content collections with Zod schemas, so they retain build-time validation and typed `getCollection()` access. Course departments are derived from course codes, so codes should begin with the department label shown in filters, such as `ECON 710` or `COMP SCI 639`. Course `types` should contain only level markers and broad subjects, while course `topics` should contain narrower fields, methods, and tools.
 
-Use project mentor fields only when the named person would plausibly recognize the project and your role in it. For smaller explorations, keep the project as a `Research note` without a listed mentor rather than implying an external reference.
+Use project mentor fields deliberately: a `Research note` status communicates scope, while the mentor list communicates provenance or advising context. Project date ranges are stored as discrete academic terms, using `YYYY-spring`, `YYYY-summer`, `YYYY-fall`, or `present`.
 
 ## Filtering and search
 
 The Research and Courses pages use progressively enhanced client-side filtering. Cards are rendered normally at build time, so all content remains visible if JavaScript is disabled. When JavaScript is available, `CollectionFilters.astro` reads `data-*` attributes on each card and applies search plus multi-select filters. Within a filter group, selected values are combined with OR logic; across filter groups, groups are combined with AND logic.
 
-- Research filters: status, topic, skill.
-- Course filters: semester, department, course type, achievement, skill.
+- Research filters: date, status, topic, skill.
+- Course filters: term, department, course type, topic, achievement.
 - Search is local to the page and matches the card text stored in `data-search`.
 
 ## CV workflow
