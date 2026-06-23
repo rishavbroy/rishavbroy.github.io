@@ -221,6 +221,7 @@ p {
   font-weight: 750;
   text-decoration: none;
   border: 1px solid transparent;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
 }
 
 .button-primary {
@@ -408,6 +409,10 @@ p {
   background: #cfe4d7;
 }
 
+.course-card .tag-list-topic .tag {
+  background: #cfe4d7;
+}
+
 .tag-list-achievement .tag {
   background: #f0cfaa;
 }
@@ -565,6 +570,10 @@ p {
   padding-bottom: var(--space-9);
 }
 
+.story-section .section-heading {
+  margin-bottom: var(--space-4);
+}
+
 .story-prose {
   max-width: 64rem;
 }
@@ -577,6 +586,11 @@ p {
 }
 
 .story-prose .story-lead {
+  max-width: 60rem;
+  margin-bottom: var(--space-5);
+}
+
+.story-prose .story-statement {
   color: var(--text);
   font-size: clamp(1.35rem, 2.1vw, 2rem);
   line-height: 1.35;
@@ -751,6 +765,19 @@ html[data-js="true"] .filter-panel {
 .range-filter input {
   width: 100%;
   accent-color: var(--accent);
+}
+
+.range-filter datalist {
+  display: none;
+}
+
+.range-filter-bounds {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  font-weight: 750;
 }
 
 .range-filter-current {
