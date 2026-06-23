@@ -1,30 +1,31 @@
 [
   {
-    "id": "phd-econometrics-ii",
-    "title": "PhD Econometrics II",
-    "code": "ECON 710",
-    "semester": "Spring 2025",
-    "termOrder": 202501,
-    "grade": "A",
-    "achievements": [
-      "Highest score in class"
-    ],
+    "id": "phd-industrial-organization-ii",
+    "title": "PhD Industrial Organization II",
+    "code": "ECON 762",
+    "semester": "Spring 2026",
+    "termOrder": 202601,
+    "grade": "",
+    "audited": true,
+    "achievements": [],
     "types": [
       "PhD-level",
       "Economics"
     ],
+    "topics": [
+      "Industrial organization",
+      "Structural modeling",
+      "Empirical IO"
+    ],
+    "highlights": [
+      "Audited the second PhD industrial organization field course."
+    ],
     "syllabusUrl": "",
-    "featured": true,
+    "featured": false,
     "order": 1,
     "professors": [
-      "bruce-hansen",
-      "harold-chiang"
-    ],
-    "topics": [
-      "Econometrics",
-      "Asymptotic theory",
-      "Causal inference",
-      "Stata"
+      "karam-kang",
+      "panle-barwick"
     ]
   },
   {
@@ -35,11 +36,22 @@
     "termOrder": 202601,
     "grade": "A",
     "achievements": [
-      "Highest score in class"
+      "Highest score on final"
     ],
     "types": [
       "PhD-level",
       "Economics"
+    ],
+    "topics": [
+      "Macroeconomics",
+      "Recursive methods",
+      "Dynamic models",
+      "MATLAB",
+      "LaTeX"
+    ],
+    "highlights": [
+      "Highest score on Rishabh Kirpalani’s final: 86/100; 75th percentile was 68.5.",
+      "Scored 92/100 on Ananth Seshadri’s final; 75th percentile was 88."
     ],
     "syllabusUrl": "",
     "featured": true,
@@ -47,11 +59,341 @@
     "professors": [
       "rishabh-kirpalani",
       "ananth-seshadri"
+    ]
+  },
+  {
+    "id": "foundation-models",
+    "title": "Foundation Models",
+    "code": "COMP SCI 639",
+    "semester": "Spring 2026",
+    "termOrder": 202601,
+    "grade": "A",
+    "achievements": [],
+    "types": [
+      "Computer Science"
+    ],
+    "topics": [
+      "Foundation models",
+      "Machine learning",
+      "Deep learning",
+      "Python"
+    ],
+    "highlights": [
+      "Scored 95/100 on the exam; 75th percentile was 90."
+    ],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 3,
+    "professors": [
+      "frederic-sala"
+    ]
+  },
+  {
+    "id": "empirical-methods-applied-micro",
+    "title": "Empirical Methods in Applied Microeconomics",
+    "code": "ECON 695",
+    "semester": "Spring 2026",
+    "termOrder": 202601,
+    "grade": "A",
+    "achievements": [],
+    "types": [
+      "Economics"
+    ],
+    "topics": [
+      "Applied microeconomics",
+      "Causal inference",
+      "Econometrics",
+      "Stata",
+      "Python"
+    ],
+    "highlights": [],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 4,
+    "professors": [
+      "karam-kang"
+    ]
+  },
+  {
+    "id": "econometrics-ai-machine-learning",
+    "title": "Econometrics with AI and Machine Learning",
+    "code": "ECON 695",
+    "semester": "Spring 2026",
+    "termOrder": 202601,
+    "grade": "A",
+    "achievements": [],
+    "types": [
+      "Economics"
+    ],
+    "topics": [
+      "Econometrics",
+      "AI",
+      "Machine learning",
+      "R",
+      "Python"
+    ],
+    "highlights": [],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 5,
+    "professors": [
+      "harold-chiang"
+    ]
+  },
+  {
+    "id": "development-economics",
+    "title": "Development Economics",
+    "code": "ECON 474",
+    "semester": "Spring 2026",
+    "termOrder": 202601,
+    "grade": "A",
+    "achievements": [
+      "Highest score on final"
+    ],
+    "types": [
+      "Economics"
+    ],
+    "topics": [
+      "Development economics",
+      "Political economy",
+      "Empirical development",
+      "LaTeX"
+    ],
+    "highlights": [
+      "Highest score on final: 18.21/19; 75th percentile was 16.47."
+    ],
+    "syllabusUrl": "",
+    "featured": true,
+    "order": 6,
+    "professors": [
+      "laura-schechter"
+    ]
+  },
+  {
+    "id": "phd-industrial-organization-i",
+    "title": "PhD Industrial Organization I",
+    "code": "ECON 761",
+    "semester": "Fall 2025",
+    "termOrder": 202503,
+    "grade": "",
+    "audited": true,
+    "achievements": [],
+    "types": [
+      "PhD-level",
+      "Economics"
+    ],
+    "topics": [
+      "Industrial organization",
+      "IO theory",
+      "Empirical IO"
+    ],
+    "highlights": [
+      "Audited the first PhD industrial organization field course."
+    ],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 1,
+    "professors": [
+      "kenneth-hendricks",
+      "jean-francois-houde"
+    ]
+  },
+  {
+    "id": "phd-macroeconomics-i",
+    "title": "PhD Macroeconomics I",
+    "code": "ECON 712",
+    "semester": "Fall 2025",
+    "termOrder": 202503,
+    "grade": "AB",
+    "achievements": [],
+    "types": [
+      "PhD-level",
+      "Economics"
     ],
     "topics": [
       "Macroeconomics",
+      "Recursive methods",
       "Dynamic models",
-      "MATLAB"
+      "MATLAB",
+      "LaTeX"
+    ],
+    "highlights": [],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 2,
+    "professors": [
+      "dean-corbae",
+      "job-boerma"
+    ]
+  },
+  {
+    "id": "data-algorithms-ethics-policy",
+    "title": "Data and Algorithms Ethics and Policy",
+    "code": "LIS 461",
+    "semester": "Fall 2025",
+    "termOrder": 202503,
+    "grade": "A",
+    "achievements": [],
+    "types": [
+      "Information Science"
+    ],
+    "topics": [
+      "Data ethics",
+      "Algorithms",
+      "Policy",
+      "AI governance"
+    ],
+    "highlights": [],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 3,
+    "professors": [
+      "b-ian-hutchins"
+    ]
+  },
+  {
+    "id": "political-sociology",
+    "title": "Political Sociology",
+    "code": "SOC 624",
+    "semester": "Fall 2025",
+    "termOrder": 202503,
+    "grade": "A",
+    "achievements": [
+      "Highest score in class",
+      "Honors"
+    ],
+    "types": [
+      "Sociology"
+    ],
+    "topics": [
+      "Political sociology",
+      "Institutions",
+      "Social theory"
+    ],
+    "highlights": [
+      "Highest score in class, with 30/30 on all three exams."
+    ],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 4,
+    "professors": [
+      "ivan-ermakoff"
+    ]
+  },
+  {
+    "id": "stochastic-processes",
+    "title": "Stochastic Processes",
+    "code": "MATH 632",
+    "semester": "Summer 2025",
+    "termOrder": 202502,
+    "grade": "A",
+    "achievements": [],
+    "types": [
+      "Master's-level",
+      "Mathematics"
+    ],
+    "topics": [
+      "Stochastic processes",
+      "Probability",
+      "LaTeX"
+    ],
+    "highlights": [
+      "Completed during a 20-credit-pace summer term."
+    ],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 1,
+    "professors": [
+      "gevorg-mnatsakanyan"
+    ]
+  },
+  {
+    "id": "optimization",
+    "title": "Introduction to Optimization",
+    "code": "COMP SCI 524",
+    "semester": "Summer 2025",
+    "termOrder": 202502,
+    "grade": "AB",
+    "achievements": [],
+    "types": [
+      "Computer Science"
+    ],
+    "topics": [
+      "Convex optimization",
+      "Optimization",
+      "Julia",
+      "LaTeX"
+    ],
+    "highlights": [
+      "Completed during a 20-credit-pace summer term."
+    ],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 2,
+    "professors": [
+      "amanda-smith"
+    ]
+  },
+  {
+    "id": "data-science-programming-ii",
+    "title": "Data Science Programming II",
+    "code": "COMP SCI 320",
+    "semester": "Summer 2025",
+    "termOrder": 202502,
+    "grade": "A",
+    "achievements": [],
+    "types": [
+      "Computer Science",
+      "Data Science"
+    ],
+    "topics": [
+      "Data programming",
+      "Python",
+      "SQL",
+      "Git",
+      "GeoPandas"
+    ],
+    "highlights": [
+      "Completed during a 20-credit-pace summer term."
+    ],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 3,
+    "professors": [
+      "gurmail-singh"
+    ]
+  },
+  {
+    "id": "phd-econometrics-ii",
+    "title": "PhD Econometrics II",
+    "code": "ECON 710",
+    "semester": "Spring 2025",
+    "termOrder": 202501,
+    "grade": "A",
+    "achievements": [
+      "Highest score on final"
+    ],
+    "types": [
+      "PhD-level",
+      "Economics"
+    ],
+    "topics": [
+      "Econometrics",
+      "Asymptotic theory",
+      "Causal inference",
+      "Stata",
+      "LaTeX"
+    ],
+    "highlights": [
+      "Highest score on Bruce Hansen’s final: 93/100; 75th percentile was 67.75.",
+      "Completed during an 18-credit semester."
+    ],
+    "syllabusUrl": "",
+    "featured": true,
+    "order": 1,
+    "professors": [
+      "bruce-hansen",
+      "harold-chiang"
     ]
   },
   {
@@ -69,89 +411,424 @@
       "Master's-level",
       "Mathematics"
     ],
-    "syllabusUrl": "",
-    "featured": true,
-    "order": 3,
-    "professors": [
-      "shengwen-gan"
-    ],
     "topics": [
       "Measure theory",
-      "Proofs"
+      "Real analysis",
+      "Proofs",
+      "LaTeX"
+    ],
+    "highlights": [
+      "Highest score in the first half of the course: 100/100 on the midterm; 75th percentile was 89.75.",
+      "Completed during an 18-credit semester."
+    ],
+    "syllabusUrl": "",
+    "featured": true,
+    "order": 2,
+    "professors": [
+      "shengwen-gan"
     ]
   },
   {
-    "id": "development-economics",
-    "title": "Development Economics",
-    "code": "ECON 474",
-    "semester": "Spring 2026",
-    "termOrder": 202601,
+    "id": "phd-microeconomics-ii",
+    "title": "PhD Microeconomics II",
+    "code": "ECON 713",
+    "semester": "Spring 2025",
+    "termOrder": 202501,
+    "grade": "AB",
+    "achievements": [
+      "Above 75th percentile on final"
+    ],
+    "types": [
+      "PhD-level",
+      "Economics"
+    ],
+    "topics": [
+      "Microeconomic theory",
+      "General equilibrium",
+      "Welfare economics",
+      "Externalities"
+    ],
+    "highlights": [
+      "Scored above the 75th percentile on the final covering general equilibrium, welfare, and externalities.",
+      "Completed during an 18-credit semester."
+    ],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 3,
+    "professors": [
+      "lones-smith",
+      "marzena-rostek"
+    ]
+  },
+  {
+    "id": "research-project-design",
+    "title": "Research Project Design",
+    "code": "ECON 580",
+    "semester": "Spring 2025",
+    "termOrder": 202501,
     "grade": "A",
     "achievements": [
-      "Highest score on final"
+      "Honors"
     ],
     "types": [
       "Economics"
     ],
+    "topics": [
+      "Research design",
+      "Applied economics",
+      "R"
+    ],
+    "highlights": [
+      "Accelerated Honors course completed during an 18-credit semester."
+    ],
     "syllabusUrl": "",
-    "featured": true,
+    "featured": false,
     "order": 4,
     "professors": [
-      "laura-schechter"
-    ],
-    "topics": [
-      "Development economics",
-      "Political economy",
-      "Empirical development"
+      "corina-mommaerts",
+      "agustin-gutierrez"
     ]
   },
   {
-    "id": "foundation-models",
-    "title": "Foundation Models",
-    "code": "COMP SCI 639",
-    "semester": "Spring 2026",
-    "termOrder": 202601,
+    "id": "world-hunger-malnutrition",
+    "title": "World Hunger and Malnutrition",
+    "code": "AAE 350",
+    "semester": "Spring 2025",
+    "termOrder": 202501,
     "grade": "A",
     "achievements": [],
     "types": [
-      "Computer Science"
+      "Development",
+      "Economics"
+    ],
+    "topics": [
+      "Food security",
+      "Malnutrition",
+      "Development",
+      "LaTeX"
+    ],
+    "highlights": [
+      "Completed during an 18-credit semester."
     ],
     "syllabusUrl": "",
     "featured": false,
     "order": 5,
     "professors": [
-      "frederic-sala"
-    ],
-    "topics": [
-      "Foundation models",
-      "Machine learning",
-      "Deep learning"
+      "taiya-bach",
+      "jeremy-foltz"
     ]
   },
   {
-    "id": "phd-industrial-organization-ii",
-    "title": "PhD Industrial Organization II",
-    "code": "ECON 762",
-    "semester": "Spring 2026",
-    "termOrder": 202601,
-    "grade": "",
-    "audited": true,
+    "id": "marxist-literary-history-capitalism",
+    "title": "A Marxist Literary History of Capitalism",
+    "code": "ENGL 175",
+    "semester": "Spring 2025",
+    "termOrder": 202501,
+    "grade": "A",
     "achievements": [],
     "types": [
-      "PhD-level",
-      "Economics"
+      "Literature"
+    ],
+    "topics": [
+      "Political theory",
+      "Capitalism",
+      "Literary history"
+    ],
+    "highlights": [
+      "Course topic: Intro to Marx."
     ],
     "syllabusUrl": "",
     "featured": false,
     "order": 6,
     "professors": [
-      "karam-kang",
-      "panle-barwick"
+      "joseph-bowling"
+    ]
+  },
+  {
+    "id": "phd-econometrics-i",
+    "title": "PhD Econometrics I",
+    "code": "ECON 709",
+    "semester": "Fall 2024",
+    "termOrder": 202403,
+    "grade": "A",
+    "achievements": [
+      "75th percentile both quarters"
+    ],
+    "types": [
+      "PhD-level",
+      "Economics"
     ],
     "topics": [
-      "Industrial organization",
-      "Structural modeling",
-      "Empirical IO"
+      "Econometrics",
+      "Asymptotic theory",
+      "Stata"
+    ],
+    "highlights": [
+      "Earned the 75th percentile in both quarters while taking 17 credits."
+    ],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 1,
+    "professors": [
+      "yong-cai",
+      "jack-porter"
+    ]
+  },
+  {
+    "id": "phd-microeconomics-i",
+    "title": "PhD Microeconomics I",
+    "code": "ECON 711",
+    "semester": "Fall 2024",
+    "termOrder": 202403,
+    "grade": "AB",
+    "achievements": [],
+    "types": [
+      "PhD-level",
+      "Economics"
+    ],
+    "topics": [
+      "Microeconomic theory",
+      "Game theory"
+    ],
+    "highlights": [
+      "Completed during a 17-credit semester."
+    ],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 2,
+    "professors": [
+      "daniel-quint",
+      "benjamin-bernard"
+    ]
+  },
+  {
+    "id": "machine-learning",
+    "title": "Machine Learning",
+    "code": "STAT 451",
+    "semester": "Fall 2024",
+    "termOrder": 202403,
+    "grade": "A",
+    "achievements": [],
+    "types": [
+      "Statistics",
+      "Data Science"
+    ],
+    "topics": [
+      "Machine learning",
+      "Python"
+    ],
+    "highlights": [
+      "Completed during a 17-credit semester."
+    ],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 3,
+    "professors": [
+      "john-gillett"
+    ]
+  },
+  {
+    "id": "data-science-modeling-ii",
+    "title": "Data Science Modeling II",
+    "code": "STAT 340",
+    "semester": "Fall 2024",
+    "termOrder": 202403,
+    "grade": "A",
+    "achievements": [],
+    "types": [
+      "Statistics",
+      "Data Science"
+    ],
+    "topics": [
+      "Statistical learning",
+      "Data science",
+      "R"
+    ],
+    "highlights": [
+      "Completed during a 17-credit semester."
+    ],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 4,
+    "professors": [
+      "bi-cheng-wu"
+    ]
+  },
+  {
+    "id": "real-analysis-ii",
+    "title": "Real Analysis II",
+    "code": "MATH 522",
+    "semester": "Fall 2024",
+    "termOrder": 202403,
+    "grade": "B",
+    "achievements": [
+      "Honors"
+    ],
+    "types": [
+      "Mathematics"
+    ],
+    "topics": [
+      "Real analysis",
+      "Sobolev spaces",
+      "Proofs"
+    ],
+    "highlights": [
+      "Honors work included Sobolev spaces.",
+      "Exam scores rose from 74 to 81 to 97 percent."
+    ],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 5,
+    "professors": [
+      "shengwen-gan"
+    ]
+  },
+  {
+    "id": "code-and-power",
+    "title": "Code and Power",
+    "code": "LIS 500",
+    "semester": "Summer 2024",
+    "termOrder": 202402,
+    "grade": "A",
+    "achievements": [],
+    "types": [
+      "Information Science"
+    ],
+    "topics": [
+      "Cultural analytics",
+      "Data politics",
+      "Python"
+    ],
+    "highlights": [],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 1,
+    "professors": [
+      "jeremy-mclaughlin"
+    ]
+  },
+  {
+    "id": "probability-theory",
+    "title": "Introduction to Theory of Probability",
+    "code": "MATH 431",
+    "semester": "Summer 2024",
+    "termOrder": 202402,
+    "grade": "A",
+    "achievements": [],
+    "types": [
+      "Mathematics"
+    ],
+    "topics": [
+      "Probability",
+      "Mathematical statistics"
+    ],
+    "highlights": [],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 2,
+    "professors": [
+      "zaidan-wu"
+    ]
+  },
+  {
+    "id": "real-analysis-i",
+    "title": "Real Analysis I",
+    "code": "MATH 521",
+    "semester": "Summer 2024",
+    "termOrder": 202402,
+    "grade": "AB",
+    "achievements": [
+      "Honors"
+    ],
+    "types": [
+      "Mathematics"
+    ],
+    "topics": [
+      "Real analysis",
+      "Riemann zeta function",
+      "Proofs"
+    ],
+    "highlights": [
+      "Honors work included the Riemann zeta function.",
+      "Exam scores rose from 61.5 to 99 to 100 percent."
+    ],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 3,
+    "professors": [
+      "sean-paul"
+    ]
+  },
+  {
+    "id": "experimental-economics",
+    "title": "Experimental Economics",
+    "code": "ECON 690",
+    "semester": "Spring 2024",
+    "termOrder": 202401,
+    "grade": "A",
+    "achievements": [],
+    "types": [
+      "Economics"
+    ],
+    "topics": [
+      "Experimental economics",
+      "Game theory",
+      "Market design"
+    ],
+    "highlights": [],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 1,
+    "professors": [
+      "david-hansen"
+    ]
+  },
+  {
+    "id": "capitalism-21st-century",
+    "title": "Capitalism in the 21st Century",
+    "code": "INTL ST 602",
+    "semester": "Fall 2023",
+    "termOrder": 202303,
+    "grade": "A",
+    "achievements": [],
+    "types": [
+      "International Studies"
+    ],
+    "topics": [
+      "Political economy",
+      "Capitalism",
+      "Development"
+    ],
+    "highlights": [],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 1,
+    "professors": [
+      "veronika-kusumaryati"
+    ]
+  },
+  {
+    "id": "conservative-political-thought",
+    "title": "Conservative Political Thought",
+    "code": "POLI SCI 460",
+    "semester": "Fall 2023",
+    "termOrder": 202303,
+    "grade": "A",
+    "achievements": [],
+    "types": [
+      "Political Science"
+    ],
+    "topics": [
+      "Political theory",
+      "Intellectual history",
+      "Capitalism"
+    ],
+    "highlights": [],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 2,
+    "professors": [
+      "eduardo-schmidt-passos"
     ]
   }
 ]
