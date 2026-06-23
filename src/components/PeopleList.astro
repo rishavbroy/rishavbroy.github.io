@@ -20,7 +20,11 @@ const resolvedLabel = label ?? (people.length === 1 ? singularLabel : pluralLabe
     {people.map((person, index) => (
       <>
         {index > 0 && <span aria-hidden="true">, </span>}
-        <a href={person.url} target="_blank" rel="noreferrer">{person.name}</a>
+        {person.url ? (
+          <a href={person.url} target="_blank" rel="noreferrer">{person.name}</a>
+        ) : (
+          <span class="person-name">{person.name}</span>
+        )}
       </>
     ))}
   </p>
