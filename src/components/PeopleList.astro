@@ -3,17 +3,20 @@ import { getPeopleByIds } from "../data/people";
 
 interface Props {
   ids?: string[];
-  label: string;
+  label?: string;
+  singularLabel?: string;
+  pluralLabel?: string;
   context?: string;
 }
 
-const { ids = [], label, context = label } = Astro.props;
+const { ids = [], label, singularLabel, pluralLabel, context = label ?? singularLabel ?? "people" } = Astro.props;
 const people = getPeopleByIds(ids, context);
+const resolvedLabel = label ?? (people.length === 1 ? singularLabel : pluralLabel) ?? "People";
 ---
 
 {people.length > 0 && (
   <p class="people-line">
-    <span>{label}:</span>{" "}
+    <span>{resolvedLabel}:</span>{" "}
     {people.map((person, index) => (
       <>
         {index > 0 && <span aria-hidden="true">, </span>}

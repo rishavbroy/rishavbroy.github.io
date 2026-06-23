@@ -301,11 +301,24 @@ p {
   color: var(--card-text);
 }
 
+.course-card {
+  display: flex;
+  flex-direction: column;
+}
+
 .course-card-header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: var(--space-3);
+}
+
+.course-code {
+  margin: calc(var(--space-2) * -0.25) 0 0;
+  color: var(--card-muted);
+  font-size: 0.92rem;
+  font-weight: 750;
+  letter-spacing: 0.02em;
 }
 
 .people-line {
@@ -329,6 +342,11 @@ p {
   text-decoration-color: #9d561e;
 }
 
+.course-card .people-line {
+  margin-top: auto;
+  padding-top: var(--space-4);
+}
+
 .grade-pill {
   flex: 0 0 auto;
   min-width: 2.25rem;
@@ -339,6 +357,17 @@ p {
   color: var(--text);
   font-weight: 800;
   font-size: 0.86rem;
+}
+
+.audit-pill {
+  align-self: flex-start;
+  margin-top: var(--space-3);
+  border-radius: 999px;
+  padding: 0.22rem 0.58rem;
+  background: #d8d6cf;
+  color: #342c26;
+  font-size: 0.76rem;
+  font-weight: 820;
 }
 
 .tag-list {

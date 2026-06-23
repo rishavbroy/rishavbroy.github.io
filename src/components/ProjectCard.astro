@@ -40,7 +40,7 @@ const searchData = toSearchData([
   </div>
 
   <h3>{data.title}</h3>
-  <PeopleList ids={data.mentors} label="Mentors" context={peopleContext} />
+  <PeopleList ids={data.mentors} singularLabel="Mentor" pluralLabel="Mentors" context={peopleContext} />
   <p class="project-question"><strong>Question:</strong> {data.question}</p>
   <p>{data.shortDescription}</p>
 
