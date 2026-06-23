@@ -505,15 +505,25 @@ p {
   padding-bottom: var(--space-9);
 }
 
-.story-card {
-  max-width: 52rem;
-  padding: var(--space-6);
-  border-radius: var(--radius-lg);
-  border: 1px solid rgb(245 239 230 / 0.1);
-  background: rgb(245 239 230 / 0.04);
+.story-prose {
+  max-width: 64rem;
 }
 
-.story-card p:last-child {
+.story-prose p {
+  color: var(--text);
+  font-size: clamp(1.18rem, 1.4vw, 1.45rem);
+  line-height: 1.68;
+  margin-bottom: var(--space-5);
+}
+
+.story-prose .story-statement {
+  font-size: clamp(1.35rem, 2.1vw, 2rem);
+  line-height: 1.35;
+  font-weight: 780;
+  letter-spacing: -0.035em;
+}
+
+.story-prose p:last-child {
   margin-bottom: 0;
 }
 
