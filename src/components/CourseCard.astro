@@ -51,9 +51,9 @@ const searchData = toSearchData([
     {data.grade && <span class="grade-pill" aria-label={`Grade: ${data.grade}`}>{data.grade}</span>}
   </div>
   {data.audited && <span class="audit-pill">Audited</span>}
+  <TagList tags={data.achievements} label={`Achievements for ${data.title}`} variant="achievement" />
   <TagList tags={courseTypes} label={`Course types for ${data.title}`} variant="type" />
   <TagList tags={data.topics} label={`Topics for ${data.title}`} variant="topic" />
-  <TagList tags={data.achievements} label={`Achievements for ${data.title}`} variant="achievement" />
   {data.syllabusUrl && (
     <div class="card-links">
       <a href={data.syllabusUrl}>Syllabus</a>
