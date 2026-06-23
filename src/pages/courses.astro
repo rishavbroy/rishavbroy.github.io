@@ -16,13 +16,15 @@ const taxonomy = getCourseTaxonomy(courses);
     <CollectionFilters
       id="courses"
       label="Filter selected coursework"
-      searchPlaceholder="Search courses by title, professor, semester, achievement, type, or skill"
+      searchPlaceholder="Search courses by title, code, instructor, department, semester, type, achievement, or skill"
       itemSingular="course"
       itemPlural="courses"
       groups={[
         { key: "semester", label: "Semester", options: taxonomy.semesters },
+        { key: "departments", label: "Department", options: taxonomy.departments },
         { key: "types", label: "Course type", options: taxonomy.types },
-        { key: "achievements", label: "Achievement", options: taxonomy.achievements }
+        { key: "achievements", label: "Achievement", options: taxonomy.achievements },
+        { key: "skills", label: "Skill", options: taxonomy.skills }
       ]}
     />
   </section>

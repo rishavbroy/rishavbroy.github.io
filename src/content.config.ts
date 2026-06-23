@@ -39,9 +39,11 @@ const courses = defineCollection({
   schema: z.object({
     id: z.string(),
     title: z.string(),
+    code: z.string(),
     semester: z.string(),
     termOrder: z.number(),
     grade: z.string().optional(),
+    audited: z.boolean().default(false),
     achievements: z.array(z.string()).default([]),
     types: z.array(z.string()).default([]),
     skills: z.array(z.string()).default([]),

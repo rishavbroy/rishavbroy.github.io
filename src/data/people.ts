@@ -35,6 +35,22 @@ export const people: Person[] = [
     name: "Shengwen Gan",
     url: "https://sites.google.com/view/shengwengan/"
   },
+
+  {
+    id: "frederic-sala",
+    name: "Frederic Sala",
+    url: "https://pages.cs.wisc.edu/~fredsala/"
+  },
+  {
+    id: "karam-kang",
+    name: "Karam Kang",
+    url: "https://karamkang.github.io/"
+  },
+  {
+    id: "panle-barwick",
+    name: "Panle Jia Barwick",
+    url: "https://panlebarwick.github.io/"
+  },
   {
     id: "job-boerma",
     name: "Job Boerma",
