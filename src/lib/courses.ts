@@ -7,6 +7,20 @@ export function getCourseDepartment(code: string) {
   return code.replace(/\s+\d+[A-Za-z]?\s*$/, "").trim();
 }
 
+export function orderCourseTypes(types: string[]) {
+  const priority = new Map([
+    ["PhD-level", 0],
+    ["Master's-level", 1]
+  ]);
+
+  return types.slice().sort((a, b) => {
+    const aPriority = priority.get(a) ?? 10;
+    const bPriority = priority.get(b) ?? 10;
+
+    return aPriority - bPriority || a.localeCompare(b);
+  });
+}
+
 export function sortCourses(courses: CourseEntry[]) {
   return courses
     .slice()
@@ -22,8 +36,8 @@ export function getCourseTaxonomy(courses: CourseEntry[]) {
   return {
     semesters: uniqueSorted(courses.map((course) => course.data.semester)),
     departments: uniqueSorted(courses.map((course) => getCourseDepartment(course.data.code))),
-    types: uniqueSorted(courses.flatMap((course) => course.data.types)),
-    achievements: uniqueSorted(courses.flatMap((course) => course.data.achievements)),
-    skills: uniqueSorted(courses.flatMap((course) => course.data.skills))
+    types: orderCourseTypes(uniqueSorted(courses.flatMap((course) => course.data.types))),
+    topics: uniqueSorted(courses.flatMap((course) => course.data.topics)),
+    achievements: uniqueSorted(courses.flatMap((course) => course.data.achievements))
   };
 }

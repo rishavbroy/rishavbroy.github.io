@@ -2,7 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import PeopleList from "./PeopleList.astro";
 import TagList from "./TagList.astro";
-import { getCourseDepartment } from "../lib/courses";
+import { getCourseDepartment, orderCourseTypes } from "../lib/courses";
 import { toFilterData, toSearchData } from "../lib/filterData";
 import { getPeopleNames } from "../data/people";
 
@@ -16,6 +16,7 @@ const filterScope = "courses";
 const peopleContext = `course: ${data.title}`;
 const professorNames = getPeopleNames(data.professors, peopleContext);
 const department = getCourseDepartment(data.code);
+const courseTypes = orderCourseTypes(data.types);
 const searchData = toSearchData([
   data.title,
   data.code,
@@ -24,8 +25,8 @@ const searchData = toSearchData([
   data.grade,
   data.audited ? "Audited" : undefined,
   data.achievements,
-  data.types,
-  data.skills,
+  courseTypes,
+  data.topics,
   professorNames
 ]);
 ---
@@ -35,9 +36,9 @@ const searchData = toSearchData([
   data-filter-card={filterScope}
   data-semester={toFilterData(data.semester)}
   data-departments={toFilterData(department)}
-  data-types={toFilterData(data.types)}
+  data-types={toFilterData(courseTypes)}
+  data-topics={toFilterData(data.topics)}
   data-achievements={toFilterData(data.achievements)}
-  data-skills={toFilterData(data.skills)}
   data-search={searchData}
 >
   <div class="course-card-header">
@@ -45,14 +46,14 @@ const searchData = toSearchData([
       <p class="card-kicker">{data.semester}</p>
       <h3>{data.title}</h3>
       <p class="course-code">{data.code}</p>
+      <PeopleList ids={data.professors} singularLabel="Instructor" pluralLabel="Instructors" context={peopleContext} />
     </div>
     {data.grade && <span class="grade-pill" aria-label={`Grade: ${data.grade}`}>{data.grade}</span>}
   </div>
   {data.audited && <span class="audit-pill">Audited</span>}
+  <TagList tags={courseTypes} label={`Course types for ${data.title}`} variant="type" />
+  <TagList tags={data.topics} label={`Topics for ${data.title}`} variant="topic" />
   <TagList tags={data.achievements} label={`Achievements for ${data.title}`} variant="achievement" />
-  <TagList tags={data.types} label={`Types for ${data.title}`} variant="type" />
-  <TagList tags={data.skills} label={`Skills for ${data.title}`} variant="skill" />
-  <PeopleList ids={data.professors} singularLabel="Instructor" pluralLabel="Instructors" context={peopleContext} />
   {data.syllabusUrl && (
     <div class="card-links">
       <a href={data.syllabusUrl}>Syllabus</a>

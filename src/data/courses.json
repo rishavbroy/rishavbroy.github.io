@@ -7,17 +7,11 @@
     "termOrder": 202501,
     "grade": "A",
     "achievements": [
-      "Top scorer"
+      "Highest score in class"
     ],
     "types": [
       "PhD-level",
-      "Econometrics",
       "Economics"
-    ],
-    "skills": [
-      "Asymptotic theory",
-      "Causal inference",
-      "Stata"
     ],
     "syllabusUrl": "",
     "featured": true,
@@ -25,6 +19,12 @@
     "professors": [
       "bruce-hansen",
       "harold-chiang"
+    ],
+    "topics": [
+      "Econometrics",
+      "Asymptotic theory",
+      "Causal inference",
+      "Stata"
     ]
   },
   {
@@ -35,16 +35,11 @@
     "termOrder": 202601,
     "grade": "A",
     "achievements": [
-      "Top scorer"
+      "Highest score in class"
     ],
     "types": [
       "PhD-level",
-      "Macroeconomics",
       "Economics"
-    ],
-    "skills": [
-      "Dynamic models",
-      "MATLAB"
     ],
     "syllabusUrl": "",
     "featured": true,
@@ -52,6 +47,11 @@
     "professors": [
       "rishabh-kirpalani",
       "ananth-seshadri"
+    ],
+    "topics": [
+      "Macroeconomics",
+      "Dynamic models",
+      "MATLAB"
     ]
   },
   {
@@ -62,22 +62,22 @@
     "termOrder": 202501,
     "grade": "A",
     "achievements": [
-      "Top scorer of first half",
+      "Highest score in first half",
       "Honors"
     ],
     "types": [
       "Master's-level",
       "Mathematics"
     ],
-    "skills": [
-      "Proofs",
-      "Measure theory"
-    ],
     "syllabusUrl": "",
     "featured": true,
     "order": 3,
     "professors": [
       "shengwen-gan"
+    ],
+    "topics": [
+      "Measure theory",
+      "Proofs"
     ]
   },
   {
@@ -88,21 +88,21 @@
     "termOrder": 202601,
     "grade": "A",
     "achievements": [
-      "Highest scorer on final"
+      "Highest score on final"
     ],
     "types": [
-      "Economics",
-      "Political Economy and Development"
-    ],
-    "skills": [
-      "Development theory",
-      "Empirical development"
+      "Economics"
     ],
     "syllabusUrl": "",
     "featured": true,
     "order": 4,
     "professors": [
       "laura-schechter"
+    ],
+    "topics": [
+      "Development economics",
+      "Political economy",
+      "Empirical development"
     ]
   },
   {
@@ -114,19 +114,18 @@
     "grade": "A",
     "achievements": [],
     "types": [
-      "Computer Science",
-      "Machine Learning"
-    ],
-    "skills": [
-      "Foundation models",
-      "Machine learning",
-      "Deep learning"
+      "Computer Science"
     ],
     "syllabusUrl": "",
     "featured": false,
     "order": 5,
     "professors": [
       "frederic-sala"
+    ],
+    "topics": [
+      "Foundation models",
+      "Machine learning",
+      "Deep learning"
     ]
   },
   {
@@ -140,13 +139,7 @@
     "achievements": [],
     "types": [
       "PhD-level",
-      "Industrial Organization",
       "Economics"
-    ],
-    "skills": [
-      "Industrial organization",
-      "Structural modeling",
-      "Empirical IO"
     ],
     "syllabusUrl": "",
     "featured": false,
@@ -154,6 +147,11 @@
     "professors": [
       "karam-kang",
       "panle-barwick"
+    ],
+    "topics": [
+      "Industrial organization",
+      "Structural modeling",
+      "Empirical IO"
     ]
   }
 ]
