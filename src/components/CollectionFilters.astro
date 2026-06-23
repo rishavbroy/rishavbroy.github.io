@@ -46,6 +46,7 @@ const rangeEndLabel = hasRange ? range.points[range.points.length - 1].label : "
 const rangeMax = hasRange ? range.points.length - 1 : 0;
 const rangeLabels = hasRange ? range.points.map((point) => point.label).join("|") : "";
 const rangeValues = hasRange ? range.points.map((point) => String(point.value)).join("|") : "";
+const rangeDatalistId = hasRange ? `${id}-${range.key}-marks` : "";
 ---
 
 <section class="filter-panel" data-filter-root={id} data-item-singular={itemSingular} data-item-plural={itemPlural} aria-label={label}>
@@ -69,13 +70,20 @@ const rangeValues = hasRange ? range.points.map((point) => String(point.value)).
         <div class="range-filter">
           <label>
             <span>From</span>
-            <input type="range" min="0" max={rangeMax} step="1" value="0" data-range-start />
+            <input type="range" min="0" max={rangeMax} step="1" value="0" list={rangeDatalistId} aria-label={`${range.label} start`} data-range-start />
           </label>
           <label>
             <span>To</span>
-            <input type="range" min="0" max={rangeMax} step="1" value={rangeMax} data-range-end />
+            <input type="range" min="0" max={rangeMax} step="1" value={rangeMax} list={rangeDatalistId} aria-label={`${range.label} end`} data-range-end />
           </label>
-          <p class="range-filter-current" data-range-current>{rangeStartLabel}–{rangeEndLabel}</p>
+          <datalist id={rangeDatalistId}>
+            {range.points.map((point, index) => <option value={index} label={point.label} />)}
+          </datalist>
+          <div class="range-filter-bounds" aria-hidden="true">
+            <span>{rangeStartLabel}</span>
+            <span>{rangeEndLabel}</span>
+          </div>
+          <output class="range-filter-current" data-range-current>{rangeStartLabel}–{rangeEndLabel}</output>
         </div>
       </details>
     )}

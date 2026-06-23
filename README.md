@@ -74,7 +74,7 @@ Use project mentor fields deliberately: a `Research note` status communicates sc
 
 ## Filtering and search
 
-The Research and Courses pages use progressively enhanced client-side filtering. Cards are rendered normally at build time, so all content remains visible if JavaScript is disabled. When JavaScript is available, `CollectionFilters.astro` reads `data-*` attributes on each card and applies search plus multi-select filters. Within a filter group, selected values are combined with OR logic; across filter groups, groups are combined with AND logic.
+The Research and Courses pages use progressively enhanced client-side filtering. Cards are rendered normally at build time, so all content remains visible if JavaScript is disabled. When JavaScript is available, `CollectionFilters.astro` reads `data-*` attributes on each card and applies search plus multi-select filters. Within a filter group, selected values are combined with OR logic; across filter groups, groups are combined with AND logic. The Research date filter uses native range inputs with integer `step` values mapped to discrete academic-term points.
 
 - Research filters: date, status, topic, skill.
 - Course filters: term, department, course type, topic, achievement.
