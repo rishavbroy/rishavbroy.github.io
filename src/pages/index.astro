@@ -25,16 +25,43 @@ const featuredProjects = getFeaturedProjects(await getCollection("projects"));
     </div>
 
     <div class="hero-copy">
-      <p class="eyebrow">Economics · Mathematics · Data Science</p>
+      <p class="eyebrow">UW–Madison B.S., May 2026 · Economics · Mathematics · Data Science</p>
       <h1>Rishav Roy</h1>
       <p class="hero-identity">
-        I study political economy, development, and the institutional dynamics that shape how societies escape—or remain trapped in—bad equilibria.
+        A triple major with top scores in PhD-level economics, building the toolkit needed to study pressing issues in the empirical analysis of political economy, development, and policy.
       </p>
       <div class="button-row">
-        <a class="button button-primary" href="#interests">My Interests</a>
+        <a class="button button-primary" href="#story">My Story</a>
         <a class="button button-secondary" href="#current-projects">Current Projects</a>
-        <a class="button button-secondary" href="#story">My Story</a>
+        <a class="button button-secondary" href="#interests">My Interests</a>
       </div>
+    </div>
+  </section>
+
+  <section id="story" class="container section story-section">
+    <p class="eyebrow">My Story</p>
+    <div class="story-prose">
+      <p class="story-statement">
+        In just three academic years, I began and completed three majors in Economics, Mathematics, and Data Science.
+      </p>
+      <p class="story-statement">
+        In just two academic years, I outscored all students in multiple PhD-level economics and master’s-level mathematics courses, ultimately earning a 3.9 GPA over the same period in which I completed the entirety of the first-year Economics PhD courseload plus 18 undergraduate-level courses.
+      </p>
+      <p>
+        It is accomplishments like this that testify to how well I, in a marathon of high-stakes work, in settings both intellectually rigorous and breakneck, am able to thrive.
+      </p>
+      <p>
+        I pride myself on being a lifelong learner—on my motivation and curiosity and ability to ask penetrating, creative questions. But it is only when combined with exceptional critical thinking abilities, advanced communication skills, and deep scientific understanding that this mixture can become potent. It is precisely this combination that I look forward to applying in my work alongside you.
+      </p>
+    </div>
+  </section>
+
+  <section id="current-projects" class="container section">
+    <SectionHeading eyebrow="My Current Projects" title="Research questions I am actively developing">
+      <p>All of my projects can be found on the <a href="/research/">Research page</a>.</p>
+    </SectionHeading>
+    <div class="card-grid">
+      {featuredProjects.map((project) => <ProjectCard project={project} />)}
     </div>
   </section>
 
@@ -57,27 +84,6 @@ const featuredProjects = getFeaturedProjects(await getCollection("projects"));
         <h3>Measurement and empirical methods</h3>
         <p>How causal inference, text-as-data, and econometric theory can make broad social questions empirically tractable.</p>
       </article>
-    </div>
-  </section>
-
-  <section id="current-projects" class="container section">
-    <SectionHeading eyebrow="My Current Projects" title="Research questions I am actively developing">
-      <p>All of my projects can be found on the <a href="/research/">Research page</a>.</p>
-    </SectionHeading>
-    <div class="card-grid">
-      {featuredProjects.map((project) => <ProjectCard project={project} />)}
-    </div>
-  </section>
-
-  <section id="story" class="container section story-section">
-    <SectionHeading eyebrow="My Story" title="A nonlinear path into research" />
-    <div class="story-card">
-      <p>
-        My path through college was not linear. Early on, family and health issues collided with a lack of structure, and my academic record reflected it: at one point, my GPA was around 1.9. I took time away from school, worked full-time, studied part-time, and slowly rebuilt both my habits and my sense of what I was capable of.
-      </p>
-      <p>
-        When I returned, I chose harder questions rather than easier ones. I pursued economics, mathematics, and data science; took graduate-level economics and mathematics courses; earned top scores in multiple PhD-level classes; and began developing independent research projects with faculty guidance across development, econometrics, macroeconomics, language models, and political economy.
-      </p>
     </div>
   </section>
 </BaseLayout>
