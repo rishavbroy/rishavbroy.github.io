@@ -17,9 +17,7 @@
       "Structural modeling",
       "Empirical IO"
     ],
-    "highlights": [
-      "Audited the second PhD industrial organization field course."
-    ],
+    "highlights": [],
     "syllabusUrl": "",
     "featured": false,
     "order": 1,
@@ -36,6 +34,7 @@
     "termOrder": 202601,
     "grade": "A",
     "achievements": [
+      "Highest score in class",
       "Highest score on final"
     ],
     "types": [
@@ -73,7 +72,7 @@
       "Computer Science"
     ],
     "topics": [
-      "Foundation models",
+      "LLMs",
       "Machine learning",
       "Deep learning",
       "Python"
@@ -91,7 +90,7 @@
   {
     "id": "empirical-methods-applied-micro",
     "title": "Empirical Methods in Applied Microeconomics",
-    "code": "ECON 695",
+    "code": "ECON 695 001",
     "semester": "Spring 2026",
     "termOrder": 202601,
     "grade": "A",
@@ -117,7 +116,7 @@
   {
     "id": "econometrics-ai-machine-learning",
     "title": "Econometrics with AI and Machine Learning",
-    "code": "ECON 695",
+    "code": "ECON 695 002",
     "semester": "Spring 2026",
     "termOrder": 202601,
     "grade": "A",
@@ -128,6 +127,7 @@
     "topics": [
       "Econometrics",
       "AI",
+      "LLMs",
       "Machine learning",
       "R",
       "Python"
@@ -187,9 +187,7 @@
       "IO theory",
       "Empirical IO"
     ],
-    "highlights": [
-      "Audited the first PhD industrial organization field course."
-    ],
+    "highlights": [],
     "syllabusUrl": "",
     "featured": false,
     "order": 1,
@@ -298,7 +296,7 @@
       "LaTeX"
     ],
     "highlights": [
-      "Completed during a 20-credit-pace summer term."
+      "Completed during an overloaded, 20-credit-pace term."
     ],
     "syllabusUrl": "",
     "featured": false,
@@ -325,7 +323,7 @@
       "LaTeX"
     ],
     "highlights": [
-      "Completed during a 20-credit-pace summer term."
+      "Completed during an overloaded, 20-credit-pace term."
     ],
     "syllabusUrl": "",
     "featured": false,
@@ -354,7 +352,7 @@
       "GeoPandas"
     ],
     "highlights": [
-      "Completed during a 20-credit-pace summer term."
+      "Completed during an overloaded, 20-credit-pace term."
     ],
     "syllabusUrl": "",
     "featured": false,
@@ -371,6 +369,8 @@
     "termOrder": 202501,
     "grade": "A",
     "achievements": [
+      "Highest score in class",
+      "Highest score in first half",
       "Highest score on final"
     ],
     "types": [
@@ -385,8 +385,7 @@
       "LaTeX"
     ],
     "highlights": [
-      "Highest score on Bruce Hansen’s final: 93/100; 75th percentile was 67.75.",
-      "Completed during an 18-credit semester."
+      "Highest score on Bruce Hansen’s final: 93/100; 75th percentile was 67.75."
     ],
     "syllabusUrl": "",
     "featured": true,
@@ -418,8 +417,7 @@
       "LaTeX"
     ],
     "highlights": [
-      "Highest score in the first half of the course: 100/100 on the midterm; 75th percentile was 89.75.",
-      "Completed during an 18-credit semester."
+      "Highest score in the first half of the course: 100/100 on the midterm; 75th percentile was 89.75."
     ],
     "syllabusUrl": "",
     "featured": true,
@@ -435,9 +433,7 @@
     "semester": "Spring 2025",
     "termOrder": 202501,
     "grade": "AB",
-    "achievements": [
-      "Above 75th percentile on final"
-    ],
+    "achievements": [],
     "types": [
       "PhD-level",
       "Economics"
@@ -449,8 +445,7 @@
       "Externalities"
     ],
     "highlights": [
-      "Scored above the 75th percentile on the final covering general equilibrium, welfare, and externalities.",
-      "Completed during an 18-credit semester."
+      "Scored above the 75th percentile on the final covering general equilibrium, welfare, and externalities."
     ],
     "syllabusUrl": "",
     "featured": false,
@@ -498,18 +493,15 @@
     "grade": "A",
     "achievements": [],
     "types": [
-      "Development",
       "Economics"
     ],
     "topics": [
       "Food security",
       "Malnutrition",
-      "Development",
+      "Development economics",
       "LaTeX"
     ],
-    "highlights": [
-      "Completed during an 18-credit semester."
-    ],
+    "highlights": [],
     "syllabusUrl": "",
     "featured": false,
     "order": 5,
@@ -520,7 +512,7 @@
   },
   {
     "id": "marxist-literary-history-capitalism",
-    "title": "A Marxist Literary History of Capitalism",
+    "title": "A Literary History of Capitalism",
     "code": "ENGL 175",
     "semester": "Spring 2025",
     "termOrder": 202501,
@@ -531,12 +523,10 @@
     ],
     "topics": [
       "Political theory",
-      "Capitalism",
-      "Literary history"
+      "Social theory",
+      "History"
     ],
-    "highlights": [
-      "Course topic: Intro to Marx."
-    ],
+    "highlights": [],
     "syllabusUrl": "",
     "featured": false,
     "order": 6,
@@ -551,9 +541,7 @@
     "semester": "Fall 2024",
     "termOrder": 202403,
     "grade": "A",
-    "achievements": [
-      "75th percentile both quarters"
-    ],
+    "achievements": [],
     "types": [
       "PhD-level",
       "Economics"
@@ -564,7 +552,7 @@
       "Stata"
     ],
     "highlights": [
-      "Earned the 75th percentile in both quarters while taking 17 credits."
+      "Earned the 75th percentile in both quarters."
     ],
     "syllabusUrl": "",
     "featured": false,
@@ -590,9 +578,7 @@
       "Microeconomic theory",
       "Game theory"
     ],
-    "highlights": [
-      "Completed during a 17-credit semester."
-    ],
+    "highlights": [],
     "syllabusUrl": "",
     "featured": false,
     "order": 2,
@@ -617,9 +603,7 @@
       "Machine learning",
       "Python"
     ],
-    "highlights": [
-      "Completed during a 17-credit semester."
-    ],
+    "highlights": [],
     "syllabusUrl": "",
     "featured": false,
     "order": 3,
@@ -641,12 +625,10 @@
     ],
     "topics": [
       "Statistical learning",
-      "Data science",
+      "Data programming",
       "R"
     ],
-    "highlights": [
-      "Completed during a 17-credit semester."
-    ],
+    "highlights": [],
     "syllabusUrl": "",
     "featured": false,
     "order": 4,
@@ -749,7 +731,6 @@
       "Proofs"
     ],
     "highlights": [
-      "Honors work included the Riemann zeta function.",
       "Exam scores rose from 61.5 to 99 to 100 percent."
     ],
     "syllabusUrl": "",
@@ -796,8 +777,8 @@
     ],
     "topics": [
       "Political economy",
-      "Capitalism",
-      "Development"
+      "Social theory",
+      "Development economics"
     ],
     "highlights": [],
     "syllabusUrl": "",
@@ -820,8 +801,8 @@
     ],
     "topics": [
       "Political theory",
-      "Intellectual history",
-      "Capitalism"
+      "History",
+      "Social theory"
     ],
     "highlights": [],
     "syllabusUrl": "",
