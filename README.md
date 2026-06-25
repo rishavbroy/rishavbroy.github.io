@@ -103,3 +103,6 @@ The checked-in TeX source should preserve all PDF-relevant content from the CV. 
 ## Deployment
 
 Deployment is handled by `.github/workflows/deploy.yml`. In GitHub repository settings, set Pages source to **GitHub Actions**.
+
+- Research project cards include a `period` range. The date filter uses discrete academic-term ticks, and project cards render the date beside the status so timing is visible without opening a detail page.
+- Course sorting groups by year first, then puts stronger achievement evidence higher within each year. This keeps the page chronological while surfacing the strongest performances.

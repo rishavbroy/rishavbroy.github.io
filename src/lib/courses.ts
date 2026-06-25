@@ -21,11 +21,21 @@ export function orderCourseTypes(types: string[]) {
   });
 }
 
+function getCourseYear(course: CourseEntry) {
+  return Math.floor(course.data.termOrder / 100);
+}
+
+function getAchievementCount(course: CourseEntry) {
+  return course.data.achievements.length;
+}
+
 export function sortCourses(courses: CourseEntry[]) {
   return courses
     .slice()
     .sort(
       (a, b) =>
+        getCourseYear(b) - getCourseYear(a) ||
+        getAchievementCount(b) - getAchievementCount(a) ||
         b.data.termOrder - a.data.termOrder ||
         a.data.order - b.data.order ||
         a.data.title.localeCompare(b.data.title)
