@@ -1,12 +1,11 @@
 ---
 title: "CEREBRO: Cross-Hardware EEG Representation Encoding"
-status: "Course Project"
+status: "Course project"
 featured: false
 order: 8
 topics:
   - Machine Learning
   - Neuroscience
-  - Course Project
 skills:
   - PyTorch
   - Transformers
@@ -19,7 +18,7 @@ period:
   start: "2026-spring"
   end: "2026-spring"
 question: "Can a multi-subject transformer trained on research-grade EEG transfer useful visual-response representations to consumer-grade EEG hardware?"
-shortDescription: "A group final project for COMP SCI 639 testing a TRIBE-style multi-subject transformer on THINGS-EEG2, then transferring a frozen encoder to consumer-grade Alljoined EEG."
+shortDescription: "A group final project for COMP SCI 639 Foundation Models testing a TRIBE-style multi-subject transformer on THINGS-EEG2, then transferring a frozen encoder to consumer-grade Alljoined EEG."
 links:
   github: "https://github.com/B-a-1-a/CEREBRO"
   paper: "https://github.com/B-a-1-a/CEREBRO/blob/main/report/writeup.pdf"

@@ -1,6 +1,6 @@
 ---
 title: "Language Models as Measurement Instruments"
-status: "Research Paper"
+status: "Research paper"
 featured: true
 order: 2
 topics:

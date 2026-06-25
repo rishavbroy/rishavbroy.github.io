@@ -10,7 +10,6 @@ topics:
 skills:
   - Theory
   - Time series
-  - Model diagnostics
 mentors:
   - job-boerma
 period:

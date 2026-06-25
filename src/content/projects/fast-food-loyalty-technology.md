@@ -5,7 +5,7 @@ featured: false
 order: 5
 topics:
   - Industrial Organization
-  - Applied Micro
+  - Applied Microeconomics
   - Inequality
 skills:
   - Structural modeling

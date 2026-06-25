@@ -6,7 +6,7 @@ order: 1
 topics:
   - Development
   - Political Economy
-  - Applied Micro
+  - Applied Microeconomics
 skills:
   - Causal inference
   - Instrumental variables
