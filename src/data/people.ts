@@ -188,6 +188,32 @@ export const people: Person[] = [
     name: "Gurmail Singh",
     url: "https://pages.cs.wisc.edu/~gurmail-singh/Gurmail.html"
   },
+
+  {
+    id: "christopher-mckelvey",
+    name: "Christopher McKelvey",
+    url: "https://users.ssc.wisc.edu/~cmckelvey/"
+  },
+  {
+    id: "matteo-camboni",
+    name: "Matteo Camboni",
+    url: "https://sites.google.com/view/matteocamboni"
+  },
+  {
+    id: "kohei-yata",
+    name: "Kohei Yata",
+    url: "https://www.koheiyata.com/"
+  },
+  {
+    id: "ron-dunbar",
+    name: "Ron Dunbar",
+    url: "https://www.linkedin.com/in/ron-dunbar-1a366a45/"
+  },
+  {
+    id: "jeffrey-havens",
+    name: "Jeffrey Havens",
+    url: "https://www.linkedin.com/in/jeff-havens-6369939/"
+  },
   {
     id: "joseph-bowling",
     name: "Joseph Bowling",
