@@ -68,14 +68,11 @@ const rangeDatalistId = hasRange ? `${id}-${range.key}-marks` : "";
           <span class="filter-summary-count" data-range-summary>{rangeStartLabel}–{rangeEndLabel}</span>
         </summary>
         <div class="range-filter">
-          <label>
-            <span>From</span>
+          <div class="range-slider" data-range-slider>
+            <div class="range-slider-track" aria-hidden="true"></div>
             <input type="range" min="0" max={rangeMax} step="1" value="0" list={rangeDatalistId} aria-label={`${range.label} start`} data-range-start />
-          </label>
-          <label>
-            <span>To</span>
             <input type="range" min="0" max={rangeMax} step="1" value={rangeMax} list={rangeDatalistId} aria-label={`${range.label} end`} data-range-end />
-          </label>
+          </div>
           <datalist id={rangeDatalistId}>
             {range.points.map((point, index) => <option value={index} label={point.label} />)}
           </datalist>
@@ -83,7 +80,6 @@ const rangeDatalistId = hasRange ? `${id}-${range.key}-marks` : "";
             <span>{rangeStartLabel}</span>
             <span>{rangeEndLabel}</span>
           </div>
-          <output class="range-filter-current" data-range-current>{rangeStartLabel}–{rangeEndLabel}</output>
         </div>
       </details>
     )}
@@ -161,7 +157,7 @@ const rangeDatalistId = hasRange ? `${id}-${range.key}-marks` : "";
           labels: String(rangeGroup.dataset.rangeLabels || "").split("|"),
           start: rangeGroup.querySelector("[data-range-start]"),
           end: rangeGroup.querySelector("[data-range-end]"),
-          current: rangeGroup.querySelector("[data-range-current]"),
+          slider: rangeGroup.querySelector("[data-range-slider]"),
           summary: rangeGroup.querySelector("[data-range-summary]")
         }
       : null;
@@ -185,8 +181,17 @@ const rangeDatalistId = hasRange ? `${id}-${range.key}-marks` : "";
       const selection = getRangeSelection();
       if (!selection || !rangeState) return;
       const label = `${selection.startLabel}–${selection.endLabel}`;
-      if (rangeState.current) rangeState.current.textContent = label;
       if (rangeState.summary) rangeState.summary.textContent = label;
+
+      if (rangeState.slider) {
+        const maxIndex = Math.max(1, rangeState.values.length - 1);
+        const startIndex = Number(rangeState.start?.value || 0);
+        const endIndex = Number(rangeState.end?.value || maxIndex);
+        const lowerIndex = Math.min(startIndex, endIndex);
+        const upperIndex = Math.max(startIndex, endIndex);
+        rangeState.slider.style.setProperty("--range-start", `${(lowerIndex / maxIndex) * 100}%`);
+        rangeState.slider.style.setProperty("--range-end", `${(upperIndex / maxIndex) * 100}%`);
+      }
     }
 
     function updateCount(visibleCount) {

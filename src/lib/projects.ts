@@ -20,9 +20,26 @@ export function getFeaturedProjects(projects: ProjectEntry[]) {
 }
 
 
+export function getProjectStatusFilters(projects: ProjectEntry[]) {
+  const statuses = projects.map((project) => project.data.status);
+  const hasActiveProject = projects.some((project) => project.data.period.end === "present");
+
+  return uniqueSorted(hasActiveProject ? [...statuses, "In progress"] : statuses);
+}
+
+export function getProjectStatusFilterValues(project: ProjectEntry) {
+  const values = [project.data.status];
+
+  if (project.data.period.end === "present") {
+    values.push("In progress");
+  }
+
+  return values;
+}
+
 export function getProjectTaxonomy(projects: ProjectEntry[]) {
   return {
-    statuses: uniqueSorted(projects.map((project) => project.data.status)),
+    statuses: getProjectStatusFilters(projects),
     topics: uniqueSorted(projects.flatMap((project) => project.data.topics)),
     skills: uniqueSorted(projects.flatMap((project) => project.data.skills))
   };
