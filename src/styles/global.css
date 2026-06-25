@@ -389,9 +389,15 @@ p {
   font-size: 0.86rem;
 }
 
+.course-status-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: var(--space-3);
+}
+
 .audit-pill {
   align-self: flex-start;
-  margin-top: var(--space-3);
   border-radius: 999px;
   padding: 0.22rem 0.58rem;
   background: #d8d6cf;
@@ -456,7 +462,7 @@ p {
 
 .project-card-header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: var(--space-3);
   margin-bottom: var(--space-3);
@@ -469,18 +475,18 @@ p {
 .project-card-meta {
   display: inline-flex;
   flex: 0 0 auto;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-end;
   gap: 0.45rem;
   max-width: none;
-  line-height: 1.1;
+  line-height: 1;
 }
 
 .project-period {
   color: var(--card-muted);
   font-size: 0.78rem;
   font-weight: 820;
-  line-height: 1.2;
+  line-height: 1;
   text-align: right;
   white-space: nowrap;
 }
@@ -494,7 +500,7 @@ p {
   font-size: 0.72rem;
   font-weight: 850;
   letter-spacing: 0.08em;
-  line-height: 1.1;
+  line-height: 1;
   text-transform: uppercase;
 }
 
@@ -864,7 +870,7 @@ html[data-js="true"] .filter-panel {
 
 .range-ticks {
   position: relative;
-  height: 0.7rem;
+  height: 0.85rem;
   margin-inline: 0.5rem;
 }
 
@@ -872,11 +878,11 @@ html[data-js="true"] .filter-panel {
   position: absolute;
   left: var(--tick-position);
   top: 0;
-  width: 1px;
-  height: 0.45rem;
+  width: 2px;
+  height: 0.62rem;
   transform: translateX(-50%);
   border-radius: 999px;
-  background: rgb(245 239 230 / 0.32);
+  background: rgb(245 239 230 / 0.5);
 }
 
 .range-filter-bounds {

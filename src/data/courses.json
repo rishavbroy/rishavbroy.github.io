@@ -983,7 +983,8 @@
     "order": 1,
     "professors": [
       "ron-dunbar"
-    ]
+    ],
+    "institution": "Madison Area Technical College"
   },
   {
     "id": "intro-programming-python",
@@ -1009,6 +1010,7 @@
     "order": 2,
     "professors": [
       "jeffrey-havens"
-    ]
+    ],
+    "institution": "Madison Area Technical College"
   }
 ]

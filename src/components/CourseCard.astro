@@ -28,6 +28,7 @@ const searchData = toSearchData([
   courseTypes,
   data.topics,
   data.highlights,
+  data.institution,
   professorNames
 ]);
 ---
@@ -56,7 +57,12 @@ const searchData = toSearchData([
       {data.highlights.map((highlight) => <p>{highlight}</p>)}
     </div>
   )}
-  {data.audited && <span class="audit-pill">Audited</span>}
+  {(data.audited || data.institution) && (
+    <div class="course-status-pills" aria-label={`Status notes for ${data.title}`}>
+      {data.audited && <span class="audit-pill">Audited</span>}
+      {data.institution && <span class="audit-pill">{data.institution}</span>}
+    </div>
+  )}
   <TagList tags={data.achievements} label={`Achievements for ${data.title}`} variant="achievement" />
   <TagList tags={courseTypes} label={`Course types for ${data.title}`} variant="type" />
   <TagList tags={data.topics} label={`Topics for ${data.title}`} variant="topic" />
