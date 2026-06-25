@@ -74,7 +74,7 @@ Use project mentor fields deliberately: a `Research note` status communicates sc
 
 ## Filtering and search
 
-The Research and Courses pages use progressively enhanced client-side filtering. Cards are rendered normally at build time, so all content remains visible if JavaScript is disabled. When JavaScript is available, `CollectionFilters.astro` reads `data-*` attributes on each card and applies search plus multi-select filters. Within a filter group, selected values are combined with OR logic; across filter groups, groups are combined with AND logic. The Research date filter uses two overlaid native range inputs with integer `step` values mapped to discrete academic-term points; the visual track highlights the selected interval between the two handles. The `In progress` research status filter is derived from project date ranges ending in `present`, so it can coexist with more specific statuses such as `Research Paper`.
+The Research and Courses pages use progressively enhanced client-side filtering. Cards are rendered normally at build time, so all content remains visible if JavaScript is disabled. When JavaScript is available, `CollectionFilters.astro` reads `data-*` attributes on each card and applies search plus multi-select filters. Within a filter group, selected values are combined with OR logic; across filter groups, groups are combined with AND logic. The Research date filter uses two overlaid native range inputs with integer `step` values mapped to discrete academic-term points; the visual track highlights the selected interval between the two handles. The `In progress` research status filter is derived from project date ranges ending in `present`, so it can coexist with more specific statuses such as `Research paper`.
 
 - Research filters: date, status, topic, skill.
 - Course filters: term, department, course type, topic, achievement.
@@ -105,4 +105,4 @@ The checked-in TeX source should preserve all PDF-relevant content from the CV. 
 Deployment is handled by `.github/workflows/deploy.yml`. In GitHub repository settings, set Pages source to **GitHub Actions**.
 
 - Research project cards include a `period` range. The date filter uses discrete academic-term ticks, and project cards render the date beside the status so timing is visible without opening a detail page.
-- Course sorting groups by year first, then puts stronger achievement evidence higher within each year. This keeps the page chronological while surfacing the strongest performances.
+- Course sorting groups by term first, then puts stronger achievement evidence higher within each term. This keeps the page chronological while surfacing the strongest performances within a given semester or summer term.
