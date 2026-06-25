@@ -7,9 +7,11 @@ topics:
   - Theoretical Econometrics
   - Applied Econometrics
 skills:
-  - Proofs
+  - Quantile regression
   - Stochastic approximation
   - Asymptotic theory
+  - Fixed effects
+  - Proofs
 mentors:
   - harold-chiang
 period:
@@ -17,7 +19,7 @@ period:
   start: "2026-spring"
   end: "present"
 question: "Can stochastic subgradient methods deliver fast, valid inference for fixed-effects panel quantile regression under common shocks?"
-shortDescription: "A theoretical econometrics project deriving an orthogonalized slope moment and one-step correction strategy for large-N panel quantile regression with common shocks."
+shortDescription: "A theoretical econometrics note deriving a stochastic-subgradient and one-step-correction strategy for large-N fixed-effects panel quantile regression with common shocks, using orthogonalized slope moments to remove first-order fixed-effect score effects."
 links:
   github: ""
   paper: ""

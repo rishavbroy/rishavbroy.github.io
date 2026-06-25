@@ -8,8 +8,10 @@ topics:
   - Policy
   - Econometrics
 skills:
-  - Theory
   - Time series
+  - Model falsification
+  - State-space methods
+  - Bayesian computation
 mentors:
   - job-boerma
 period:
@@ -17,7 +19,7 @@ period:
   start: "2025-fall"
   end: "2025-fall"
 question: "What observable implications distinguish true hysteresis from persistence, long memory, or misspecified Markov dynamics?"
-shortDescription: "A project developing empirical proxies and falsification strategies for distinguishing stochastic hysteresis from more familiar forms of persistence in macro, finance, and climate-policy settings."
+shortDescription: "A research note deriving observable proxies for stochastic hysteresis and outlining falsification strategies for Markov models in macro, finance, and climate-policy settings, with attention to Kalman filtering, particle filtering, and Bayesian MCMC tradeoffs."
 links:
   github: ""
   paper: ""

@@ -7,6 +7,7 @@ topics:
   - Trade
   - Political Economy
   - Labor
+  - Applied Microeconomics
   - Applied Econometrics
 skills:
   - Shift-share design

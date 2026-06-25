@@ -4,14 +4,16 @@ status: "Senior thesis"
 featured: true
 order: 1
 topics:
-  - Development
+  - Development Economics
   - Political Economy
-  - Applied Microeconomics
+  - Applied Econometrics
 skills:
   - Causal inference
   - Instrumental variables
+  - Data harmonization
   - Spatial analysis
   - Survey data
+  - R
 mentors:
   - laura-schechter
 period:
@@ -19,7 +21,7 @@ period:
   start: "2025-spring"
   end: "present"
 question: "Can exposure to English-medium instruction help households escape persistent inequality, and through what channels?"
-shortDescription: "A district pseudo-panel project using Indian survey microdata, Census language files, shapefiles, and IV methods to study English-medium instruction exposure and consumption growth."
+shortDescription: "A senior thesis building a district pseudo-panel from Indian survey microdata, Census language files, and shapefiles to estimate how English-medium instruction exposure relates to consumption growth, with IV specifications, survey-design adjustments, spatial diagnostics, and district harmonization."
 links:
   github: ""
   paper: ""

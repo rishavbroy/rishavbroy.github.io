@@ -11,6 +11,7 @@ skills:
   - Structural modeling
   - Discrete choice
   - Convex optimization
+  - Simulation
   - Julia
 mentors:
   - amanda-smith
@@ -19,7 +20,7 @@ period:
   start: "2025-summer"
   end: "2025-fall"
 question: "How do loyalty programs, app adoption, and discount technologies reshape pricing, channel choice, and consumer surplus across income groups?"
-shortDescription: "A structural modeling project using dynamic channel choice, loyalty adoption, and discount technology to study how digital fast-food platforms can change firm strategy and inequality."
+shortDescription: "A structural modeling note formulating a dynamic channel-choice and loyalty-adoption model for fast-food platforms, using MNL demand, simulation, and exponential-cone optimization to study discounting, technology investment, and inequality counterfactuals."
 links:
   github: ""
   paper: ""

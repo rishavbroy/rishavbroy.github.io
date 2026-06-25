@@ -4,7 +4,7 @@ status: "Policy report"
 featured: false
 order: 6
 topics:
-  - Development
+  - Economic Development
   - Labor
   - Public Policy
 skills:

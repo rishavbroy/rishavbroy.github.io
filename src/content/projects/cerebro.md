@@ -11,7 +11,7 @@ skills:
   - Transformers
   - Representation learning
   - EEG
-  - Cross-domain transfer
+  - Cross-hardware transfer
 mentors: []
 period:
   label: "Spring 2026"
