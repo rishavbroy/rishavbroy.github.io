@@ -469,16 +469,18 @@ p {
 .project-card-meta {
   display: inline-flex;
   flex: 0 0 auto;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-end;
   gap: 0.45rem;
   max-width: none;
+  line-height: 1.1;
 }
 
 .project-period {
   color: var(--card-muted);
   font-size: 0.78rem;
   font-weight: 820;
+  line-height: 1.2;
   text-align: right;
   white-space: nowrap;
 }
@@ -492,6 +494,7 @@ p {
   font-size: 0.72rem;
   font-weight: 850;
   letter-spacing: 0.08em;
+  line-height: 1.1;
   text-transform: uppercase;
 }
 
@@ -857,6 +860,23 @@ html[data-js="true"] .filter-panel {
 
 .range-filter datalist {
   display: none;
+}
+
+.range-ticks {
+  position: relative;
+  height: 0.7rem;
+  margin-inline: 0.5rem;
+}
+
+.range-tick {
+  position: absolute;
+  left: var(--tick-position);
+  top: 0;
+  width: 1px;
+  height: 0.45rem;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: rgb(245 239 230 / 0.32);
 }
 
 .range-filter-bounds {

@@ -76,6 +76,11 @@ const rangeDatalistId = hasRange ? `${id}-${range.key}-marks` : "";
           <datalist id={rangeDatalistId}>
             {range.points.map((point, index) => <option value={index} label={point.label} />)}
           </datalist>
+          <div class="range-ticks" aria-hidden="true">
+            {range.points.map((point, index) => (
+              <span class="range-tick" style={`--tick-position: ${(index / rangeMax) * 100}%`} title={point.label}></span>
+            ))}
+          </div>
           <div class="range-filter-bounds" aria-hidden="true">
             <span>{rangeStartLabel}</span>
             <span>{rangeEndLabel}</span>
