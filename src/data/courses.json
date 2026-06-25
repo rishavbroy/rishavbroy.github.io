@@ -741,6 +741,56 @@
     ]
   },
   {
+    "id": "intermediate-macroeconomics",
+    "title": "Intermediate Macroeconomics",
+    "code": "ECON 312",
+    "semester": "Spring 2024",
+    "termOrder": 202401,
+    "grade": "A",
+    "achievements": [
+      "Honors"
+    ],
+    "types": [
+      "Economics"
+    ],
+    "topics": [
+      "Macroeconomics",
+      "Economic growth",
+      "Dynamic models"
+    ],
+    "highlights": [],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 1,
+    "professors": [
+      "simeon-alder"
+    ]
+  },
+  {
+    "id": "markets-and-models",
+    "title": "Markets and Models",
+    "code": "ECON 621",
+    "semester": "Spring 2024",
+    "termOrder": 202401,
+    "grade": "AB",
+    "achievements": [],
+    "types": [
+      "Economics"
+    ],
+    "topics": [
+      "Microeconomic theory",
+      "Market design",
+      "Game theory"
+    ],
+    "highlights": [],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 2,
+    "professors": [
+      "daniel-quint"
+    ]
+  },
+  {
     "id": "experimental-economics",
     "title": "Experimental Economics",
     "code": "ECON 690",
@@ -759,9 +809,59 @@
     "highlights": [],
     "syllabusUrl": "",
     "featured": false,
-    "order": 1,
+    "order": 3,
     "professors": [
       "david-hansen"
+    ]
+  },
+  {
+    "id": "introductory-econometrics",
+    "title": "Introductory Econometrics",
+    "code": "ECON 410",
+    "semester": "Fall 2023",
+    "termOrder": 202303,
+    "grade": "A",
+    "achievements": [],
+    "types": [
+      "Economics"
+    ],
+    "topics": [
+      "Econometrics",
+      "Regression analysis",
+      "Causal inference"
+    ],
+    "highlights": [],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 1,
+    "professors": [
+      "kohei-yata"
+    ]
+  },
+  {
+    "id": "intermediate-microeconomics",
+    "title": "Intermediate Microeconomics",
+    "code": "ECON 311",
+    "semester": "Fall 2023",
+    "termOrder": 202303,
+    "grade": "AB",
+    "achievements": [
+      "Honors"
+    ],
+    "types": [
+      "Economics"
+    ],
+    "topics": [
+      "Microeconomic theory",
+      "Consumer theory",
+      "Game theory"
+    ],
+    "highlights": [],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 2,
+    "professors": [
+      "matteo-camboni"
     ]
   },
   {
@@ -783,7 +883,7 @@
     "highlights": [],
     "syllabusUrl": "",
     "featured": false,
-    "order": 1,
+    "order": 3,
     "professors": [
       "veronika-kusumaryati"
     ]
@@ -807,9 +907,108 @@
     "highlights": [],
     "syllabusUrl": "",
     "featured": false,
-    "order": 2,
+    "order": 4,
     "professors": [
       "eduardo-schmidt-passos"
+    ]
+  },
+  {
+    "id": "statistics-measurement-economics",
+    "title": "Statistics: Measurement in Economics",
+    "code": "ECON 310",
+    "semester": "Summer 2023",
+    "termOrder": 202302,
+    "grade": "A",
+    "achievements": [],
+    "types": [
+      "Economics"
+    ],
+    "topics": [
+      "Statistics",
+      "Measurement",
+      "Data analysis"
+    ],
+    "highlights": [],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 1,
+    "professors": [
+      "christopher-mckelvey"
+    ]
+  },
+  {
+    "id": "data-science-modeling-i",
+    "title": "Data Science Modeling I",
+    "code": "STAT 240",
+    "semester": "Summer 2023",
+    "termOrder": 202302,
+    "grade": "A",
+    "achievements": [],
+    "types": [
+      "Statistics",
+      "Data Science"
+    ],
+    "topics": [
+      "Data programming",
+      "Data modeling",
+      "R"
+    ],
+    "highlights": [],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 2,
+    "professors": [
+      "bi-cheng-wu"
+    ]
+  },
+  {
+    "id": "madison-college-microeconomics",
+    "title": "Microeconomics",
+    "code": "ECON 20809212",
+    "semester": "Spring 2023",
+    "termOrder": 202301,
+    "grade": "A",
+    "achievements": [],
+    "types": [
+      "Economics"
+    ],
+    "topics": [
+      "Microeconomics"
+    ],
+    "highlights": [
+      "Earned a grade above 100%."
+    ],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 1,
+    "professors": [
+      "ron-dunbar"
+    ]
+  },
+  {
+    "id": "intro-programming-python",
+    "title": "Intro to Programming in Python",
+    "code": "MATH 20804217",
+    "semester": "Spring 2023",
+    "termOrder": 202301,
+    "grade": "A",
+    "achievements": [],
+    "types": [
+      "Computer Science",
+      "Data Science"
+    ],
+    "topics": [
+      "Python",
+      "Data programming"
+    ],
+    "highlights": [
+      "Earned a grade above 100%."
+    ],
+    "syllabusUrl": "",
+    "featured": false,
+    "order": 2,
+    "professors": [
+      "jeffrey-havens"
     ]
   }
 ]
