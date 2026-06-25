@@ -20,11 +20,19 @@ export function getFeaturedProjects(projects: ProjectEntry[]) {
 }
 
 
+function sortProjectStatuses(statuses: string[]) {
+  return statuses.slice().sort((a, b) => {
+    if (a === "In progress") return -1;
+    if (b === "In progress") return 1;
+    return a.localeCompare(b);
+  });
+}
+
 export function getProjectStatusFilters(projects: ProjectEntry[]) {
   const statuses = projects.map((project) => project.data.status);
   const hasActiveProject = projects.some((project) => project.data.period.end === "present");
 
-  return uniqueSorted(hasActiveProject ? [...statuses, "In progress"] : statuses);
+  return sortProjectStatuses([...new Set(hasActiveProject ? [...statuses, "In progress"] : statuses)].filter(Boolean));
 }
 
 export function getProjectStatusFilterValues(project: ProjectEntry) {
