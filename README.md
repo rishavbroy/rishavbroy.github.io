@@ -70,7 +70,7 @@ npm run dev:review:log
 
 Research projects are Markdown entries because they may later grow into project pages with prose bodies. Courses are stored in `src/data/courses.json` because they are structured records rather than essays. Professors and mentors are referenced by stable IDs and resolved through `src/data/people.ts`, so one canonical name/link update flows through all cards that cite that person. People without stable public pages may omit `url`; their names render as plain text instead of links. Both projects and courses are still Astro content collections with Zod schemas, so they retain build-time validation and typed `getCollection()` access. Course departments are derived from course codes, so codes should begin with the department label shown in filters, such as `ECON 710` or `COMP SCI 639`. Course `types` should contain only level markers and broad subjects, while course `topics` should contain narrower fields, methods, and tools, including coding tools such as Python, Stata, R, Julia, MATLAB, LaTeX, SQL, and Git. Course `highlights` should be reserved for unusually strong evidence such as exact exam scores, percentile comparisons, or other exceptional performance evidence; routine topical content, audit status, and course-load context belong elsewhere or should be omitted.
 
-Use project mentor fields deliberately: a `Research note` status communicates scope, while the mentor list communicates provenance or advising context. Project date ranges are stored as discrete academic terms, using `YYYY-spring`, `YYYY-summer`, `YYYY-fall`, or `present`.
+Use project mentor fields deliberately: a `Research note` status communicates scope, while the mentor list communicates provenance or advising context. Project date ranges are stored as discrete academic terms, using `YYYY-spring`, `YYYY-summer`, `YYYY-fall`, or `present`. Project tags should be standard, reusable labels; avoid near-duplicates such as `Development` and `Development Economics`, and prefer the more specific shared label when one exists.
 
 ## Filtering and search
 
@@ -98,7 +98,7 @@ npm run build:review
 
 The deployment workflow intentionally does not compile LaTeX. The PDF is a committed static asset so the public CV link stays stable and the website build stays simple.
 
-The checked-in TeX source should preserve all PDF-relevant content from the CV. Large inactive `comment` environments may be omitted to avoid publishing dormant reference/contact blocks, but visible CV content should not be removed as part of website maintenance.
+The checked-in TeX source should preserve the user-provided canonical `cv/Rishav_Roy_CV.tex` exactly unless the user explicitly provides a replacement or asks for a CV edit. Website patches should not trim, regenerate, or normalize the CV source as incidental cleanup.
 
 ## Deployment
 
