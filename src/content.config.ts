@@ -4,14 +4,25 @@ import { z } from "astro/zod";
 
 const optionalUrl = z.union([z.string().url(), z.literal("")]).optional();
 
+const projectLinkValue = z
+  .union([
+    z.string().url(),
+    z.literal(""),
+    z.object({
+      href: z.string().url(),
+      label: z.string()
+    })
+  ])
+  .optional();
+
 const projectLinksSchema = z
   .object({
-    github: optionalUrl,
-    paper: optionalUrl,
-    slides: optionalUrl,
-    poster: optionalUrl,
-    code: optionalUrl,
-    website: optionalUrl
+    github: projectLinkValue,
+    paper: projectLinkValue,
+    slides: projectLinkValue,
+    poster: projectLinkValue,
+    code: projectLinkValue,
+    website: projectLinkValue
   })
   .default({});
 

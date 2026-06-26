@@ -534,23 +534,18 @@ p {
 .card-links a {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
   color: var(--card-text);
-  text-decoration: none;
-}
-
-.card-links a:hover {
   text-decoration: underline;
-  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgb(23 17 14 / 0.36);
+  text-underline-offset: 0.22em;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
 }
 
-.card-links span {
-  border-radius: 999px;
-  padding: 0.12rem 0.38rem;
-  background: #17110e;
-  color: var(--text);
-  font-size: 0.68rem;
-  font-weight: 850;
+.card-links a:hover,
+.card-links a:focus-visible {
+  color: #9a4f17;
+  text-decoration-color: #9a4f17;
 }
 
 .research-summary {

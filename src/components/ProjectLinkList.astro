@@ -14,7 +14,6 @@ const visibleLinks = getVisibleProjectLinks(links);
   <div class="card-links" aria-label={label}>
     {visibleLinks.map((link) => (
       <a href={link.href} target="_blank" rel="noreferrer">
-        <span aria-hidden="true">{link.icon}</span>
         {link.label}
       </a>
     ))}
