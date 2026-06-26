@@ -22,7 +22,9 @@ shortDescription: "A group final project for COMP SCI 639 Foundation Models test
 links:
   github: "https://github.com/B-a-1-a/CEREBRO"
   paper: "https://github.com/B-a-1-a/CEREBRO/blob/main/report/writeup.pdf"
-  website: "https://b-a-1-a.github.io/CEREBRO/"
+  website:
+    href: "https://b-a-1-a.github.io/CEREBRO/"
+    label: "Demo"
 ---
 
 This entry is intentionally short for now. Later, it can include the report, model architecture, result figures, and replication notes.

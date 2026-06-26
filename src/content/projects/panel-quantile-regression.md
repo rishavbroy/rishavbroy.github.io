@@ -21,8 +21,10 @@ period:
 question: "Can stochastic subgradient methods deliver fast, valid inference for fixed-effects panel quantile regression under common shocks?"
 shortDescription: "A theoretical econometrics note deriving a stochastic-subgradient and one-step-correction strategy for large-N fixed-effects panel quantile regression with common shocks, using orthogonalized slope moments to remove first-order fixed-effect score effects."
 links:
-  github: ""
-  paper: ""
+  github: "https://github.com/rishavbroy/fast-feqr-with-shocks"
+  paper:
+    href: "https://github.com/rishavbroy/fast-feqr-with-shocks/blob/main/draft.pdf"
+    label: "Draft"
 ---
 
 This entry is intentionally short for now. Later, it can become a full project page with abstract, methods, links, figures, and replication notes.
