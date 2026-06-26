@@ -14,8 +14,9 @@
     ],
     "topics": [
       "Industrial organization",
-      "Structural modeling",
-      "Empirical IO"
+      "Empirical IO",
+      "Policy analysis",
+      "Structural modeling"
     ],
     "highlights": [],
     "syllabusUrl": "",
@@ -43,10 +44,10 @@
     ],
     "topics": [
       "Macroeconomics",
-      "Recursive methods",
-      "Dynamic models",
-      "MATLAB",
-      "LaTeX"
+      "Dynamic programming",
+      "Labor economics",
+      "LaTeX",
+      "MATLAB"
     ],
     "highlights": [
       "Highest score on Rishabh Kirpalani’s final: 86/100; 75th percentile was 68.5.",
@@ -73,8 +74,9 @@
     ],
     "topics": [
       "LLMs",
-      "Machine learning",
+      "AI",
       "Deep learning",
+      "Machine learning",
       "Python"
     ],
     "highlights": [
@@ -99,11 +101,12 @@
       "Economics"
     ],
     "topics": [
-      "Applied microeconomics",
+      "Applied Microeconomics",
       "Causal inference",
       "Econometrics",
-      "Stata",
-      "Python"
+      "Policy analysis",
+      "Python",
+      "Stata"
     ],
     "highlights": [],
     "syllabusUrl": "",
@@ -129,8 +132,8 @@
       "AI",
       "LLMs",
       "Machine learning",
-      "R",
-      "Python"
+      "Python",
+      "R"
     ],
     "highlights": [],
     "syllabusUrl": "",
@@ -156,7 +159,7 @@
     "topics": [
       "Development economics",
       "Political economy",
-      "Empirical development",
+      "Risk and insurance",
       "LaTeX"
     ],
     "highlights": [
@@ -184,8 +187,8 @@
     ],
     "topics": [
       "Industrial organization",
-      "IO theory",
-      "Empirical IO"
+      "Empirical IO",
+      "Structural modeling"
     ],
     "highlights": [],
     "syllabusUrl": "",
@@ -210,10 +213,10 @@
     ],
     "topics": [
       "Macroeconomics",
-      "Recursive methods",
-      "Dynamic models",
-      "MATLAB",
-      "LaTeX"
+      "Dynamic programming",
+      "Economic growth",
+      "LaTeX",
+      "MATLAB"
     ],
     "highlights": [],
     "syllabusUrl": "",
@@ -237,9 +240,9 @@
     ],
     "topics": [
       "Data ethics",
+      "AI governance",
       "Algorithms",
-      "Policy",
-      "AI governance"
+      "Policy"
     ],
     "highlights": [],
     "syllabusUrl": "",
@@ -265,7 +268,8 @@
     ],
     "topics": [
       "Political sociology",
-      "Institutions",
+      "Game theory",
+      "Political economy",
       "Social theory"
     ],
     "highlights": [
@@ -292,7 +296,8 @@
     ],
     "topics": [
       "Stochastic processes",
-      "Probability",
+      "Mathematical statistics",
+      "Proofs",
       "LaTeX"
     ],
     "highlights": [
@@ -317,8 +322,8 @@
       "Computer Science"
     ],
     "topics": [
-      "Convex optimization",
       "Optimization",
+      "Convex optimization",
       "Julia",
       "LaTeX"
     ],
@@ -346,10 +351,10 @@
     ],
     "topics": [
       "Data programming",
-      "Python",
-      "SQL",
+      "Algorithms",
       "Git",
-      "GeoPandas"
+      "Python",
+      "SQL"
     ],
     "highlights": [
       "Completed during an overloaded, 20-credit-pace term."
@@ -381,11 +386,14 @@
       "Econometrics",
       "Asymptotic theory",
       "Causal inference",
-      "Stata",
-      "LaTeX"
+      "Machine learning",
+      "Time series",
+      "LaTeX",
+      "Stata"
     ],
     "highlights": [
-      "Highest score on Bruce Hansen’s final: 93/100; 75th percentile was 67.75."
+      "Highest score on Bruce Hansen’s final: 93/100; 75th percentile was 67.75.",
+      "Earned 75th percentile on Harold D. Chiang’s final."
     ],
     "syllabusUrl": "",
     "featured": true,
@@ -412,12 +420,14 @@
     ],
     "topics": [
       "Measure theory",
-      "Real analysis",
+      "Probability theory",
       "Proofs",
+      "Real analysis",
       "LaTeX"
     ],
     "highlights": [
-      "Highest score in the first half of the course: 100/100 on the midterm; 75th percentile was 89.75."
+      "Highest score in the first half of the course: 100/100 on the midterm; 75th percentile was 89.75.",
+      "Studied measure-theoretic probability theory for Honors."
     ],
     "syllabusUrl": "",
     "featured": true,
@@ -440,9 +450,9 @@
     ],
     "topics": [
       "Microeconomic theory",
-      "General equilibrium",
-      "Welfare economics",
-      "Externalities"
+      "Market design",
+      "Risk and insurance",
+      "Welfare economics"
     ],
     "highlights": [
       "Scored above the 75th percentile on the final covering general equilibrium, welfare, and externalities."
@@ -497,8 +507,8 @@
     ],
     "topics": [
       "Food security",
-      "Malnutrition",
       "Development economics",
+      "Political economy",
       "LaTeX"
     ],
     "highlights": [],
@@ -522,9 +532,9 @@
       "Literature"
     ],
     "topics": [
+      "History",
       "Political theory",
-      "Social theory",
-      "History"
+      "Social theory"
     ],
     "highlights": [],
     "syllabusUrl": "",
@@ -549,6 +559,8 @@
     "topics": [
       "Econometrics",
       "Asymptotic theory",
+      "Mathematical statistics",
+      "Probability theory",
       "Stata"
     ],
     "highlights": [
@@ -589,7 +601,7 @@
   },
   {
     "id": "machine-learning",
-    "title": "Machine Learning",
+    "title": "Machine Learning and Pattern Classification",
     "code": "STAT 451",
     "semester": "Fall 2024",
     "termOrder": 202403,
@@ -601,6 +613,7 @@
     ],
     "topics": [
       "Machine learning",
+      "Pattern classification",
       "Python"
     ],
     "highlights": [],
@@ -624,7 +637,7 @@
       "Data Science"
     ],
     "topics": [
-      "Statistical learning",
+      "Data modeling",
       "Data programming",
       "R"
     ],
@@ -651,7 +664,7 @@
     ],
     "topics": [
       "Real analysis",
-      "Sobolev spaces",
+      "Functional analysis",
       "Proofs"
     ],
     "highlights": [
@@ -678,7 +691,7 @@
     ],
     "topics": [
       "Cultural analytics",
-      "Data politics",
+      "Machine learning",
       "Python"
     ],
     "highlights": [],
@@ -701,7 +714,7 @@
       "Mathematics"
     ],
     "topics": [
-      "Probability",
+      "Probability theory",
       "Mathematical statistics"
     ],
     "highlights": [],
@@ -727,7 +740,6 @@
     ],
     "topics": [
       "Real analysis",
-      "Riemann zeta function",
       "Proofs"
     ],
     "highlights": [
@@ -756,7 +768,7 @@
     "topics": [
       "Macroeconomics",
       "Economic growth",
-      "Dynamic models"
+      "Labor economics"
     ],
     "highlights": [],
     "syllabusUrl": "",
@@ -778,9 +790,8 @@
       "Economics"
     ],
     "topics": [
-      "Microeconomic theory",
       "Market design",
-      "Game theory"
+      "Microeconomic theory"
     ],
     "highlights": [],
     "syllabusUrl": "",
@@ -827,7 +838,6 @@
     ],
     "topics": [
       "Econometrics",
-      "Regression analysis",
       "Causal inference"
     ],
     "highlights": [],
@@ -853,7 +863,6 @@
     ],
     "topics": [
       "Microeconomic theory",
-      "Consumer theory",
       "Game theory"
     ],
     "highlights": [],
@@ -876,9 +885,9 @@
       "International Studies"
     ],
     "topics": [
-      "Political economy",
       "Social theory",
-      "Development economics"
+      "Anthropology",
+      "Political economy"
     ],
     "highlights": [],
     "syllabusUrl": "",
@@ -924,9 +933,7 @@
       "Economics"
     ],
     "topics": [
-      "Statistics",
-      "Measurement",
-      "Data analysis"
+      "Mathematical statistics"
     ],
     "highlights": [],
     "syllabusUrl": "",
@@ -949,8 +956,8 @@
       "Data Science"
     ],
     "topics": [
-      "Data programming",
       "Data modeling",
+      "Data programming",
       "R"
     ],
     "highlights": [],
@@ -999,8 +1006,8 @@
       "Data Science"
     ],
     "topics": [
-      "Python",
-      "Data programming"
+      "Data programming",
+      "Python"
     ],
     "highlights": [
       "Earned a grade above 100%."
