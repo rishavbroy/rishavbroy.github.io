@@ -1,18 +1,31 @@
 import type { CollectionEntry } from "astro:content";
 import { uniqueSorted } from "./filterData";
-import { buildTimelinePoints } from "./terms";
+import { buildTimelinePoints, getPeriodValues } from "./terms";
 
 export type ProjectEntry = CollectionEntry<"projects">;
 
 export function sortProjects(projects: ProjectEntry[]) {
-  return projects
-    .slice()
-    .sort(
-      (a, b) =>
-        Number(b.data.featured) - Number(a.data.featured) ||
-        a.data.order - b.data.order ||
-        a.data.title.localeCompare(b.data.title)
+  return projects.slice().sort((a, b) => {
+    const featuredDifference = Number(b.data.featured) - Number(a.data.featured);
+
+    if (featuredDifference !== 0) {
+      return featuredDifference;
+    }
+
+    if (a.data.featured && b.data.featured) {
+      return a.data.order - b.data.order || a.data.title.localeCompare(b.data.title);
+    }
+
+    const aPeriod = getPeriodValues(a.data.period);
+    const bPeriod = getPeriodValues(b.data.period);
+
+    return (
+      bPeriod.end - aPeriod.end ||
+      bPeriod.start - aPeriod.start ||
+      a.data.order - b.data.order ||
+      a.data.title.localeCompare(b.data.title)
     );
+  });
 }
 
 export function getFeaturedProjects(projects: ProjectEntry[]) {
