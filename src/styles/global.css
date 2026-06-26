@@ -536,7 +536,7 @@ p {
   align-items: center;
   color: var(--card-text);
   text-decoration: underline;
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: auto;
   text-decoration-color: rgb(23 17 14 / 0.36);
   text-underline-offset: 0.22em;
   transition: color 160ms ease, text-decoration-color 160ms ease;
