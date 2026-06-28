@@ -7,12 +7,14 @@ topics:
   - LLMs
   - Monetary Policy
   - Macroeconomics
-  - Applied Econometrics
+  - Central bank communication
 skills:
-  - Text as data
-  - Measurement error
   - Fixed effects
+  - Measurement error
   - Natural language processing
+  - Panel data
+  - Text as data
+  - Transformers
   - Python
 mentors:
   - harold-chiang
@@ -21,7 +23,7 @@ period:
   start: "2026-spring"
   end: "present"
 question: "When language models generate monetary-policy stance measures for downstream economic estimation, how do their errors propagate?"
-shortDescription: "A research paper treating language-model-generated central-bank stance measures as noisy proxies for latent policy stance, using a 380,200-sentence central-bank corpus, human-labeled validation data, entity masking, semantic perturbations, fixed-effects regressions, and aggregation-sensitivity checks."
+shortDescription: "A research paper studying language model stance scores as generated regressors in macroeconomic estimation. Using the World Central Banks corpus, human labels, masking tests, semantic perturbations, and bank-month regressions, it measures when central bank text classifiers produce errors that affect exchange-rate and inflation estimates."
 links:
   github: "https://github.com/rishavbroy/llms-macro-measures"
   paper: "https://github.com/rishavbroy/llms-macro-measures/blob/main/report/report.pdf"

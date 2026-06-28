@@ -8,10 +8,10 @@ topics:
   - Labor
   - Public Policy
 skills:
+  - Policy analysis
   - Policy design
-  - Local general equilibrium
-  - Workforce development
   - Public finance
+  - Workforce development
 mentors:
   - simeon-alder
 period:
@@ -19,7 +19,7 @@ period:
   start: "2024-fall"
   end: "2024-fall"
 question: "How should local policymakers design workforce and business-development policy after a major negative labor-demand shock?"
-shortDescription: "A first-place economic development case competition project estimating local impacts from a coal-plant closure and designing demand-driven training, supportive services, and business-dynamism interventions."
+shortDescription: "A first-place economic development case competition project estimating the local effects of a coal plant closure and proposing training, supportive services, and business development policies for displaced workers and affected communities."
 links:
   paper: ""
   slides: ""

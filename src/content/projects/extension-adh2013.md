@@ -7,22 +7,21 @@ topics:
   - Trade
   - Political Economy
   - Labor
-  - Applied Microeconomics
-  - Applied Econometrics
 skills:
-  - Shift-share design
+  - Applied Econometrics
+  - Data harmonization
   - Event studies
   - Instrumental variables
-  - Data harmonization
-  - Stata
+  - Shift-share design
   - Python
+  - Stata
 mentors: []
 period:
   label: "Spring 2026"
   start: "2026-spring"
   end: "2026-spring"
 question: "Did local exposure to the China shock affect Republican presidential vote margins, and did any political effects emerge in the short run, medium run, or long run?"
-shortDescription: "A group final project for ECON 695 001 Empirical Methods in Applied Microeconomics extending Autor, Dorn, and Hanson’s China-shock design to commuting-zone presidential vote margins using county-to-CZ crosswalks, election returns, shift-share exposure, and event-study specifications."
+shortDescription: "A group final project for ECON 695 001 Empirical Methods in Applied Microeconomics extending Autor, Dorn, and Hanson’s China shock design to presidential politics. It links trade exposure, county election returns, historical county crosswalks, and commuting zones to study changes in Republican vote margins."
 links:
   github: "https://github.com/rishavbroy/extension-adh2013"
   paper: "https://github.com/rishavbroy/extension-adh2013/blob/main/report/final-report.pdf"

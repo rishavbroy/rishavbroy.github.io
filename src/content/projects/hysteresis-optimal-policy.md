@@ -5,13 +5,14 @@ featured: false
 order: 4
 topics:
   - Macroeconomics
-  - Policy
   - Econometrics
+  - Climate Economics
+  - Finance
 skills:
-  - Time series
-  - Model falsification
-  - State-space methods
   - Bayesian computation
+  - State-space models
+  - Stochastic processes
+  - Time series
 mentors:
   - job-boerma
 period:
@@ -19,7 +20,7 @@ period:
   start: "2025-fall"
   end: "2025-fall"
 question: "What observable implications distinguish true hysteresis from persistence, long memory, or misspecified Markov dynamics?"
-shortDescription: "A research note deriving observable proxies for stochastic hysteresis and outlining falsification strategies for Markov models in macro, finance, and climate-policy settings, with attention to Kalman filtering, particle filtering, and Bayesian MCMC tradeoffs."
+shortDescription: "A research note asking how true hysteresis can be distinguished from persistence or long memory in macroeconomic and climate policy time series. It derives observable implications from stochastic hysteresis models and compares state-space and Bayesian approaches for empirical implementation."
 links:
   github: ""
   paper: ""
