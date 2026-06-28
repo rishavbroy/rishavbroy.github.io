@@ -101,9 +101,8 @@
       "Economics"
     ],
     "topics": [
-      "Applied Microeconomics",
-      "Causal inference",
       "Econometrics",
+      "Causal inference",
       "Policy analysis",
       "Python",
       "Stata"
@@ -480,7 +479,6 @@
     ],
     "topics": [
       "Research design",
-      "Applied economics",
       "R"
     ],
     "highlights": [
