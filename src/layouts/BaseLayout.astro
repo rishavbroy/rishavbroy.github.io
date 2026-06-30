@@ -1,4 +1,5 @@
 ---
+import { Font } from "astro:assets";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
@@ -24,6 +25,19 @@ const pageTitle = title === "Rishav Roy" ? title : `${title} | Rishav Roy`;
     <meta name="description" content={description} />
     <meta name="theme-color" content="#080504" />
     <title>{pageTitle}</title>
+    <Font cssVariable="--font-lato" />
+    <Font cssVariable="--font-source-sans-3" />
+    <Font cssVariable="--font-ibm-plex-sans" />
+    <Font cssVariable="--font-manrope" />
+    <Font cssVariable="--font-plus-jakarta-sans" />
+    <Font cssVariable="--font-cabinet-grotesk" />
+    <Font cssVariable="--font-general-sans" />
+    <Font cssVariable="--font-satoshi" />
+    <Font cssVariable="--font-literata" />
+    <Font cssVariable="--font-newsreader" />
+    <Font cssVariable="--font-source-serif-4" />
+    <Font cssVariable="--font-crimson-pro" />
+    <Font cssVariable="--font-spectral" />
     <script is:inline>document.documentElement.dataset.js = "true";</script>
   </head>
   <body>
