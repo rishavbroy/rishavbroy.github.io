@@ -12,13 +12,13 @@ My personal website, built with [Astro](https://astro.build/) and deployed to Gi
 - `src/data/people.ts` contains canonical professor and mentor names/links used by courses and projects.
 - `public/` contains static files copied as-is to the deployed site.
 - `public/cv/Rishav_Roy_CV.tex` is the canonical CV source.
-- `public/cv/Rishav_Roy_CV.pdf` is generated from the TeX source before deployment and is not committed.
+- `public/cv/Rishav_Roy_CV.pdf` is generated from the TeX source.
 - `scripts/` contains local review helpers and the CV render script.
 
 
 ## Local development
 
-Make sure you have [installed Node.js](https://nodejs.org/en/download) before running `npm` commands.
+Make sure to [install Node.js](https://nodejs.org/en/download) before running the following `npm` commands.
 
 Install dependencies:
 
@@ -32,7 +32,7 @@ Run the local dev server:
 npm run dev
 ```
 
-Create a review ZIP (so you can get an LLM to help you code without having to pay more for an agent):
+Create a review ZIP (for coding with an LLM without having to pay for an agent):
 
 ```bash
 npm run review
@@ -79,6 +79,8 @@ npm run build:cv
 npm run check:cv
 npm run build:review
 ```
+
+Alternatively, after editing `public/cv/Rishav_Roy_CV.tex`, you can simply run `npm run build` or `npm run build:review`.
 
 The GitHub Pages workflow renders `public/cv/Rishav_Roy_CV.pdf` from `public/cv/Rishav_Roy_CV.tex` during deployment, before Astro builds the site.
 
