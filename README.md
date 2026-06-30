@@ -64,10 +64,10 @@ npm run dev:review:log
 
 ## CV workflow
 
-`public/cv/Rishav_Roy_CV.pdf` renders from `public/cv/Rishav_Roy_CV.tex`. To update the CV locally:
+`public/cv/Rishav_Roy_CV.pdf` renders from `public/cv/Rishav_Roy_CV.tex`. If you want to change the CV and preview or commit the updated PDF:
 
 1. Edit `public/cv/Rishav_Roy_CV.tex`.
-2. Render the generated PDF:
+2. Render `public/cv/Rishav_Roy_CV.pdf` locally:
 
 ```bash
 npm run build:cv
@@ -82,7 +82,7 @@ npm run build:review
 
 Alternatively, after editing `public/cv/Rishav_Roy_CV.tex`, you can simply run `npm run build` or `npm run build:review`.
 
-The GitHub Pages workflow renders `public/cv/Rishav_Roy_CV.pdf` from `public/cv/Rishav_Roy_CV.tex` during deployment, before Astro builds the site.
+The GitHub Pages workflow also runs `npm run build:cv` before Astro builds the site, so the deployed CV at `/cv/Rishav_Roy_CV.pdf` is rendered from `public/cv/Rishav_Roy_CV.tex` on every deployment.
 
 ## Deployment
 

@@ -26,7 +26,7 @@ Course sorting groups by term first, then puts stronger achievement evidence hig
 
 ## CV source
 
-`public/cv/Rishav_Roy_CV.tex` is the canonical CV source. The public PDF is generated from that file by `scripts/build-cv.sh` during deployment and should not be committed. Website patches must not trim, regenerate, or normalize the CV source as incidental cleanup. Change the TeX source only when the user explicitly provides a replacement or asks for a CV edit.
+`public/cv/Rishav_Roy_CV.tex` is the canonical CV source. `scripts/build-cv.sh` renders it to `public/cv/Rishav_Roy_CV.pdf`; the GitHub Pages workflow runs this render before Astro builds the deployed site. The PDF may be committed when the user wants the repository copy updated, but agents should not maintain a second PDF or source tree under `cv/`. Website patches must not trim, regenerate, or normalize the CV source as incidental cleanup. Change the TeX source only when the user explicitly provides a replacement or asks for a CV edit.
 
 ## Review ZIPs
 
