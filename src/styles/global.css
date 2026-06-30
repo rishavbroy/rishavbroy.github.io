@@ -266,6 +266,14 @@ p {
   color: var(--text);
 }
 
+#interests .section-heading {
+  max-width: 64rem;
+}
+
+#interests .section-heading p {
+  max-width: 60rem;
+}
+
 .interest-grid,
 .card-grid,
 .course-grid {
@@ -537,7 +545,7 @@ p {
   color: var(--card-text);
   text-decoration: underline;
   text-decoration-thickness: auto;
-  text-decoration-color: rgb(23 17 14 / 0.36);
+  text-decoration-color: var(--card-text);
   text-underline-offset: 0.22em;
   transition: color 160ms ease, text-decoration-color 160ms ease;
 }
