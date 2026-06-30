@@ -4,8 +4,8 @@ import { resolve } from "node:path";
 const root = process.cwd();
 
 const paths = {
-  pdf: resolve(root, "public/cv/Rishav_Roy_CV.pdf"),
-  tex: resolve(root, "cv/Rishav_Roy_CV.tex")
+  tex: resolve(root, "public/cv/Rishav_Roy_CV.tex"),
+  pdf: resolve(root, "public/cv/Rishav_Roy_CV.pdf")
 };
 
 async function assertReadableFile(path, label) {
@@ -17,16 +17,18 @@ async function assertReadableFile(path, label) {
     }
 
     return fileStat;
-  } catch (error) {
+  } catch {
     throw new Error(`${label} is missing or unreadable: ${path}`);
   }
 }
 
 async function main() {
-  const pdfStat = await assertReadableFile(paths.pdf, "CV PDF");
   await assertReadableFile(paths.tex, "CV TeX source");
+  const pdfStat = await assertReadableFile(paths.pdf, "CV PDF");
 
-  const pdfHeader = await readFile(paths.pdf).then((contents) => contents.subarray(0, 5).toString("utf8"));
+  const pdfHeader = await readFile(paths.pdf).then((contents) =>
+    contents.subarray(0, 5).toString("utf8")
+  );
 
   if (pdfHeader !== "%PDF-") {
     throw new Error("CV PDF does not appear to be a valid PDF: public/cv/Rishav_Roy_CV.pdf");
@@ -36,10 +38,11 @@ async function main() {
     throw new Error("CV PDF is suspiciously small. Did the render fail?");
   }
 
-  console.log("CV assets found: public/cv/Rishav_Roy_CV.pdf and cv/Rishav_Roy_CV.tex");
+  console.log("CV assets found: public/cv/Rishav_Roy_CV.tex and public/cv/Rishav_Roy_CV.pdf");
 }
 
 main().catch((error) => {
   console.error(error.message);
+  console.error("Run npm run build:cv before building the site if the public CV PDF is missing.");
   process.exit(1);
 });

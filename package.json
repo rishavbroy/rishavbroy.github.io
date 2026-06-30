@@ -13,7 +13,8 @@
     "dev:review": "node scripts/run-with-review.mjs dev",
     "build:review": "node scripts/run-with-review.mjs build",
     "dev:review:log": "node scripts/run-with-review.mjs dev --log",
-    "build:review:log": "node scripts/run-with-review.mjs build --log"
+    "build:review:log": "node scripts/run-with-review.mjs build --log",
+    "build:cv": "bash scripts/build-cv.sh"
   },
   "dependencies": {
     "astro": "^6.4.8"

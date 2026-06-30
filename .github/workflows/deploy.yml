@@ -21,6 +21,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
+      - name: Install LaTeX for CV render
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            latexmk \
+            texlive-fonts-recommended \
+            texlive-latex-base \
+            texlive-latex-extra \
+            texlive-latex-recommended
+
+      - name: Render public CV PDF
+        run: bash scripts/build-cv.sh
+
       - name: Install, build, and upload site
         uses: withastro/action@v6
 

@@ -7,7 +7,6 @@ const outFile = path.join(root, "review.zip");
 const includeRoots = [
   "src",
   "public",
-  "cv",
   "scripts",
   ".gitignore",
   ".github/workflows",
@@ -15,7 +14,8 @@ const includeRoots = [
   "package.json",
   "package-lock.json",
   "tsconfig.json",
-  "README.md"
+  "README.md",
+  "AGENTS.md"
 ];
 
 if (process.env.INCLUDE_TERMINAL_OUTPUT === "1") {
@@ -29,7 +29,8 @@ const excludeNames = new Set([
   ".git",
   ".DS_Store",
   "Thumbs.db",
-  "review.zip"
+  "review.zip",
+  ".cv-build"
 ]);
 
 const cvBuildByproducts = [
@@ -49,7 +50,8 @@ const cvBuildByproducts = [
 
 function isCvBuildByproduct(relativePath) {
   return (
-    relativePath.startsWith("cv/") &&
+    (relativePath.startsWith("cv/") || relativePath.startsWith("public/cv/")) &&
+    relativePath !== "public/cv/Rishav_Roy_CV.pdf" &&
     cvBuildByproducts.some((suffix) => relativePath.endsWith(suffix))
   );
 }

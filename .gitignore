@@ -4,6 +4,7 @@ node_modules/
 # Build output
 dist/
 .astro/
+.cv-build/
 
 # Local environment
 .env
@@ -19,15 +20,14 @@ terminal_output.txt
 Thumbs.db
 
 # LaTeX build byproducts
-cv/*.aux
-cv/*.bbl
-cv/*.bcf
-cv/*.blg
-cv/*.fls
-cv/*.fdb_latexmk
-cv/*.log
-cv/*.out
-cv/*.run.xml
-cv/*.synctex.gz
-cv/*.toc
-cv/*.pdf
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
