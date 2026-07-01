@@ -19,51 +19,51 @@
   --tag-bg: #eadfce;
   --tag-text: #2a211d;
 
-  /*
-    List of font presets.
+/*
+  List of font presets.
 
-    Minimalist:
-    --font-body: var(--font-lato);
-    --font-heading: var(--font-lato);
-
-    Warmer academic sans:
-    --font-body: var(--font-source-sans-3);
-    --font-heading: var(--font-source-sans-3);
-
-    Technical:
-    --font-body: var(--font-ibm-plex-sans);
-    --font-heading: var(--font-ibm-plex-sans);
-
-    Modern compact:
-    --font-body: var(--font-manrope);
-    --font-heading: var(--font-manrope);
-
-    Distinctive modern:
-    --font-body: var(--font-lato);
-    --font-heading: var(--font-cabinet-grotesk);
-
-    Formal academic:
-    --font-body: var(--font-source-sans-3);
-    --font-heading: var(--font-literata);
-
-    Editorial:
-    --font-body: var(--font-lato);
-    --font-heading: var(--font-newsreader);
-
-    Research-paper adjacent:
-    --font-body: var(--font-ibm-plex-sans);
-    --font-heading: var(--font-source-serif-4);
-
-    Literary/formal:
-    --font-body: var(--font-lato);
-    --font-heading: var(--font-crimson-pro);
-
-    Tasteful humanist:
-    --font-body: var(--font-source-sans-3);
-    --font-heading: var(--font-spectral);
-  */
+  0Minimalist:
   --font-body: var(--font-lato);
   --font-heading: var(--font-lato);
+
+  Warmer academic sans:
+  --font-body: var(--font-source-sans-3);
+  --font-heading: var(--font-source-sans-3);
+
+  3Technical:
+  --font-body: var(--font-ibm-plex-sans);
+  --font-heading: var(--font-ibm-plex-sans);
+
+  5Modern compact:
+  --font-body: var(--font-manrope);
+  --font-heading: var(--font-manrope);
+
+  1Distinctive modern:
+  --font-body: var(--font-lato);
+  --font-heading: var(--font-cabinet-grotesk);
+
+  2Formal academic:
+  --font-body: var(--font-source-sans-3);
+  --font-heading: var(--font-literata);
+
+  4Editorial:
+  --font-body: var(--font-lato);
+  --font-heading: var(--font-newsreader);
+
+  Research-paper adjacent:
+  --font-body: var(--font-ibm-plex-sans);
+  --font-heading: var(--font-source-serif-4);
+
+  Literary/formal:
+  --font-body: var(--font-lato);
+  --font-heading: var(--font-crimson-pro);
+
+  Tasteful humanist:
+  --font-body: var(--font-source-sans-3);
+  --font-heading: var(--font-spectral);
+*/
+  --font-body: var(--font-ibm-plex-sans);
+  --font-heading: var(--font-crimson-pro);
   --font-sans: var(--font-body);
   --font-serif: var(--font-heading);
 
