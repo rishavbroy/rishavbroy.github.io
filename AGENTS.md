@@ -12,7 +12,7 @@ Use project mentor fields deliberately: a `Research note` status communicates sc
 
 ## Site shell, fonts, and icons
 
-Only active fonts should be registered in `astro.config.mjs` and rendered with `<Font />` in `src/layouts/BaseLayout.astro`. Inactive font experiments may remain commented out beside the active font entries, but the active config, layout tags, and `src/styles/tokens.css` values should agree. Social profile icons are local inline SVGs in `src/components/SocialLinks.astro`; do not add an icon dependency for one or two static brand links unless the site grows a broader icon system. The favicon assets live in `public/` and are referenced from `BaseLayout.astro`.
+Only active fonts should be registered in `astro.config.mjs` and rendered with `<Font />` in `src/layouts/BaseLayout.astro`. Inactive font experiments may remain commented out beside the active font entries, but the active config, layout tags, and `src/styles/tokens.css` values should agree. Social profile icons are local inline SVGs in `src/components/SocialLinks.astro`; do not add an icon dependency for one or two static brand links unless the site grows a broader icon system. The favicon assets live in `public/images/` and are referenced from `BaseLayout.astro`; keep those URLs stable because search engines can use them in search results. The static `public/sitemap.xml` and `public/robots.txt` files list only the public HTML pages that should be discovered from search.
 
 ## Filtering and search
 
