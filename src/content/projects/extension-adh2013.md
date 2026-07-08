@@ -15,6 +15,8 @@ skills:
   - Shift-share design
   - Python
   - Stata
+mentors:
+  - karam-kang
 period:
   label: "Spring 2026"
   start: "2026-spring"

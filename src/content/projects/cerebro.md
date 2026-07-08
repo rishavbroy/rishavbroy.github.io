@@ -14,6 +14,8 @@ skills:
   - Representation learning
   - Transfer learning
   - Transformers
+mentors:
+  - frederic-sala
 period:
   label: "Spring 2026"
   start: "2026-spring"
