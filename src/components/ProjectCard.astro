@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import PeopleList from "./PeopleList.astro";
 import ProjectLinkList from "./ProjectLinkList.astro";
+import InlineLinkText from "./InlineLinkText.astro";
 import TagList from "./TagList.astro";
 import { toFilterData, toSearchData } from "../lib/filterData";
 import { getPeopleNames } from "../data/people";
@@ -52,7 +53,7 @@ const searchData = toSearchData([
   <h3>{data.title}</h3>
   <PeopleList ids={data.mentors} singularLabel="Mentor" pluralLabel="Mentors" context={peopleContext} />
   <p class="project-question"><strong>Question:</strong> {data.question}</p>
-  <p>{data.shortDescription}</p>
+  <InlineLinkText text={data.shortDescription} className="project-description" />
 
   <div class="tag-groups">
     <div>
