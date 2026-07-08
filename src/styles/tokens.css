@@ -20,9 +20,9 @@
   --tag-text: #2a211d;
 
 /*
-  List of font presets.
+  Potential font "presets" for future users:
 
-  0Minimalist:
+  Minimalist:
   --font-body: var(--font-lato);
   --font-heading: var(--font-lato);
 
@@ -30,23 +30,23 @@
   --font-body: var(--font-source-sans-3);
   --font-heading: var(--font-source-sans-3);
 
-  3Technical:
+  Technical:
   --font-body: var(--font-ibm-plex-sans);
   --font-heading: var(--font-ibm-plex-sans);
 
-  5Modern compact:
+  Modern compact:
   --font-body: var(--font-manrope);
   --font-heading: var(--font-manrope);
 
-  1Distinctive modern:
+  Distinctive modern:
   --font-body: var(--font-lato);
   --font-heading: var(--font-cabinet-grotesk);
 
-  2Formal academic:
+  Formal academic:
   --font-body: var(--font-source-sans-3);
   --font-heading: var(--font-literata);
 
-  4Editorial:
+  Editorial:
   --font-body: var(--font-lato);
   --font-heading: var(--font-newsreader);
 

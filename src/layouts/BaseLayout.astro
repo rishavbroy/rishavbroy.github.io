@@ -25,8 +25,13 @@ const pageTitle = title === "Rishav Roy" ? title : `${title} | Rishav Roy`;
     <meta name="description" content={description} />
     <meta name="theme-color" content="#080504" />
     <title>{pageTitle}</title>
-    <Font cssVariable="--font-lato" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <Font cssVariable="--font-source-sans-3" />
+    <Font cssVariable="--font-spectral" />
+    <!-- Uncomment the following to enable font "presets":
+    <Font cssVariable="--font-lato" />
     <Font cssVariable="--font-ibm-plex-sans" />
     <Font cssVariable="--font-manrope" />
     <Font cssVariable="--font-plus-jakarta-sans" />
@@ -37,7 +42,7 @@ const pageTitle = title === "Rishav Roy" ? title : `${title} | Rishav Roy`;
     <Font cssVariable="--font-newsreader" />
     <Font cssVariable="--font-source-serif-4" />
     <Font cssVariable="--font-crimson-pro" />
-    <Font cssVariable="--font-spectral" />
+    -->
     <script is:inline>document.documentElement.dataset.js = "true";</script>
   </head>
   <body>
