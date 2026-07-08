@@ -14,7 +14,6 @@ skills:
   - Representation learning
   - Transfer learning
   - Transformers
-mentors: []
 period:
   label: "Spring 2026"
   start: "2026-spring"
@@ -28,5 +27,3 @@ links:
     href: "https://b-a-1-a.github.io/CEREBRO/"
     label: "Demo"
 ---
-
-This entry is intentionally short for now. Later, it (or its README) can include the report, model architecture, result figures, and replication notes.

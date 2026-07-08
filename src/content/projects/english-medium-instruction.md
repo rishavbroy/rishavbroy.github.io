@@ -32,5 +32,3 @@ links:
     href: "https://github.com/rishavbroy/emi-inequality-india/blob/main/presentations/2025_uw_undergrad_symposium/slides.pdf"
     label: "Presentation (May 2025)"
 ---
-
-This entry is intentionally short for now. Later, it (or its README) can become a full project page with abstract, methods, links, figures, and replication notes.

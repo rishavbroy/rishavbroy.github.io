@@ -20,10 +20,4 @@ period:
   end: "2024-fall"
 question: "How should local policymakers design workforce and business-development policy after a major negative labor-demand shock?"
 shortDescription: "A first-place economic development case competition project estimating the local effects of a coal plant closure and proposing training, supportive services, and business development policies for displaced workers and affected communities."
-links:
-  paper: ""
-  slides: ""
-  poster: ""
 ---
-
-This entry is intentionally short for now. Later, it (or its README) can include the policy memo, presentation materials, and data notes.

@@ -31,5 +31,3 @@ links:
     href: "https://github.com/rishavbroy/llms-macro-measures/blob/main/presentation/presentation.pdf"
     label: "Presentation (May 2026)"
 ---
-
-This entry is intentionally short for now. Later, it (or its README) can become a full project page with abstract, methods, links, figures, and replication notes.

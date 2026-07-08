@@ -26,5 +26,3 @@ links:
     href: "https://github.com/rishavbroy/fast-feqr-with-shocks/blob/main/draft.pdf"
     label: "Draft"
 ---
-
-This entry is intentionally short for now. Later, it (or its README) can become a full project page with abstract, methods, links, figures, and replication notes.

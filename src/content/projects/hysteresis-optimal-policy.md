@@ -21,9 +21,4 @@ period:
   end: "2025-fall"
 question: "What observable implications distinguish true hysteresis from persistence, long memory, or misspecified Markov dynamics?"
 shortDescription: "A research note asking how true hysteresis can be distinguished from persistence or long memory in macroeconomic and climate policy time series. It derives observable implications from stochastic hysteresis models and compares state-space and Bayesian approaches for empirical implementation."
-links:
-  github: ""
-  paper: ""
 ---
-
-This entry is intentionally short for now. Later, it (or its README) can become a full project page with abstract, methods, links, figures, and replication notes.

@@ -21,10 +21,4 @@ period:
   end: "2025-fall"
 question: "How do loyalty programs, app adoption, and discount technologies reshape pricing, channel choice, and consumer surplus across income groups?"
 shortDescription: "A structural industrial organization note modeling app adoption, loyalty programs, discounting, and channel choice in fast food. It uses dynamic discrete choice, simulated consumer states, and convex optimization to study how pricing technology can redistribute surplus across income groups."
-links:
-  github: ""
-  paper: ""
-  slides: ""
 ---
-
-This entry is intentionally short for now. Later, it (or its README) can become a full project page with the model setup, counterfactuals, and simulation results.

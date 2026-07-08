@@ -22,8 +22,4 @@ period:
   end: "2024-spring"
 question: "Can a field experiment distinguish irrational present bias from rational responses to poverty, precarity, and stress?"
 shortDescription: "A final project for ECON 690 Experimental Economics proposing a four-arm field experiment on poverty and present bias. The design uses stratified randomization, intertemporal choices with real financial incentives, biomarkers, and wellbeing measures to distinguish irrational impatience from rational responses to precarity."
-links:
-  paper: ""
 ---
-
-This entry is intentionally short for now. Later, it (or its README) can include the experimental design, survey instruments, identification concerns, and implementation notes.
