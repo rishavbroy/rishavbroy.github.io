@@ -43,6 +43,6 @@ async function main() {
 
 main().catch((error) => {
   console.error(error.message);
-  console.error("Run npm run build:cv before building the site if the public CV PDF is missing.");
+  console.error("Run npm run build:cv if you need to regenerate the public CV PDF directly.");
   process.exit(1);
 });

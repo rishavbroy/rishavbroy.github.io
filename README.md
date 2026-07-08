@@ -18,7 +18,7 @@ My personal website, built with [Astro](https://astro.build/) and deployed to Gi
 
 ## Local development
 
-Make sure to [install Node.js](https://nodejs.org/en/download) before running the following `npm` commands.
+Make sure to [install Node.js](https://nodejs.org/en/download) before running the following `npm` commands. Builds also require a local LaTeX installation with `latexmk`, because the public CV PDF is rendered before Astro builds the site.
 
 Install dependencies:
 
@@ -62,27 +62,33 @@ or:
 npm run dev:review:log
 ```
 
+Remove local build output, review archives, macOS metadata, and LaTeX byproducts:
+
+```bash
+npm run clean
+```
+
 ## CV workflow
 
-`public/cv/Rishav_Roy_CV.pdf` renders from `public/cv/Rishav_Roy_CV.tex`. If you want to change the CV and preview or commit the updated PDF:
+`public/cv/Rishav_Roy_CV.tex` is the canonical CV source, and `public/cv/Rishav_Roy_CV.pdf` is the public PDF served at `/cv/Rishav_Roy_CV.pdf`.
+
+To update the CV:
 
 1. Edit `public/cv/Rishav_Roy_CV.tex`.
-2. Render `public/cv/Rishav_Roy_CV.pdf` locally:
+2. Run a normal site build:
+
+```bash
+npm run build
+```
+
+The `prebuild` step renders `public/cv/Rishav_Roy_CV.pdf` from the TeX source before Astro builds the site. The GitHub Pages workflow installs LaTeX before running the Astro build, so each deployment renders the public PDF from the current TeX source.
+
+For a CV-only render or validation, use:
 
 ```bash
 npm run build:cv
-```
-
-3. Validate the assets and site build:
-
-```bash
 npm run check:cv
-npm run build:review
 ```
-
-Alternatively, after editing `public/cv/Rishav_Roy_CV.tex`, you can simply run `npm run build` or `npm run build:review`.
-
-The GitHub Pages workflow also runs `npm run build:cv` before Astro builds the site, so the deployed CV at `/cv/Rishav_Roy_CV.pdf` is rendered from `public/cv/Rishav_Roy_CV.tex` on every deployment.
 
 ## Deployment
 

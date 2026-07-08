@@ -31,9 +31,6 @@ jobs:
             texlive-latex-extra \
             texlive-latex-recommended
 
-      - name: Render public CV PDF
-        run: bash scripts/build-cv.sh
-
       - name: Install, build, and upload site
         uses: withastro/action@v6
 
