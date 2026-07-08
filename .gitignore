@@ -11,13 +11,15 @@ dist/
 .env.*
 !.env.example
 
-# Review artifacts
+# Review files
 review.zip
+Archive.zip
 terminal_output.txt
 
-# System files
+# System artifacts
 .DS_Store
 Thumbs.db
+__MACOSX/
 
 # LaTeX build byproducts
 *.aux
