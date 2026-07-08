@@ -31,6 +31,12 @@ jobs:
             texlive-latex-extra \
             texlive-latex-recommended
 
+      - name: Restore CV render cache
+        uses: actions/cache@v4
+        with:
+          path: .cv-build
+          key: cv-${{ runner.os }}-${{ hashFiles('public/cv/Rishav_Roy_CV.tex') }}
+
       - name: Install, build, and upload site
         uses: withastro/action@v6
 

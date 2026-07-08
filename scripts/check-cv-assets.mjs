@@ -43,6 +43,6 @@ async function main() {
 
 main().catch((error) => {
   console.error(error.message);
-  console.error("Run npm run build:cv if you need to regenerate the public CV PDF directly.");
+  console.error("Run npm run build:cv to render the public CV PDF when the TeX source has changed. Use npm run build:cv:force to render it regardless of the cache.");
   process.exit(1);
 });

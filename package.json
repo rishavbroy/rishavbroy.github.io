@@ -14,8 +14,9 @@
     "build:review": "node scripts/run-with-review.mjs build",
     "dev:review:log": "node scripts/run-with-review.mjs dev --log",
     "build:review:log": "node scripts/run-with-review.mjs build --log",
-    "build:cv": "bash scripts/build-cv.sh",
-    "clean": "node scripts/clean-local-artifacts.mjs"
+    "build:cv": "node scripts/build-cv.mjs",
+    "clean": "node scripts/clean-local-artifacts.mjs",
+    "build:cv:force": "node scripts/build-cv.mjs --force"
   },
   "dependencies": {
     "astro": "^7.0.7"
