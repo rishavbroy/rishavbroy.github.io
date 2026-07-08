@@ -27,4 +27,4 @@ links:
   paper: "https://github.com/rishavbroy/extension-adh2013/blob/main/report/final-report.pdf"
 ---
 
-This entry is intentionally short for now. Later, it can include the report, empirical design, figures, and replication notes.
+This entry is intentionally short for now. Later, it (or its README) can include the report, empirical design, figures, and replication notes.

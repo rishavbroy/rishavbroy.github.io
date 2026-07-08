@@ -26,4 +26,4 @@ links:
   poster: ""
 ---
 
-This entry is intentionally short for now. Later, it can include the policy memo, presentation materials, and data notes.
+This entry is intentionally short for now. Later, it (or its README) can include the policy memo, presentation materials, and data notes.

@@ -26,4 +26,4 @@ links:
   paper: ""
 ---
 
-This entry is intentionally short for now. Later, it can include the experimental design, survey instruments, identification concerns, and implementation notes.
+This entry is intentionally short for now. Later, it (or its README) can include the experimental design, survey instruments, identification concerns, and implementation notes.

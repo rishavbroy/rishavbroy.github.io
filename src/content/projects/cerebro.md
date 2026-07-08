@@ -29,4 +29,4 @@ links:
     label: "Demo"
 ---
 
-This entry is intentionally short for now. Later, it can include the report, model architecture, result figures, and replication notes.
+This entry is intentionally short for now. Later, it (or its README) can include the report, model architecture, result figures, and replication notes.

@@ -27,4 +27,4 @@ links:
     label: "Draft"
 ---
 
-This entry is intentionally short for now. Later, it can become a full project page with abstract, methods, links, figures, and replication notes.
+This entry is intentionally short for now. Later, it (or its README) can become a full project page with abstract, methods, links, figures, and replication notes.

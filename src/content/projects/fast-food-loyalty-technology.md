@@ -27,4 +27,4 @@ links:
   slides: ""
 ---
 
-This entry is intentionally short for now. Later, it can become a full project page with the model setup, counterfactuals, and simulation results.
+This entry is intentionally short for now. Later, it (or its README) can become a full project page with the model setup, counterfactuals, and simulation results.
