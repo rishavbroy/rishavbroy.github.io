@@ -5,12 +5,19 @@ import CollectionFilters from "../components/CollectionFilters.astro";
 import CourseCard from "../components/CourseCard.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import { getCourseTaxonomy, sortCourses } from "../lib/courses";
+import { collectionPageStructuredData } from "../lib/structuredData";
 
+const description = "Selected coursework by Rishav Roy in graduate economics, mathematics, data science, machine learning, political economy, and development.";
 const courses = sortCourses(await getCollection("courses"));
 const taxonomy = getCourseTaxonomy(courses);
+const structuredData = collectionPageStructuredData({
+  path: "/courses/",
+  name: "Courses | Rishav Roy",
+  description
+});
 ---
 
-<BaseLayout title="Courses" description="Selected coursework by Rishav Roy in graduate economics, mathematics, data science, machine learning, political economy, and development.">
+<BaseLayout title="Courses" description={description} jsonLd={structuredData}>
   <section class="container page-hero">
     <SectionHeading eyebrow="Courses" title="Selected coursework" />
     <CollectionFilters

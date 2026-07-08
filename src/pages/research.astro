@@ -5,13 +5,20 @@ import ProjectCard from "../components/ProjectCard.astro";
 import CollectionFilters from "../components/CollectionFilters.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import { getProjectTaxonomy, getProjectTimeline, sortProjects } from "../lib/projects";
+import { collectionPageStructuredData } from "../lib/structuredData";
 
+const description = "Research projects by Rishav Roy in development, political economy, econometrics, macroeconomics, and language models.";
 const projects = sortProjects(await getCollection("projects"));
 const taxonomy = getProjectTaxonomy(projects);
 const timeline = getProjectTimeline(projects);
+const structuredData = collectionPageStructuredData({
+  path: "/research/",
+  name: "Research | Rishav Roy",
+  description
+});
 ---
 
-<BaseLayout title="Research" description="Research projects by Rishav Roy in development, political economy, econometrics, macroeconomics, and language models.">
+<BaseLayout title="Research" description={description} jsonLd={structuredData}>
   <section class="container page-hero">
     <SectionHeading eyebrow="Research" title="Projects and research questions" />
     <CollectionFilters
