@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import SectionHeading from "../components/SectionHeading.astro";
+import SocialLinks from "../components/SocialLinks.astro";
 import { getFeaturedProjects } from "../lib/projects";
 
 const featuredProjects = getFeaturedProjects(await getCollection("projects"));
@@ -27,7 +28,10 @@ const featuredProjects = getFeaturedProjects(await getCollection("projects"));
     <div class="hero-copy">
       <p class="eyebrow">UW–Madison B.S., ‘26 · Economics · Mathematics · Data Science</p>
       <h1>Rishav Roy</h1>
-      <p class="hero-contact">Contact: roybrishav [at] gmail [dot] com</p>
+      <div class="hero-contact-row">
+        <p class="hero-contact">Contact: roybrishav [at] gmail [dot] com</p>
+        <SocialLinks label="Rishav Roy profiles" />
+      </div>
       <p class="hero-identity">
         Triple major with top scores in PhD-level economics. Building the toolkit needed to study pressing issues in the empirical and econometric study of behavior, policy, and institutions.
       </p>

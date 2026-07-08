@@ -1,6 +1,13 @@
+---
+import SocialLinks from "./SocialLinks.astro";
+---
+
 <footer class="site-footer">
   <div class="container footer-inner">
-    <p>© {new Date().getFullYear()} Rishav Roy.</p>
-    <p class="footer-note">Built with Astro and GitHub Pages.</p>
+    <div>
+      <p>© {new Date().getFullYear()} Rishav Roy.</p>
+      <p class="footer-note">Built with Astro and GitHub Pages.</p>
+    </div>
+    <SocialLinks label="Rishav Roy profiles" />
   </div>
 </footer>
