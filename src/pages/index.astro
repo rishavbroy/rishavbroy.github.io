@@ -7,9 +7,31 @@ import SocialLinks from "../components/SocialLinks.astro";
 import { getFeaturedProjects } from "../lib/projects";
 
 const featuredProjects = getFeaturedProjects(await getCollection("projects"));
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Rishav Roy",
+  alternateName: "Rishav B. Roy",
+  url: "https://rishavbroy.github.io/",
+  image: "https://rishavbroy.github.io/images/headshot-960.webp",
+  sameAs: ["https://github.com/rishavbroy", "https://www.linkedin.com/in/roybrishav"],
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "University of Wisconsin–Madison",
+    sameAs: "https://www.wisc.edu/"
+  },
+  knowsAbout: [
+    "Applied econometrics",
+    "Development economics",
+    "Machine learning",
+    "Artificial intelligence",
+    "Political economy",
+    "Public policy",
+  ]
+};
 ---
 
-<BaseLayout>
+<BaseLayout jsonLd={personJsonLd}>
   <section class="hero container section-xl">
     <div class="hero-image-wrap">
       <picture>
