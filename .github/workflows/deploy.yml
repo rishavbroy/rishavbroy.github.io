@@ -26,13 +26,14 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
             latexmk \
+            texlive-fonts-extra \
             texlive-fonts-recommended \
             texlive-latex-base \
             texlive-latex-extra \
             texlive-latex-recommended
 
       - name: Restore CV render cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: .cv-build
           key: cv-${{ runner.os }}-${{ hashFiles('public/cv/Rishav_Roy_CV.tex') }}
