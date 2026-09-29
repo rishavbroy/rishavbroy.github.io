@@ -29,7 +29,7 @@ Run the local dev server:
 npm run dev
 ```
 
-Create a review ZIP for external review (e.g., when coding with an LLM without paying extra for an agent):
+Create a review ZIP for external review (e.g., so an LLM can help you troubleshoot without the cost of a coding agent):
 
 ```bash
 npm run review
@@ -47,7 +47,7 @@ Run the dev server through the review wrapper. A review ZIP is created when the 
 npm run dev:review
 ```
 
-Include `terminal_output.txt` in `review.zip` when you need to share terminal output:
+Include `terminal_output.txt` in `review.zip` if you want to share terminal output:
 
 ```bash
 npm run build:review:log
