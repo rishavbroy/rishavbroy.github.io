@@ -15,6 +15,7 @@ dist/
 review.zip
 Archive.zip
 terminal_output.txt
+file_list.txt
 
 # System artifacts
 .DS_Store
