@@ -29,7 +29,7 @@ Run the local dev server:
 npm run dev
 ```
 
-Create a review ZIP for external review (e.g., so an LLM can help you troubleshoot without the cost of a coding agent):
+Create a review ZIP for external review (e.g., to seek LLM assistance when troubleshooting without the added cost of a coding agent):
 
 ```bash
 npm run review
@@ -41,7 +41,7 @@ Run a build and create `review.zip` afterwards:
 npm run build:review
 ```
 
-Run the dev server through the review wrapper. A review ZIP is created when the server starts and again when you stop it with Ctrl-C:
+Run the dev server through the review wrapper. A review ZIP is created when the server starts and again if it's aborted (e.g., with Ctrl-C):
 
 ```bash
 npm run dev:review
