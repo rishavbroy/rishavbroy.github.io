@@ -1,7 +1,7 @@
 ---
 title: "Political Effects of the China Shock in Local Labor Markets"
 status: "Course project"
-featured: false
+featured: true
 order: 7
 topics:
   - Trade
