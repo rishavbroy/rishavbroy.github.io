@@ -19,6 +19,7 @@ const projectLinksSchema = z
   .object({
     github: projectLinkValue,
     paper: projectLinkValue,
+    samples: projectLinkValue,
     slides: projectLinkValue,
     poster: projectLinkValue,
     code: projectLinkValue,

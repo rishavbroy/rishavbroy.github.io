@@ -1,5 +1,5 @@
 ---
-title: "Escaping Inequality in India: The Role of English-Medium Instruction"
+title: "Inequality in a Potential Equalizer of Opportunity"
 status: "Senior thesis"
 featured: true
 order: 1
@@ -23,12 +23,16 @@ period:
   label: "Spring 2025–Present"
   start: "2025-spring"
   end: "present"
-question: "Does greater exposure to English-medium instruction increase local economic mobility in India?"
-shortDescription: "A senior thesis estimating whether district exposure to English-medium instruction in 2007 raised household consumption growth in India by 2018. It combines NSS education and consumption microdata, Census language files, and district boundary data, using linguistic distance from Hindi as an instrument and a probit model to study selection into education."
+question: "How unequal are the conditions that shape access to and potential gains from English-medium instruction in India?"
+shortDescription: "A senior thesis studying inequality in three conditions that shape the accessibility and potential net benefits of English-medium instruction in India: inherited linguistic costs, access to English-medium schooling, and local economic conditions. It harmonizes district and survey data on language, education, consumption, migration, human capital, and employment."
 links:
   github: "https://github.com/rishavbroy/emi-inequality-india"
-  paper: "https://github.com/rishavbroy/emi-inequality-india/blob/main/paper/report.pdf"
+  paper: "https://rishavbroy.github.io/emi-inequality-india/paper.pdf"
+  samples: "https://rishavbroy.github.io/emi-inequality-india/"
   slides:
     href: "https://github.com/rishavbroy/emi-inequality-india/blob/main/presentations/2025_uw_undergrad_symposium/slides.pdf"
     label: "Presentation (May 2025)"
+  poster:
+    href: "https://github.com/rishavbroy/emi-inequality-india/blob/main/posters/2026_predoc_conference/RishavRoy-Education.png"
+    label: "Poster (July 2026)"
 ---
