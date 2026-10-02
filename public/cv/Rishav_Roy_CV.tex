@@ -140,36 +140,40 @@
 
 \section{Research Experience}
 \resumeSubHeadingListStart
-    \resumeSubheading{{Inequality of Opportunity: English-Medium Instruction in India
-\hspace{0.5em}
+
+%\begin{comment}
+\resumeSubheading{{Inequality of Opportunity: English-Medium Instruction in India
+\hspace{0.2em}
 \href{https://rishavbroy.github.io/emi-inequality-india/application-samples/RishavRoy_WritingSample_Full.pdf}
-{\raisebox{0.1ex}{\footnotesize\faFilePdf}}
+{\raisebox{0ex}{\footnotesize\faFilePdf}}
 \hspace{0.15em}
 \href{https://github.com/rishavbroy/emi-inequality-india}
-{\raisebox{0.1ex}{\footnotesize\faGithub}}
+{\raisebox{0ex}{\footnotesize\faGithub}}
 \hspace{0.15em}
 \href{https://rishavbroy.github.io/emi-inequality-india/}
-{\raisebox{0.1ex}{\footnotesize\faGlobe}}
-}}{Spring 2025--Present}{Senior Thesis Paper (with feedback from Prof. Laura Schechter)}{}
+{\raisebox{0ex}{\footnotesize\faGlobe}}
+}}{Spring 2025--Fall 2026}{Senior Thesis Paper (with feedback from Prof. Laura Schechter)}{}
     \resumeItemListStart
 
-        \resumeItem{Built a district pseudo-panel ($N = 454$) merging 2007-08/2017-18 survey microdata and metadata, 35 Census 2001 language files, \& 2019-20 shapefiles to study EMI exposure on consumption growth with survey-weighted measures.}
+        \resumeItem{Engineered original district data system (1961--2024, mapped to 2001 borders) incorporating 52 Census tables; 14 NSS, HCES, \& PLFS surveys; 11 DISE censuses, 7 linguistic datasets, 4 CPI time series, 2 Economic Censuses.}
+        
+        \resumeItem{Built administrative histories for 593 districts using Census \& LGD records, geographic evidence, and official state gazettes, reconciling districts over renames, mergers, splits, and typos. Harmonized 9 consumption surveys with varying questionnaires and recall periods by defining comparable MPCE measures, tested against published values.}
+        
+        \resumeItem{Reconstructed lost schooling data for 7,211 district-year-medium of instruction IDs by processing 22 archived DISE PDFs. Recovered lost lexicostatistical data to test robustness of linguistic distance proxies like Glottolog genealogy.}
+        
+        \resumeItem{Implemented state-FE and survey-weighted ANCOVA, probit, and IV models with extensive sensitivity analysis. Tested spatial autocorrelation via permutation Moran's $I$. Evaluated weak IV inference using Montiel Olea--Pflueger effective $F$ and Anderson--Rubin confidence sets. Controlled family-wise error rate using Holm--Bonferroni method.}
+        
+        %\resumeItem{Found sharp within-district social stratification in English-medium/private schooling and stronger later-consumption associations for EMI than enrollment alone; documented substantial heterogeneity by baseline human capital and urbanization.} 
+        % This is good, but this list is already quite long.
+        
+        \resumeItem{Built reproducible \texttt{\{targets\}} pipeline in R with \texttt{renv}-locked dependencies, SHA-256 checksums for raw file manifests, automated tests, and end-to-end generation of publication-quality tables, maps, and manuscript.}
 
-        \resumeItem{Estimated district-level 2SLS with state-level clustered SEs, partial $F=39.20$. Documented endogeneity threats, spatial spillovers (Moran's $I$, Monte Carlo). Designed reusable IV generator to safely iterate 2SLS specifications.}
-        %\resumeItem{Estimated district-level 2SLS with state-level clustered SEs. Verified relevance (partial $F=39.20$) of IV, the 2001 pop.-WA of mother tongues' linguistic distance  from Hindi. Documented endogeneity threats, spatial spillovers (Moran's $I$, Monte Carlo), ecological fallacy. Designed reusable IV generator to safely iterate 2SLS specifications.}
-
-        \resumeItem{Estimated enrollment probit with design-based SEs, complex survey design (nested strata, lonely PSUs). Computed AME, delta-method SEs via autodiff. Rejected MCAR via logits, BH procedure. Mitigated systematic missingness.}
-        %\resumeItem{Detected spatial autocorrelation via Moran's $I$, constructed spatial lags, \& prototyped spatial IV/GMM.}
-
-        \resumeItem{Harmonized districts across renames/mergers/splits \& typos via multi-pass fuzzy joins (soundex, q-gram, etc.), canonicalization, \& 80 manual matches. Engineered data intake tools robust to OS-specific file-naming conventions.} % Identified duplicates driving multicollinearity.
-       
-        \resumeItem{Drafted 49-page paper in R Markdown with detailed replication notes, automated publication-quality maps/tables.}
     \resumeItemListEnd
+%\end{comment}
 
-
-    \resumeSubheading{Language Models as Measurement Instruments: Risks for Estimation}{Spring 2026--Present}{Independent Research Project (with feedback from Prof. Harold D. Chiang)}{}
+    \resumeSubheading{Language Models as Measurement Instruments: Risks for Estimation}{Summer 2026--Present}{Independent Research Project (with feedback from Prof. Harold D. Chiang)}{}
     \resumeItemListStart
-        \resumeItem{Formulated LM-generated measures as noisy proxies for central banks’ latent policy stance. Decomposed noise into error/leakage channels whose effects on downstream economic estimation I then experimentally isolated.}
+        \resumeItem{Formulated LM-generated measures as noisy proxies for central banks’ monetary policy stance. Decomposed noise into non-classical error and training leakage. Designed experiments isolating their effects on macro prediction.}
 
         \resumeItem{Built reproducible Python codebase for World Central Banks corpus (380,200 sentences, 3,453 docs, 1996-2024): ingestion, measurement, aggregation, FE regressions with IMF/World Bank data, and automated tables/figures.}
 
@@ -198,6 +202,7 @@
     \resumeItemListEnd
 %\end{comment}
 
+%\begin{comment}
     \resumeSubheading{Dynamic Discrete Choice in Fast Food: Loyalty, Technology, \& Inequality}{Summer--Fall 2025}{Independent Research Project (with feedback from Prof. Amanda Smith)}{}
     \resumeItemListStart
         \resumeItem{Formulated and numerically optimized a structural model of discounts, channel choice (in-store vs. app vs. outside option), and loyalty adoption using exponential cone optimization (Julia/JuMP, MOSEK) with MNL demand.}
@@ -206,6 +211,8 @@
         
         \resumeItem{Ensured convexity despite MNL demand \& concave technology investment via log-sum-exp \& RSOC epigraphs. Avoided bilinearity by updating loyalty shares via lagged states. Added income segmentation via MILP Big-$M$.}
     \resumeItemListEnd
+%\end{comment}
+
 
 \begin{comment}
     \resumeSubheading{Experimental Design: The Rationality of the Poverty-Present Bias Connection}{Spring 2024}{Independent Research Paper (with feedback from Prof. David Hansen)}{}
@@ -238,18 +245,18 @@
     \resumeSubheading{Economic Consultant and Data Analyst: Capital and Firm Ownership in Retirement}{2024}{Maui Mastermind Business Coaching}{Remote}
     \resumeItemListStart
 
-        \resumeItem{Harmonized SCF 2022 microdata with automated data integrity checks to characterize role of business ownership in post-retirement wealth persistence in R. Implemented survey design with 5 implicates, 999 replicate weights.}
+        \resumeItem{Wrangled the complex survey design and multiple imputation of the Federal Reserve's \textit{Survey of Consumer Finances} to  harmonize its microdata and study the role of business ownership in post-retirement wealth persistence.}
 
-        \resumeItem{Estimated age-grouped wealth distributions via survey-weighted quantiles (P50-P99.99) with replicate-weight SEs combined under multiple imputation. Illustrated and exported results in client-readable tables/figures.}
+        \resumeItem{Estimated age-grouped wealth distributions via survey-weighted quantiles (P50-P99.99), with replicate-weight SEs combined under multiple imputation (5 implicates, 999 replicate weights), in R.}
 
-        \resumeItem{Produced breakdowns of asset/income composition (e.g., active/non-active business ownership) via nearest-neighbor selection by net worth for age$\times$percentile estimates. Detailed SCF measurement/sampling limitations, data gaps.}
+        \resumeItem{Illustrated findings in client-readable tables/figures. Reported results alongside concise discussions of how SCF measurement, sampling, and data gaps affect interpretation, balancing technical precision with accessibility.}
         
     \resumeItemListEnd
 %\end{comment}
 
     \resumeSubheading{Restaurant and Inventory Manager}{2022--2023}{Sookie’s Veggie Burgers}{Madison, WI}
     \resumeItemListStart
-        \resumeItem{Built data-driven inventory tracker, cutting waste/holding times and building teamwork under stressful conditions.}
+        \resumeItem{Managed a 10-person team in daily operations. Implemented data-driven inventory tracking to cut waste and holding times. Strengthened communication/teamwork under tight operational constraints. Designed menu items.}
     \resumeItemListEnd
 
     \resumeSubheading{Tutor of College-Level Economics, Calculus, Chemistry, and US History}{2022--2023}{Self-Employed}{Remote}
@@ -284,7 +291,7 @@
         
         \resumeItem{Analyzed local general equilibrium impacts of a coal-plant closure using demand spillovers, labor reallocation, BLS and WI DWD projections, and direct/indirect/induced labor/fiscal losses  (\$251M output, \$2.8M taxes, 308 jobs).}
         
-        \resumeItem{Designed demand-driven training addressing job-specific human capital, participation constraints (school funding, housing supply), and retention via supportive services (childcare, transportation) \& post-training mentorship guarantees. Evaluated funding constraints and alternatives beyond WIOA (e.g., WI Fast Forward, SCSEP).}
+        \resumeItem{Designed demand-driven training addressing job-specific human capital, school funding, housing supply, \& retention via supportive services, post-training mentorship. Evaluated funding, from WIOA to WI Fast Forward \& SCSEP.}
         
         \resumeItem{Presented strategies and potential partnerships for improving business dynamism and climate (licensing, zoning, knowledge diffusion) given local demand gaps (e.g., 50\% retail furniture leakage) to Alliant Energy, MadREP.}
         
