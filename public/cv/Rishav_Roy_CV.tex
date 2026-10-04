@@ -157,13 +157,13 @@
 
         \resumeItem{Engineered original district data system (1961--2024, mapped to 2001 borders) incorporating 52 Census tables; 14 NSS, HCES, \& PLFS surveys; 11 DISE censuses, 7 linguistic datasets, 4 CPI time series, 2 Economic Censuses.}
         
-        \resumeItem{Built administrative histories for 593 districts using Census \& LGD records, geographic evidence, and official state documents, reconciling districts over renames, mergers, splits, and typos. Harmonized 9 consumption surveys with varying questionnaires, recall conventions by defining comparable MPCE measures tested against published values.}
+        \resumeItem{Built jurisdictional histories for 593 districts using Census \& LGD records, geographic evidence, and official state documents, reconciling districts over renames, mergers, splits, and typos. Harmonized 9 consumption surveys with varying questionnaires, recall conventions by defining comparable MPCE measures tested against published values.} % Anything longer than "varying questionnaires, recall conventions" puts us over 2 pages
         
-        \resumeItem{Reconstructed lost schooling data for 7,211 district-year-medium of instruction IDs by processing 22 archived DISE PDFs. Recovered lost lexicostatistical data to test robustness of linguistic distance proxies like Glottolog genealogy.}
+        \resumeItem{Reconstructed lost schooling data for 7,211 district-year-medium observations by processing 22 archived DISE PDFs. Recovered lost lexicostatistical data to test robustness of linguistic distance proxies like Glottolog genealogy.}
         
         \resumeItem{Implemented state-FE and survey-weighted ANCOVA, probit, and IV models with extensive sensitivity analysis. Tested spatial autocorrelation via permutation Moran's $I$. Evaluated weak IV inference using Montiel Olea--Pflueger effective $F$ and Anderson--Rubin confidence sets. Controlled family-wise error rate using Holm--Bonferroni method.}
         
-        %\resumeItem{Found sharp within-district social stratification in English-medium/private schooling and stronger later-consumption associations for EMI than enrollment alone; documented substantial heterogeneity by baseline human capital and urbanization.} 
+        %\resumeItem{Found sharp within-district social stratification in English-medium \& private schooling. Documented substantial heterogeneity by baseline human capital and urbanization.} 
         % This is good, but this list is already quite long.
         
         \resumeItem{Built reproducible \texttt{\{targets\}} pipeline in R with \texttt{renv}-locked dependencies, SHA-256 checksums for raw file manifests, automated tests, and end-to-end generation of publication-quality tables, maps, and manuscript.}
@@ -179,7 +179,7 @@
 
         \resumeItem{Evaluated non-classical measurement error using 25,000 human-labeled sentences and entity masking, semantic perturbations, validation sample-size simulations, regressions predicting errors, and sensitivity to aggregation rules.}
 
-        \resumeItem{Currently fine-tuning RoBERTa model while using a TF-IDF/logit baseline to benchmark and debug the pipeline. Will compare models by predictive performance, potential propagation of errors into macroeconomic estimation.}
+        %\resumeItem{Currently fine-tuning RoBERTa model while using a TF-IDF/logit baseline to benchmark and debug the pipeline. Will compare models by predictive performance, potential propagation of errors into macroeconomic estimation.}
         
     \resumeItemListEnd
 
@@ -191,8 +191,20 @@
         \resumeItem{Developed proof strategy for first-order equivalence between one-step corrected SGD estimator and exact FEQR: asymptotically negligible KKT residuals imply $\sqrt{T}$-normality and valid $\Gamma^{-1}\Sigma\Gamma^{-1}$ sandwich inference.}
 
     \resumeItemListEnd
-
+    
 %\begin{comment}
+    \resumeSubheading{The China Shock and Political Change in Local Labor Markets}{Spring 2026}{Sole Author of Code \& Collaborator on Project (with feedback from Prof. Karam Kang)}{}
+    \resumeItemListStart
+
+        \resumeItem{Estimated FE event studies of 1990--2007 import exposure (\href{https://doi.org/10.1257/aer.103.6.2121}{ADH, 2013}) on voting. Built balanced panel of 722 1990 CZs $\times$ 13 elections, each with $>99.6\%$ votes retained, via population-based crosswalks of 1972--2020 counties in R.}
+
+        \resumeItem{Tested results across alternative geographic weights, vote choice vs. participation outcomes, 1990--2000 vs. 2000--2007 exposure, and CZ-/state-clustered, Conley, Newey--West, Driscoll--Kraay, \& two-way clustered SEs.}
+        
+        \resumeItem{Assessed literature on Rotemberg weights, CZ-definition sensitivity, sectoral/temporal aggregation bias, inconsistent industry coding, and firm reorganization. Found that exposed CZs diverged more in later rather than earlier post-shock elections, motivating extensions on partisan composition, media consumption, and candidate ideology.}
+    \resumeItemListEnd
+%\end{comment}
+
+\begin{comment}
     \resumeSubheading{Empirical Implications of Stochastic Hysteresis on Optimal Policy}{Fall 2025}{Independent Research Project  (with guidance from Prof. Job Boerma)}{}
     \resumeItemListStart
         \resumeItem{Derived observable proxies for \href{https://jobboerma.com/wp-content/uploads/policy_hysteresis.pdf}{Boerma et al. (2023)}'s Malliavin/Itô calculus given CRRA utilities, CRS, etc. to distinguish true hysteresis from persistence or long memory in macro, finance, and climate policy.}
@@ -200,7 +212,7 @@
         \resumeItem{Developed framework to falsify large class of Markov models (e.g., DSGE, VAR) using non-Markov time series. Assessed computational and identification tradeoffs of Kalman filtering, particle filtering, and Bayesian MCMC.}
         %\resumeItem{Emphasized robustness to persistence, misspecification, and measurement error.}
     \resumeItemListEnd
-%\end{comment}
+\end{comment}
 
 %\begin{comment}
     \resumeSubheading{Dynamic Discrete Choice in Fast Food: Loyalty, Technology, \& Inequality}{Summer--Fall 2025}{Independent Research Project (with feedback from Prof. Amanda Smith)}{}
@@ -323,7 +335,7 @@
 
 \vspace{2.5mm}
 
-\textbf{Leadership Recognition}: \small{President’s Volunteer Service Award Winner (Field Museum),}\\ \small{Martin Luther King Jr. Outstanding Young Person Award (Urban League of Greater Madison), \\ Certificate of Distinguished Achievement for Outstanding Citizenship (American Legion)}
+%\textbf{Leadership Recognition}: \small{President’s Volunteer Service Award Winner (Field Museum),}\\ \small{Martin Luther King Jr. Outstanding Young Person Award (Urban League of Greater Madison), \\ Certificate of Distinguished Achievement for Outstanding Citizenship (American Legion)}
 
 \resumeSubHeadingListEnd
 
