@@ -4,7 +4,7 @@ import { uniqueSorted } from "./filterData";
 export type CourseEntry = CollectionEntry<"courses">;
 
 export function getCourseDepartment(code: string) {
-  return code.replace(/\s+\d+[A-Za-z]?\s*$/, "").trim();
+  return code.replace(/\s+\d.*$/, "").trim();
 }
 
 export function orderCourseTypes(types: string[]) {
